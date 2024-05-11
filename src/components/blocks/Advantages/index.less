@@ -1,0 +1,144 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.advantages {
+  width: 100%;
+  // max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    border-top: 8px solid rgba(168, 26, 32, 1);
+
+    @media (max-width: @screen-lg-min) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &Item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 0.3s;
+
+    // :hover {
+    //   transform: scale(1.2);
+    // }
+
+    @media (max-width: @screen-lg-min) {
+      width: 50%;
+    }
+
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    &Content {
+      position:  absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 75px 55px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      // text-align: center;
+
+      @media (max-width: @screen-xl-min) {
+        padding: 40px 30px 40px;
+      }
+
+      @media (max-width: @screen-lg-min) {
+        padding: 100px 70px 50px;
+      }
+
+      @media (max-width: @screen-md-min) {
+        padding: 75px 13px 50px;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        padding: 40px 32px 40px;
+      }
+
+      @media (max-width: @screen-xs-min) {
+        padding: 14px 10px;
+      }
+    }
+
+    &Title {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      color: rgba(82, 86, 91, 1);
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      @media (max-width: @screen-lg-min) {
+        width: 50%;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        font-size: 20px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: @screen-xs-min) {
+        font-size: 16px;
+        line-height: 1.1;
+      }
+    }
+
+    &Descr {
+      // height: 50%;
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      line-height: 24px;
+      text-transform: lowercase;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      color: #000;
+
+      @media (max-width: @screen-lg-min) {
+        font-size: 2.4vw;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}

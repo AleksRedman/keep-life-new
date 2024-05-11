@@ -1,0 +1,162 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #F1F1F1;
+
+  &Wrap {
+    width: 100%;
+    display: flex;
+    max-width: 1600px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    justify-content: flex-start;
+  }
+
+  &Contacts {
+    width: 100%;
+    display: flex;
+    padding: 48px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &Title {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 21px;
+      color: #202020;
+      margin-bottom: 25px;
+    }
+
+    &Address {
+      color: #202020;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    &Details {
+      width: 100%;
+    }
+
+    &ItemsWrap {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: @screen-md-min) {
+        flex-direction: column;
+      }
+    }
+
+    &Item {
+      padding: 0 20px;
+      color: #A81A20;
+
+      :global {
+        .anticon {
+          color: #202020;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &Logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    &ImgWrap {
+      width: 22vw;
+      display: block;
+      margin-bottom: 10px;
+
+      @media (max-width: @screen-md-min) {
+        width: 50%;
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &Banner {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  // &Right
+  // &RightContacts {
+  //   font-family: 'Cuprum', sans-serif;
+  //   font-size: calc(~'3vw / 2');
+  //   color: #fff;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: flex-end;
+
+  //   @media (max-width: @screen-md-min) {
+  //     width: 100%;
+  //     justify-content: flex-start;
+  //     align-items: center;
+  //     font-size: calc(~'7vw / 2');
+  //   }
+  // }
+  // &RightContactsAddress {
+  //   font-family: 'Cuprum', sans-serif;
+  //   font-size: calc(~'3vw / 2');
+  //   color: #fff;
+  //   margin-bottom: 15px;
+
+  //   @media (max-width: @screen-md-min) {
+  //     font-size: calc(~'7vw / 2');
+  //   }
+
+  //   &:hover {
+  //     color: #3794ff;
+  //   }
+  // }
+  // &RightContactsItem {
+  //   font-family: 'Cuprum', sans-serif;
+  //   font-size: calc(~'3vw / 2');
+  //   color: #fff;
+  //   margin-bottom: 15px;
+
+  //   @media (max-width: @screen-md-min) {
+  //     font-size: calc(~'7vw / 2');
+  //   }
+
+  //   span {
+  //     padding-left: 15px;
+
+  //     @media (max-width: @screen-md-min) {
+  //       padding-left: 2vw;
+  //     }
+  //   }
+
+  //   &:hover {
+  //     color: #3794ff;
+  //   }
+  // }
+}

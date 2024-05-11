@@ -1,0 +1,69 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.newsAboutKL {
+  // background-color: rgba(0,0,0,0.41);
+  padding-bottom: 4.5vw;
+
+  &Title {
+    padding: 2.5vw 1.5vw;
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'7vw / 2');
+
+    p {
+      margin-bottom: 0;
+    }
+    
+    strong {
+      color: #8f1919;
+    }
+
+    @media (max-width: @screen-md-min) {
+      top: 10vw;
+      font-size: calc(~'15vw / 2');
+      -webkit-text-stroke: calc(1.2vw / 10) rgb(64, 0, 0);
+    }
+  }
+
+  &Wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    a {
+      width: 22vw;
+      height: 22vw;
+      margin: 1.46vw;
+      display: flex;
+      transition: 0.3s;
+
+      @media (max-width: @screen-md-min) {
+        width: 30vw;
+        height: 30vw;
+        margin: 1.55vw;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        border: 5px solid #8f1919;
+
+        @media (max-width: @screen-md-min) {
+          border: 3px solid #8f1919;
+        }
+      }
+
+      :hover {
+        transform: scale(1.1);
+      }
+    }
+
+    // @media (max-width: @screen-md-min) {
+    //   justify-content: space-between;
+    // }
+  }
+}

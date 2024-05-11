@@ -1,0 +1,144 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.footer {
+  background-color: #000;
+  padding: 70px 160px 150px;
+  width: 100%;
+
+  @media (max-width: @screen-md-min) {
+    padding: 10vw 8vw!important;
+  }
+
+  &Wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: @screen-md-min) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &Left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (max-width: @screen-md-min) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &LeftImg1Wrap {
+    display: block;
+    margin-bottom: 50px;
+
+    img {
+      width: 22vw;
+
+      @media (max-width: @screen-md-min) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: @screen-md-min) {
+      width: 45%;
+      margin-bottom: 40px;
+    }
+  }
+  &LeftImg2Wrap {
+    display: block;
+
+    img {
+      width: 22vw;
+
+      @media (max-width: @screen-md-min) {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: @screen-md-min) {
+      width: 45%;
+      margin-bottom: 40px;
+    }
+  }
+  &Right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    @media (max-width: @screen-md-min) {
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  &RightTitle {
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+    color: #fff;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'7vw / 2');
+    }
+  }
+  &RightContacts {
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'3vw / 2');
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    @media (max-width: @screen-md-min) {
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: calc(~'7vw / 2');
+    }
+  }
+  &RightContactsAddress {
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'3vw / 2');
+    color: #fff;
+    margin-bottom: 15px;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'7vw / 2');
+    }
+
+    &:hover {
+      color: #3794ff;
+    }
+  }
+  &RightContactsItem {
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'3vw / 2');
+    color: #fff;
+    margin-bottom: 15px;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'7vw / 2');
+    }
+
+    span {
+      padding-left: 15px;
+
+      @media (max-width: @screen-md-min) {
+        padding-left: 2vw;
+      }
+    }
+
+    &:hover {
+      color: #3794ff;
+    }
+  }
+}

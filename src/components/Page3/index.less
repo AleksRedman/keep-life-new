@@ -1,0 +1,195 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.page3 {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  @media (max-width: 992px) {
+    min-height: 600px;
+    height: 600px;
+  }
+
+  &Decor {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 25vw;
+    left: 0px;
+    bottom: 0px;
+  }
+  &DecorBlock {
+    background-color: rgba(126,1,17,0.4);
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &TitleWrapper {
+    width: 100%;
+  }
+  &H2Title {
+    color: #8f1919;
+    -webkit-text-stroke: calc(2vw / 10) rgb(64, 0, 0);
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'12vw / 2');
+    text-align: center;
+    margin-top: 3.5vw;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'17vw / 2');
+    }
+  }
+  &List1 {
+    width: 100%;
+    z-index: 1;
+  }
+  &List2 {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+  &List3 {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+  &List1Wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media (max-width: @screen-sm-min) {
+      flex-wrap: wrap;
+    }
+  }
+  &List2Wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media (max-width: @screen-sm-min) {
+      flex-wrap: wrap;
+    }
+  }
+  &List3Wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media (max-width: @screen-sm-min) {
+      flex-wrap: wrap;
+    }
+  }
+  &List1Item {
+    background-color: #8f1919;
+    width: 17vw;
+    height: 10vw;
+    padding: 1vw;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 4vw;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+
+    @media (max-width: @screen-md-min) {
+      width: 20vw;
+      height: 14vw;
+      font-size: calc(~'6vw / 2');
+    }
+
+    @media (max-width: @screen-xs-min) {
+      font-size: calc(~'9vw / 2');
+      width: 44vw;
+      height: 15vw;
+      line-height: 1.1;
+    }
+  }
+  &List2Item {
+    width: 16vw;
+    height: 13vw;
+    margin-bottom: 4vw;
+    min-width: 16vw;
+    min-height: 13vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 20vw;
+      height: 15vw;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 43vw;
+      height: 35vw;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      width: 44vw;
+      height: 40vw;
+    }
+  }
+  &List3Item {
+    background-color: #000;
+    width: 17vw;
+    height: 10vw;
+    padding: 1vw;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 4vw;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+
+    @media (max-width: @screen-md-min) {
+      width: 20vw;
+      height: 14vw;
+      font-size: calc(~'6vw / 2');
+    }
+
+    @media (max-width: @screen-xs-min) {
+      font-size: calc(~'9vw / 2');
+      width: 44vw;
+      height: 15vw;
+      line-height: 1.1;
+    }
+  }
+  &List2ItemImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  &List2ItemImg1 {
+    background: center / cover url(../../assets/img/daf_grey.jpg) no-repeat;
+  }
+  &List2ItemImg2 {
+    background: center / cover url(../../assets/img/container_grey.jpg) no-repeat;
+  }
+  &List2ItemImg3 {
+    background: center / cover url(../../assets/img/equip_grey.jpg) no-repeat;
+  }
+  &List2ItemImg4 {
+    background: center / cover url(../../assets/img/battery_block_grey.jpg) no-repeat;
+  }
+
+  @media (max-width: @screen-md-min) {
+    min-height: 700px!important;
+    height: 100vh!important;
+  }
+}

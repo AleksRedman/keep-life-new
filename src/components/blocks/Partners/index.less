@@ -1,0 +1,92 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.partners {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 48px 4vw;
+
+    @media (max-width: @screen-sm-min) {
+      padding: 30px 3vw;
+    }
+  }
+
+  &Title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    color: #202020;
+    margin-bottom: 40px;
+
+    @media (max-width: @screen-sm-min) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &List {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    &Item {
+      padding: 15px;
+      width: 15%;
+      margin-bottom: 10px;
+      min-height: 100px;
+
+      @media (max-width: @screen-lg-min) {
+        width: 20%;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        width: 30%;
+        padding: 5px;
+      }
+
+      @media (max-width: @screen-xs-min) {
+        width: 40%;
+      }
+
+      &Link {
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        // min-height: 25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2vw;
+
+        &Wide {
+          padding: 0;
+        }
+      }
+
+      &Img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}

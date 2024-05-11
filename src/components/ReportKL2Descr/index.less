@@ -1,0 +1,198 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.reportKL2 {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  @media (max-width: 992px) {
+    min-height: 600px;
+    height: 600px;
+  }
+
+  &Image1Block {
+    width: 55vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (max-width: @screen-md-min) {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 100vw;
+      height: 50vh;
+    }
+  }
+  &Image1Block1Wrap {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &Image1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: center / cover url(../../assets/img/kl_cards.jpg) no-repeat;
+  }
+  &Image1BlockCover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &Image2QrCode {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 10vw;
+    left: calc(~"50% - 10vw");
+    background: center / cover url(../../assets/img/qr-report2.jpg) no-repeat;
+
+    @media (max-width: @screen-md-min) {
+      width: 50vw;
+      height: 50vw;
+      left: calc(50% - 25vw);
+    }
+  }
+
+  &ImageBlock {
+    width: 45vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: @screen-md-min) {
+      display: none;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      display: block;
+      width: 100vw;
+      height: 50vh;
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &ImageBlockAllWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  &ImageBlockWrap {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
+  &Image3 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: center / cover url(../../assets/img/report2_equipment.jpg) no-repeat;
+  }
+  &Image3BlockCover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.13);
+  }
+  &Image4BlockWrap {
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  &ImageBlock2Text {
+    display: block;
+    width: 100%;
+    font-size: calc(~'4vw / 2');
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    font-family: 'Cuprum', sans-serif;
+    color: #8f1919;
+    font-weight: 700;
+    padding-top: 10px;
+
+    @media (max-width: @screen-sm-min) {
+      font-size: 5vw;
+    }
+  }
+  &Image4 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: center bottom / cover url(../../assets/img/report2-kl.jpg) no-repeat;
+  }
+  &Image4BlockCover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.3);
+  }
+
+  &TitleWrapper {
+    width: 100%;
+    position: absolute;
+    top: 7.5vw;
+    left: 3vw;
+
+    @media (max-width: @screen-md-min) {
+      left: 0;
+    }
+  }
+  &H2Title {
+    color: #fff;
+    -webkit-text-stroke: calc(2.2vw / 10) #5e5e5e;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'14vw / 2');
+    font-weight: 700;
+    text-align: center;
+    // margin-top: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+
+    @media (max-width: @screen-md-min) {
+      color: #050719;
+      font-size: calc(~'18vw / 2');
+      -webkit-text-stroke: calc(2.2vw / 10) #fff;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+    min-height: 650px!important;
+    height: 100vh!important;
+  }
+}

@@ -1,0 +1,146 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.page1 {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  @media (max-width: 992px) {
+    min-height: 600px;
+    height: 600px;
+  }
+
+  &ImageBlock1 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    right: 40px;
+    top: 60px;
+  }
+  &ImageBlock1Wrap {
+    width: 30vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 60vw;
+    }
+  }
+  &ImageBlock1Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+
+    @media (max-width: @screen-md-min) {
+      background: rgba(5,7,25,0.63);
+    }
+  }
+
+  &ImageBlock2 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    right: 28vw;
+    bottom: 25px;
+  }
+  &ImageBlock2Wrap {
+    width: 30vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 60vw;
+    }
+  }
+  &ImageBlock2Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+
+    @media (max-width: @screen-md-min) {
+      background: rgba(5,7,25,0.63);
+    }
+  }
+
+  &DecorBlock {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 50vw;
+    height: 30vw;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(126,1,17,0.4);
+  }
+  &H2Title {
+    color: #8f1919;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'7vw / 2');
+    position: absolute;
+    z-index: 2;
+    top: 8vw;
+
+    @media (max-width: @screen-md-min) {
+      top: 10vw;
+      font-size: calc(~'15vw / 2');
+      -webkit-text-stroke: calc(1.2vw / 10) rgb(64, 0, 0);
+    }
+  }
+  &List {
+    position: absolute;
+    z-index: 2;
+    top: 20vw;
+
+    @media (max-width: @screen-md-min) {
+      top: 35vh;
+      left: 20%;
+    }
+  }
+  &ListItem {
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+    letter-spacing: 1px;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    img {
+      width: 6vw;
+
+      @media (max-width: @screen-md-min) {
+        width: 9vw;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        width: 11vw;
+      }
+    }
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'6vw / 2');
+      margin-bottom: 3vh;
+      padding: 0 4vw;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      font-size: calc(~'8vw / 2');
+      margin-bottom: 3vh;
+      padding: 0 4vw;
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+    min-height: 700px!important;
+    height: 100vh!important;
+  }
+}

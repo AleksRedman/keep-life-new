@@ -1,0 +1,849 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.donatePazzle {
+  width: 100%;
+  // padding-top: 160px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  // margin-bottom: 100px;
+  flex-grow: 1;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &Block1 {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &DescrCard {
+    width: 25%;
+    max-width: 25%;
+    background-color: #A81A20;
+
+    &Wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #A81A20;
+      padding-top: 30px;
+    }
+
+    &Text {
+      width: 100%;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 27px;
+      color: #fff;
+      background-color: #A81A20;
+      padding: 30px;
+    }
+
+    &ArrowText {
+      width: 50%;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+    }
+
+    &Arrow {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 30%;
+      margin-bottom: 70px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &Link {
+      width: 100%;
+      height: 70px;
+      min-width: 100%;
+      padding: 10px;
+      background-color: #202020;
+      border-color: #202020;
+      border-radius: 0;
+    }
+
+    &LinkText {
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  &BannerCard {
+    width: 50%;
+    max-width: 50%;
+  }
+
+  &TextCard {
+    width: 25%;
+    padding: 48px;
+    background-color: #F1F1F1;
+
+    p {
+      color: #202020;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      // letter-spacing: 1px;
+      // margin-bottom: 2vw;
+
+      strong {
+        color: #8f1919;
+      }
+
+      a {
+        color: #8f1919;
+
+        &:hover {
+          color: #d81515;
+        }
+      }
+
+      @media (max-width: @screen-lg-min) {
+        font-size: calc(~'6vw / 2');
+      }
+    }
+  }
+
+  &TextCardWrap {
+
+  }
+
+  &BannerCard {
+    width: 50%;
+    min-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-image: url(../../../assets/img/pazzle-img-new-crop.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &Wrap {
+      height: 100%;
+      min-height: 100%;
+      width: 100%;
+      min-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &Item {
+      width: 16.66%;
+      height: 16.67%;
+      min-width: 16.66%;
+      min-height: 16.67%;
+      border: 1px solid #fff;
+      backdrop-filter: blur(9px);
+
+      @media (max-width: @screen-md-min) {
+        backdrop-filter: blur(4px);
+      }
+
+      &Cont {
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        p {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          color: transparent;
+
+          strong {
+            @media (max-width: @screen-xxl-min) {
+              font-size: 1vw;
+            }
+          }
+
+          span {
+            @media (max-width: @screen-xxl-min) {
+              font-size: 1vw;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        border: 1px solid #d81515;
+        background-color: #d81515;
+
+        @media (max-width: 1024px) {
+          border: 1px solid #fff;
+          background: none;
+          backdrop-filter: none;
+        }
+
+        .donatePazzleBannerCardItemCont {
+          :global {
+            .anticon {
+              color: #fff!important;
+            }
+          }
+        }
+
+        .donatePazzleBannerCardItemCont {
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &Block2 {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &PBCard {
+    width: 50%;
+    max-width: 50%;
+    padding: 60px 30px 10px;
+    background-color: #FBFBFB;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    &ImgsWrap {
+      width: 45%;
+      display: flex;
+      max-width: 45%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &PaymentMethod {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &PaymentQR {
+      width: 80%;
+      max-width: 80%;
+      // margin-bottom: 40px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &PaymentDetails {
+      width: 45%;
+      max-width: 45%;
+      padding-top: 20px;
+
+      &Row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      &Label {
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 11px;
+        color: #808D9F;
+      }
+
+      &Value {
+        font-family: 'Inter', sans-serif;
+        word-break: break-word;
+        font-weight: 400;
+        font-size: 14px;
+
+        :global {
+          .ant-btn {
+            padding: 0;
+            color: #A81A20;
+          }
+        }
+      }
+    }
+
+    &PaymentDetailsCopy {
+
+    }
+  }
+
+  &MBCard {
+    width: 25%;
+    max-width: 50%;
+    padding: 30px;
+    background-color: #F1F1F1;
+
+    &ImgsWrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &PaymentMethod {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &PaymentQR {
+      width: 70%;
+      max-width: 70%;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &PaymentDetails {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &PaymentDetailsBtnWrap {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &PaymentDetailsMonoBtn {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 40px;
+      background-color: #000;
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: #111;
+        opacity: 0.8;
+      }
+
+      &:active {
+        background-color: #111;
+      }
+
+      &::selection {
+        background-color: #111!important;
+        border: none!important;
+      }
+
+      img {
+        width: 60%;
+        max-width: 60%;
+        display: flex;
+      }
+    }
+  }
+
+  &PPCard {
+    width: 25%;
+    padding: 100px 40px 60px;
+    max-width: 50%;
+    background-color: #FBFBFB;
+
+    &ImgsWrap {
+      width: 100%;
+    }
+
+    &PaymentMethod {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &PaymentDetails {
+      &Row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      &Label {
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 11px;
+        color: #808D9F;
+      }
+
+      &Value {
+        font-family: 'Inter', sans-serif;
+        word-break: break-word;
+        font-weight: 400;
+        font-size: 14px;
+
+        :global {
+          .ant-btn {
+            padding: 0;
+            color: #A81A20;
+          }
+        }
+      }
+    }
+
+    &PaymentDetailsCopy {
+
+    }
+  }
+}
+
+:global {
+  .ant-popover {
+    width: 19vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 30vw;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 40vw;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      width: 60vw;
+    }
+
+    .ant-popover-inner-content {
+      padding: 8px 5px 4px;
+      border-radius: 5px;
+
+      @media (max-width: @screen-xs-min) {
+        max-height: 200px;
+        overflow: auto;
+      }
+    }
+
+    .donate-puzzle-item-popup {
+      white-space: normal;
+      font-size: 2.5vw;
+      text-align: center;
+      color: #8f1919;
+      font-weight: 600;
+      -webkit-text-stroke: 0.3px #000;
+    }
+
+    .donate-puzzle-item-popup-wrap {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .donate-puzzle-item-popup-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        @media (max-width: @screen-xs-min) {
+          width: 40%!important;
+        }
+      }
+    }
+
+    .donate-puzzle-item-popup-sum {
+      font-size: 20px;
+      text-align: center;
+      color: #8f1919;
+      font-weight: 600;
+      white-space: normal;
+      margin-bottom: 0;
+
+      @media (max-width: @screen-xs-min) {
+        font-size: 16px;
+      }
+    }
+
+    .donate-puzzle-item-popup-descr {
+      text-align: center;
+      padding: 0 5px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// .donate {
+//   padding: 80px 0 80px;
+//   padding-left: 3%;
+//   padding-right: 3%;
+//   flex-grow: 1;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+
+//   &Wrap {
+//     width: 100%;
+//     max-width: 1600px;
+//   }
+
+//   &BlockTitle {
+//     font-size: 4vw;
+//     font-weight: 700;
+//     font-family: 'Cuprum', sans-serif;
+//   }
+
+//   &Block {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     justify-content: flex-start;
+
+//     @media (max-width: @screen-lg-min) {
+//       flex-wrap: wrap;
+//       flex-direction: column;
+//     }
+//   }
+
+//   &LinkWrap {
+//     width: 100%;
+//     margin-right: 0;
+//     border: 2px solid #000;
+//     border-radius: 10px;
+//     padding: 20px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     :global {
+//       .ant-btn {
+//         width: 100%;
+//         text-transform: uppercase;
+//         white-space: normal;
+//         height: auto;
+//         min-height: 50px;
+//         padding: 10px;
+//         font-size: 1.7vw;
+//         font-weight: 700;
+//         font-family: 'Cuprum', sans-serif;
+
+//         -webkit-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+//         -moz-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+//         box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+
+//         &:hover {
+//           -webkit-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+//           -moz-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+//           box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+//         }
+
+//         @media (max-width: @screen-lg-min) {
+//           font-size: 2vw;
+//         }
+
+//         @media (max-width: @screen-md-min) {
+//           font-size: 2.7vw;
+//         }
+
+//         @media (max-width: @screen-sm-min) {
+//           font-size: 4.7vw;
+//         }
+//       }
+//     }
+//   }
+
+//   &Card {
+//     width: 48%;
+//     margin-right: 4%;
+//     margin-bottom: 4%;
+//     border: 2px solid #000;
+//     border-radius: 10px;
+//     padding: 20px;
+//     display: flex;
+//     // justify-content: space-between;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     align-items: center;
+
+//     &:nth-child(2n) {
+//       margin-right: 0;
+//     }
+
+//     &PuzzleDonatePageLinkText {
+//       width: 100%;
+//     }
+
+//     &ImgsWrap {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: row;
+//       align-items: center;
+//       justify-content: center;
+
+//       @media (max-width: @screen-lg-min) {
+//         flex-direction: column;
+//         justify-content: flex-start;
+//         align-items: center;
+//       }
+//     }
+
+//     &PaymentMethod {
+//       width: 50%;
+
+//       @media (max-width: @screen-lg-min) {
+//         width: 50%;
+//         margin-bottom: 2vw;
+//       }
+
+//       @media (max-width: @screen-md-min) {
+//         width: 70%;
+//         margin-bottom: 2vw;
+//       }
+
+//       img {
+//         width: 100%;
+//         height: auto;
+//       }
+//     }
+
+//     &PaymentQR {
+//       width: 50%;
+
+//       @media (max-width: @screen-lg-min) {
+//         width: 50%;
+//       }
+
+//       @media (max-width: @screen-md-min) {
+//         width: 80%;
+//       }
+      
+//       // @media (max-width: @screen-lg-min) {
+//       //   width: 100%;
+//       //   margin-bottom: 2vw;
+//       // }
+
+//       img {
+//         width: 100%;
+//         height: auto;
+//       }
+//     }
+
+//     &PaymentDetails {
+//       width: 100%;
+//       white-space: normal;
+//       word-break: break-word;
+//       padding-left: 25px;
+
+//       p {
+//         // white-space: normal;
+//         font-size: 1.9vw;
+//         margin-bottom: 8px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-start;
+//         width: 100%;
+
+//         @media (max-width: @screen-sm-min) {
+//           font-size: 3.7vw;
+//           white-space: normal;
+//         }
+
+//         & > span:first-child {
+//           margin-right: 5px;
+//           color: rgba(40, 39, 39, 0.5);
+//         }
+//       }
+
+//       @media (max-width: @screen-lg-min) {
+//         width: 100%;
+//         font-size: 18px;
+//         padding-left: 0;
+//       }
+
+//       &Copy {
+//         width: 2.5vw;
+//         height: 2.5vw;
+
+//         :global {
+//           .anticon {
+//             font-size: 2.2vw;
+//             color: #8f1919;
+
+//             @media (max-width: @screen-sm-min) {
+//               font-size: 4vw;
+//             }
+//           }
+//         }
+
+//         @media (max-width: @screen-sm-min) {
+//           width: 6vw;
+//           height: 6vw;
+//         }
+//       }
+
+//       // &Wide {
+//       //   width: 75%;
+
+//       //   @media (max-width: @screen-lg-min) {
+//       //     width: 100%;
+//       //     font-size: 18px;
+//       //     padding-left: 0;
+//       //   }
+
+//       //   // p {
+//       //   //   // white-space: normal;
+//       //   //   font-size: 1.9vw;
+//       //   //   margin-bottom: 8px;
+  
+//       //   //   @media (max-width: @screen-sm-min) {
+//       //   //     font-size: 3.7vw;
+//       //   //     white-space: normal;
+//       //   //   }
+//       //   // }
+//       // }
+
+//       &BtnWrap {
+//         width: 100%;
+//         min-width: 100%;
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: center;
+//       }
+
+//       &MonoBtn {
+//         background-color: #111;
+//         width: 95%;
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: center;
+//         min-height: 100px;
+//         border-radius: 70px;
+        
+//         &:hover {
+//           background-color: #111;
+//           opacity: 0.8;
+//         }
+
+//         &:active {
+//           background-color: #111;
+//         }
+
+//         &::selection {
+//           background-color: #111!important;
+//           border: none!important;
+//         }
+
+//         img {
+//           width: 50%;
+//           max-width: 50%;
+//           max-height: 100%;
+//         }
+
+//         @media (max-width: @screen-sm-min) {
+//           min-height: 70px;
+//         }
+
+//         @media (max-width: @screen-xs-min) {
+//           min-height: 60px;
+//         }
+//       }
+
+//       :global {
+//         .ant-btn-primary {
+//           background-color: #111;
+//         }
+//       }
+//     }
+
+//     @media (max-width: @screen-lg-min) {
+//       width: 100%;
+//       margin-right: 0;
+//       margin-bottom: 20px;
+//       border: 2px solid #000;
+//       border-radius: 10px;
+//       padding: 20px;
+//       flex-direction: column;
+//       align-items: flex-start;
+
+//       &:nth-child(2n) {
+//         margin-right: 0;
+//       }
+//     }
+
+//     // @media (max-width: @screen-sm-min) {
+//     //   width: 48%;
+//     //   margin-right: 4%;
+
+//     //   &:nth-child(2n) {
+//     //     margin-right: 0;
+//     //   }
+//     // }
+
+//     @media (max-width: @screen-xs-min) {
+//       width: 100%;
+//       margin-right: 0;
+
+//       &:nth-child(2n) {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }

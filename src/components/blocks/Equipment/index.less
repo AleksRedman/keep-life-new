@@ -1,0 +1,175 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.equip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  // margin-bottom: 5px;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(241, 241, 241, 1);
+  }
+
+  &ImagesList {
+    width: 75%;
+    padding: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+
+    @media (max-width: @screen-xl-min) {
+      padding: 30px;
+    }
+
+    @media (max-width: @screen-lg-min) {
+      width: 100%;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      display: none;
+    }
+
+    &Item {
+      width: 20%;
+      padding: 10px 20px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+
+      @media (max-width: @screen-xl-min) {
+        padding: 10px 10px 0;
+      }
+
+      @media (max-width: @screen-lg-min) {
+        width: 25%;
+      }
+
+      @media (max-width: @screen-md-min) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &ItemImgWrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 7px;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    &ItemImgContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      // text-align: center;
+    }
+
+    &ItemImg {
+      width: 90%!important;
+      height: auto;
+    }
+
+    &ItemLabel {
+      text-align: center;
+      color: rgba(128, 141, 159, 1);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+
+
+
+      @media (max-width: @screen-md-min) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &List {
+    width: 25%;
+    padding: 32px;
+    min-width: 360px;
+    background-color: #fff;
+
+    @media (max-width: @screen-md-min) {
+      display: none;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &Title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #202020;
+    margin-bottom: 25px;
+  }
+
+  &ListWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &ListItem {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #202020;
+
+      &:first-child {
+        color: #A81A20;
+        margin-right: 5px;
+      }
+    }
+  }
+}

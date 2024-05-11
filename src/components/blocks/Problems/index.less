@@ -1,0 +1,131 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.problems {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @media (max-width: @custom-screen-sm) {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &ImgWrap {
+    width: 25%;
+    min-width: 25%;
+    background: url(../../../assets/img/problemsImg.png) no-repeat 50% / cover;
+
+    @media (max-width: @screen-xl-min) {
+      display: none;
+    }
+  }
+
+  &WrapProblems {
+    width: 50%;
+    padding: 32px 48px;
+    background-color: #202020;
+
+    @media (max-width: @custom-screen-sm) {
+      width: 100%;
+    }
+  }
+
+  &ListOfProblemsTitle {
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+  &ListOfProblems {
+    color: #fff;
+    padding-left: 10px;
+
+    li {
+      margin-bottom: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    li::marker {
+      background-color: #A81A20;
+      color: #A81A20;
+    }
+    // position: relative;
+
+    // &::before {
+    //   content: "";
+    //   top: calc(~"50% - 2px");
+    //   left: calc(~"3px");
+    //   width: 4px;
+    //   height: 4px;
+    //   display: block;
+    //   border-radius: 50%;
+    //   background-color: #A81A20;
+    // }
+  }
+
+  &WrapAdvantages {
+    width: 25%;
+    padding: 32px 48px;
+    background-color: #A81A20;
+
+    @media (max-width: @screen-xl-min) {
+      width: 50%;
+    }
+
+    @media (max-width: @custom-screen-sm) {
+      width: 100%;
+    }
+  }
+
+  &ListOfAdvantagesTitle {
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+  &ListOfAdvantages {
+    color: #fff;
+    padding-left: 10px;
+
+    li {
+      margin-bottom: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    // position: relative;
+
+    // &::before {
+    //   content: "";
+    //   top: calc(~"50% - 2px");
+    //   left: calc(~"3px");
+    //   width: 4px;
+    //   height: 4px;
+    //   display: block;
+    //   border-radius: 50%;
+    //   background-color: #fff;
+    // }
+  }
+}

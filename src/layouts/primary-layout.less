@@ -1,0 +1,255 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../vars.less";
+
+.primaryLayout {
+  width: 100%;
+  height: auto;
+  min-height: 100vh!important;
+  // background-color: rgba(5,7,25,1);
+  // background-color: rgba(119,140,145,0.8);
+  // background: rgb(255,255,255);
+  // background: radial-gradient(circle, rgba(255,255,255,0.8029805672268908) 0%, rgba(119,140,145,0.8029805672268908) 100%);
+  background-color: #B3BFC2;
+  overflow: auto;
+  overflow-x: hidden;
+
+  &Content {
+    height: 100%;
+    min-height: 100%!important;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+
+    @media (max-width: @screen-sm-min) {
+      padding: 0;
+    }
+  }
+
+  &ContentBlock {
+    overflow: auto;
+
+    &CustomizeMode {
+      padding-bottom: 80px;
+
+      @media (max-width: @custom-screen-sm) {
+        padding-bottom: 120px;
+      }
+    }
+  }
+
+  &MainContent {
+    background: rgba(5,7,25,1);
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    transition: 0.3s;
+    width: calc(~'100% - 255px');
+    max-width: calc(~'100% - 255px');
+    min-width: calc(~'100% - 255px');
+
+    @media (max-width: @custom-tablet-lend) {
+      overflow: unset;
+    }
+
+    @media (max-width: @screen-xl-max) {
+      width: calc(~'100% - 255px');
+      max-width: calc(~'100% - 255px');
+      min-width: calc(~'100% - 255px');
+    }
+
+    &Md {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &CollapsedSider {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &Home {
+      :global {
+        .ant-layout-content {
+          margin-left: 0px;
+          margin-right: 0px;
+
+          @media (max-width: @screen-sm-min) {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    :global {
+      .headroom--scrolled {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &DonateBtn {
+    width: 9vw;
+    height: 9vw;
+    max-width: 120px;
+    max-height: 120px;
+    position: fixed;
+    bottom: 2.2vw;
+    right: 2.2vw;
+    z-index: 9999;
+    // background-color: #8f1919;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~"3.5vw / 2");
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1vw;
+    border: none;
+    padding: 0;
+    transition: 0.3s;
+    background: linear-gradient(149.97deg, #B81821 -8.91%, #B51820 16.94%, #AB171E 36.83%, #9A171A 55.72%, #821514 73.61%, #63140D 90.51%);
+
+    @media (min-width: @screen-xl-max) {
+      min-width: 150px;
+      min-height: 150px;
+      max-width: 150px;
+      max-height: 150px;
+    }
+
+    :global {
+      .anticon {
+        font-size: calc(~"5vw / 2");
+
+        @media (min-width: @screen-xl-max) {
+          font-size: 45px;
+        }
+
+        @media (max-width: @screen-lg-min) {
+          font-size: calc(~"6vw / 2");
+        }
+
+        @media (max-width: @screen-sm-min) {
+          font-size: calc(~"7vw / 2");
+        }
+      }
+    }
+
+    &Icon {
+      -webkit-animation:heartBeat 1s ease infinite 0s;
+      -moz-animation:heartBeat 1s ease infinite 0s;
+      -o-animation:heartBeat 1s ease infinite 0s;
+      -ms-animation:heartBeat 1s ease infinite 0s;
+      animation:heartBeat 1s ease infinite 0s;
+    }
+
+    &Text {
+      margin: 0!important;
+      font-size: 12px;
+      font-weight: 500;
+      padding-top: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+
+      @media (min-width: @screen-xl-max) {
+        font-size: 18px;
+      }
+
+      // @media (max-width: @screen-xl-min) {
+      //   font-size: calc(~"3.2vw / 2");
+      // }
+
+      // @media (max-width: @screen-lg-min) {
+      //   font-size: calc(~"4.2vw / 2");
+      // }
+
+      @media (max-width: @screen-sm-min) {
+        font-size: calc(~"5.2vw / 2");
+      }
+    }
+
+    @media (max-width: @screen-xl-min) {
+      width: 12vw;
+      height: 12vw;
+      max-width: 120px;
+      max-height: 120px;
+    }
+
+    @media (max-width: @screen-lg-min) {
+      width: 15vw;
+      height: 15vw;
+      max-width: 110px;
+      max-height: 110px;
+    }
+
+    @media (max-width: @screen-lg-min) {
+      width: 15vw;
+      height: 15vw;
+      max-width: 110px;
+      max-height: 110px;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 18vw;
+      height: 18vw;
+      bottom: 3vw;
+      right: 3vw;
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}
+
+:global {
+  .ant-empty {
+    .ant-empty-description {
+      color: rgba(5,7,25,1);
+    }
+  }
+}
+
+/*
+css keyframes based off:
+https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+*/
+/*tested on chrome 24*/
+@-webkit-keyframes heartBeat { 
+  0% { zoom:100%; }
+  15% { zoom:120%; }
+  25% { zoom:110%; }
+  35% { zoom:120%; }
+  100% { zoom:100%; }
+}
+/*tested on opera 12*/
+@-o-keyframes heartBeat { 
+  0% { zoom:100%; }
+  15% { zoom:120%; }
+  25% { zoom:110%; }
+  35% { zoom:120%; }
+  100% { zoom:100%; }
+}
+/*
+tested on IE9, should work but doesn't :(
+https://developer.mozilla.org/en-US/docs/CSS/transform
+*/
+@-ms-keyframes heartBeat { 
+  0% { transform:scale(1); }
+  15% { transform:scale(1.2); }
+  25% { transform:scale(1.1); }
+  35% { transform:scale(1.2); }
+  100% { transform:scale(1); }
+}
+/*tested on FF 18*/
+@keyframes heartBeat { 
+  0% { transform:scale(1); }
+  15% { transform:scale(1.2); }
+  25% { transform:scale(1.1); }
+  35% { transform:scale(1.2); }
+  100% { transform:scale(1); }
+}

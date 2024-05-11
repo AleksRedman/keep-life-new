@@ -1,0 +1,213 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.header {
+  // position: fixed;
+  display: block;
+  // z-index: 999;
+  // background: transparent;
+  // background: #96a6aa;
+  background-color: #B3BFC2;
+  border-bottom: 1px solid transparent;
+  transition: border .5s cubic-bezier(0.455, 0.03, 0.515, 0.955), background .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  height: 120px;
+  padding: 0 50px 0 35px;
+  width: 100%;
+  min-width: 100%;
+  z-index: 999;
+
+  @media (max-width: @screen-md-min) {
+    height: 72px;
+    padding: 0 16px;
+  }
+
+  &.home-nav-bottom {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom-color: #ebedee;
+    .search {
+      border-left-color: #ebedee;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .header-link {
+    color: #fff;
+  }
+  .ant-menu-item-active .header-link {
+    color: #8f1919;
+  }
+
+  &Wrap {
+    width: 100%;
+    padding: 0;
+    height: 120px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: @screen-md-min) {
+      height: 72px;
+      min-height: 72px;
+    }
+
+    :global {
+      .ant-menu {
+        background: transparent;
+        border-bottom: none;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+
+        .ant-menu-item {
+          height: 120px;
+          line-height: 120px;
+          min-width: 72px;
+          text-align: center;
+          border-bottom-width: 3px;
+          color: #000;
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 12px!important;
+          transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        
+          @media (max-width: @screen-xl-min) {
+            max-width: 160px;
+            white-space: normal;
+            line-height: 1;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+          }
+        
+          &.ant-menu-item-selected a {
+            color: @primary-color;
+            font-weight: bold;
+          }
+        
+          @media (max-width: @screen-lg-min) {
+            max-width: 130px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            white-space: normal;
+            padding: 0 5px;
+            font-size: 13px!important;
+            max-width: 110px;
+          }
+        
+          @media (max-width: @screen-md-min) {
+            max-width: 100%;
+            width: 100%;
+          }
+
+          &ant-menu-title-content {
+            font-size: 12px;
+            color: #8f1919!important;
+          }
+
+          &-active {
+            color: #8f1919!important;
+
+            &ant-menu-title-content {
+              font-size: 12px;
+              color: #8f1919!important;
+            }
+
+            &::after {
+              border-bottom: 2px solid #8f1919!important;
+            }
+          }
+
+          &-selected {
+            color: #8f1919!important;
+            &ant-menu-title-content {
+              color: #8f1919!important;
+            }
+
+            &::after {
+              border-bottom: 2px solid #8f1919!important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &MenuIcon {
+    color: #8f1919;
+    width: 60px;
+    font-size: 30px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &LogoWrap {
+    width: 114px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: @screen-lg-max) {
+      width: 100px;
+    }
+
+    a {
+      width: 100%;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &MenuDropdown {
+
+  }
+}
+
+.langMenuDropdown {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: @screen-md-min) {
+    height: 72px;
+  }
+
+  a {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 12px!important;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      width: 10px;
+      display: block;
+      margin-left: 6px;
+      padding-bottom: 3px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    :global {
+      .anticon {
+        color: #8f1919;
+        font-weight: 700;
+        font-size: 12px!important;
+      }
+    }
+  }
+}

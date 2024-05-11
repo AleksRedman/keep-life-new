@@ -1,0 +1,235 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.page4 {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  @media (max-width: 992px) {
+    min-height: 600px;
+    height: 600px;
+  }
+
+  &ImageBlock {
+    height: 100%;
+    min-height: 100%;
+  }
+  &ImageBlockAllWrap {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &ImageBlock1Wrap {
+    width: 25vw;
+    height: 40vw;
+    margin-top: 2vw;
+    min-width: 16vw;
+    min-height: 13vw;
+    position: relative;
+
+    @media (max-width: @screen-md-min) {
+      width: 48vw;
+      height: 50vw;
+      margin-top: 14vw;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      margin-top: 30vw;
+    }
+  }
+  &Image1 {
+    width: 100%;
+    height: 100%;
+    background: 20% / cover url(../../assets/img/equipment.jpg) no-repeat;
+  }
+  &ImageBlock1Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &ImageBlock2Wrap {
+    width: 35vw;
+    height: 40vw;
+    margin-top: 15vw;
+    margin-left: 2vw;
+    min-width: 16vw;
+    min-height: 13vw;
+    position: relative;
+
+    @media (max-width: @screen-xl-min) {
+      margin-top: 28vw;
+    }
+
+    @media (max-width: @screen-md-min) {
+      width: 40vw;
+      height: 40vw;
+      margin-top: 65vw;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      margin-top: 40vw;
+    }
+  
+    &::after {
+      position: absolute;
+      top: -4vw;
+      left: -4vw;
+      display: block;
+      content: "";
+      width: 7vw;
+      height: 7vw;
+      z-index: 2;
+      background-color: rgba(126,1,17,0.6);
+    }
+  }
+  &Image2 {
+    width: 100%;
+    height: 100%;
+    background: center / cover url(../../assets/img/surgery.jpg) no-repeat;
+  }
+  &ImageBlock2Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &ImageBlock2Text {
+    background-color: rgba(126,1,17,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+    padding: 15px;
+    color: #fff;
+    font-weight: 500;
+
+    @media (max-width: @screen-xs-min) {
+      font-size: calc(~'7vw / 2');
+      padding: 5px;
+      width: 100%;
+      bottom: -12vw;
+    }
+  
+    strong {
+      font-size: 10vw;
+    }
+  }
+  &DecorBlock {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 30%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(126,1,17,0.4);
+  }
+  &H2Title {
+    color: #8f1919;
+    -webkit-text-stroke: calc(2vw / 10) rgb(64, 0, 0);
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'14vw / 2');
+    line-height: 1;
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+    top: 8vw;
+    left: 42%;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'20vw / 2');
+      left: 10%;
+    }
+  }
+  &List {
+    position: absolute;
+    z-index: 2;
+    top: 28vw;
+    left: 63%;
+
+    @media (max-width: @screen-md-min) {
+      top: 29vw;
+      left: 53%;
+    }
+
+    @media (max-width: @screen-xs-min) {
+      top: 107vw;
+      left: 5vw;
+    }
+  }
+  &ListItem {
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+    margin-bottom: 1vw;
+    position: relative;
+    padding-left: 3vw;
+    letter-spacing: 1px;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'5vw / 2');
+    }
+
+    @media (max-width: @screen-xs-min) {
+      font-size: calc(~'8vw / 2');
+      margin-bottom: 2vw;
+      padding-left: 5vw;
+    }
+  
+    &::before {
+      position: absolute;
+      top: 0.4vw;
+      left: 0;
+      display: block;
+      content: "";
+      width: 2vw;
+      height: 2vw;
+      background: #8f1919;
+
+      @media (max-width: @screen-md-min) {
+        top: 0.8vw;
+      }
+
+      @media (max-width: @screen-xs-min) {
+        width: 3vw;
+        height: 3vw;
+        top: 1.5vw;
+      }
+    }
+  }
+  &ListItemHighlight {
+    color: #8f1919;
+  }
+
+  @media (max-width: @screen-xl-min) {
+    min-height: 700px!important;
+  }
+
+  @media (max-width: @screen-md-min) {
+    min-height: 650px!important;
+    height: 100vh!important;
+  }
+
+  @media (max-width: @screen-xs-min) {
+    min-height: 600px!important;
+    height: 100vh!important;
+  }
+}

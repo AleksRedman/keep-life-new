@@ -1,0 +1,322 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.donate {
+  padding: 80px 0 80px;
+  padding-left: 3%;
+  padding-right: 3%;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+  }
+
+  &BlockTitle {
+    font-size: 4vw;
+    font-weight: 700;
+    font-family: 'Cuprum', sans-serif;
+  }
+
+  &Block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @media (max-width: @screen-lg-min) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+
+  &LinkWrap {
+    width: 100%;
+    margin-right: 0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :global {
+      .ant-btn {
+        width: 100%;
+        text-transform: uppercase;
+        white-space: normal;
+        height: auto;
+        min-height: 50px;
+        padding: 10px;
+        font-size: 1.7vw;
+        font-weight: 700;
+        font-family: 'Cuprum', sans-serif;
+
+        -webkit-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+        box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.75);
+
+        &:hover {
+          -webkit-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+          -moz-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+          box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.95);
+        }
+
+        @media (max-width: @screen-lg-min) {
+          font-size: 2vw;
+        }
+
+        @media (max-width: @screen-md-min) {
+          font-size: 2.7vw;
+        }
+
+        @media (max-width: @screen-sm-min) {
+          font-size: 4.7vw;
+        }
+      }
+    }
+  }
+
+  &Card {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    // justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &PuzzleDonatePageLinkText {
+      width: 100%;
+    }
+
+    &ImgsWrap {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: @screen-lg-min) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &PaymentMethod {
+      width: 50%;
+
+      @media (max-width: @screen-lg-min) {
+        width: 50%;
+        margin-bottom: 2vw;
+      }
+
+      @media (max-width: @screen-md-min) {
+        width: 70%;
+        margin-bottom: 2vw;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &PaymentQR {
+      width: 50%;
+
+      @media (max-width: @screen-lg-min) {
+        width: 50%;
+      }
+
+      @media (max-width: @screen-md-min) {
+        width: 80%;
+      }
+      
+      // @media (max-width: @screen-lg-min) {
+      //   width: 100%;
+      //   margin-bottom: 2vw;
+      // }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &PaymentDetails {
+      width: 100%;
+      white-space: normal;
+      word-break: break-word;
+      padding-left: 25px;
+
+      p {
+        // white-space: normal;
+        font-size: 1.9vw;
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        @media (max-width: @screen-sm-min) {
+          font-size: 3.7vw;
+          white-space: normal;
+        }
+
+        & > span:first-child {
+          margin-right: 5px;
+          color: rgba(40, 39, 39, 0.5);
+        }
+      }
+
+      @media (max-width: @screen-lg-min) {
+        width: 100%;
+        font-size: 18px;
+        padding-left: 0;
+      }
+
+      &Copy {
+        width: 2.5vw;
+        height: 2.5vw;
+
+        :global {
+          .anticon {
+            font-size: 2.2vw;
+            color: #8f1919;
+
+            @media (max-width: @screen-sm-min) {
+              font-size: 4vw;
+            }
+          }
+        }
+
+        @media (max-width: @screen-sm-min) {
+          width: 6vw;
+          height: 6vw;
+        }
+      }
+
+      // &Wide {
+      //   width: 75%;
+
+      //   @media (max-width: @screen-lg-min) {
+      //     width: 100%;
+      //     font-size: 18px;
+      //     padding-left: 0;
+      //   }
+
+      //   // p {
+      //   //   // white-space: normal;
+      //   //   font-size: 1.9vw;
+      //   //   margin-bottom: 8px;
+  
+      //   //   @media (max-width: @screen-sm-min) {
+      //   //     font-size: 3.7vw;
+      //   //     white-space: normal;
+      //   //   }
+      //   // }
+      // }
+
+      &BtnWrap {
+        width: 100%;
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &MonoBtn {
+        background-color: #111;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        border-radius: 70px;
+        
+        &:hover {
+          background-color: #111;
+          opacity: 0.8;
+        }
+
+        &:active {
+          background-color: #111;
+        }
+
+        &::selection {
+          background-color: #111!important;
+          border: none!important;
+        }
+
+        img {
+          width: 50%;
+          max-width: 50%;
+          max-height: 100%;
+        }
+
+        @media (max-width: @screen-sm-min) {
+          min-height: 70px;
+        }
+
+        @media (max-width: @screen-xs-min) {
+          min-height: 60px;
+        }
+      }
+
+      :global {
+        .ant-btn-primary {
+          background-color: #111;
+        }
+      }
+    }
+
+    @media (max-width: @screen-lg-min) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    // @media (max-width: @screen-sm-min) {
+    //   width: 48%;
+    //   margin-right: 4%;
+
+    //   &:nth-child(2n) {
+    //     margin-right: 0;
+    //   }
+    // }
+
+    @media (max-width: @screen-xs-min) {
+      width: 100%;
+      margin-right: 0;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

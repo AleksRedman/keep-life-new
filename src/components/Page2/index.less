@@ -1,0 +1,170 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../vars";
+
+.page2 {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  @media (max-width: 992px) {
+    min-height: 600px;
+    height: 600px;
+  }
+
+  &ImageBlock1 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 40px;
+    top: 40px;
+  }
+  &ImageBlock1Wrap {
+    width: 35vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 70vw;
+    }
+  }
+  &ImageBlock1Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &ImageBlock2 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 40px;
+    bottom: 60px;
+  }
+  &ImageBlock2Wrap {
+    width: 30vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 35vw;
+    }
+  }
+  &ImageBlock2Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &ImageBlock3 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    right: 40px;
+    bottom: 60px;
+  }
+  &ImageBlock3Wrap {
+    width: 30vw;
+
+    @media (max-width: @screen-md-min) {
+      width: 35vw;
+    }
+  }
+  &ImageBlock3Cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(5,7,25,0.23);
+  }
+  &DecorBlock {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 30%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(126,1,17,0.4);
+  }
+  &H2Title {
+    color: #8f1919;
+    -webkit-text-stroke: calc(2vw / 10) rgb(64, 0, 0);
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'18vw / 2');
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+    top: 8vw;
+    left: 42%;
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'36vw / 2');
+      -webkit-text-stroke: calc(2vw / 10) rgb(123, 123, 123);
+      left: 20%;
+    }
+  }
+  &List {
+    position: absolute;
+    z-index: 2;
+    top: 28vw;
+    left: 34%;
+
+    @media (max-width: @screen-md-min) {
+      top: 38vw;
+      left: 20vw;
+      padding: 3vw 0;
+      background: rgba(5,7,25,0.73);
+    }
+
+    @media (max-width: @screen-sm-min) {
+      left: 10vw;
+    }
+  }
+  &ListItem {
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
+    font-size: calc(~'4vw / 2');
+    margin-bottom: 1vw;
+    letter-spacing: 1px;
+  
+    img {
+      margin-right: 1vw;
+      width: 3vw;
+
+      @media (max-width: @screen-md-min) {
+        width: 6vw;
+      }
+
+      @media (max-width: @screen-sm-min) {
+        width: 8vw;
+      }
+    }
+
+    @media (max-width: @screen-md-min) {
+      font-size: calc(~'6vw / 2');
+      margin-bottom: 3vh;
+      padding: 0 4vw;
+    }
+
+    @media (max-width: @screen-sm-min) {
+      font-size: calc(~'8vw / 2');
+      margin-bottom: 3vh;
+      padding: 0 4vw;
+    }
+  }
+  &ListItemHighlight {
+    color: #8f1919;
+  }
+
+  @media (max-width: @screen-md-min) {
+    min-height: 700px!important;
+    height: 100vh!important;
+  }
+}

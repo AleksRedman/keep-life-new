@@ -1,0 +1,22 @@
+{
+  "name": "Keep Life",
+  "short_name": "Keep Life",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#8f1919",
+  "background_color": "#050719",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512"
+    }
+  ]
+}
