@@ -35,15 +35,21 @@
 
     @media (max-width: @screen-lg-min) {
       width: 100%;
-      border-bottom: 8px solid #A81A20;
+      // border-bottom: 8px solid #A81A20;
     }
   }
 
   &Descr {
     width: 100%;
     height: 50%;
-    padding: 40px 45px;
+    max-height: 50%;
+    padding: 40px 20px 40px 45px;
     flex-grow: 1;
+    height: auto;
+
+    @media (max-width: @custom-middle-lg) {
+      padding: 40px 35px 40px 45px;
+    }
 
     @media (max-width: @screen-xl-min) {
       padding: 30px 35px;
@@ -51,10 +57,12 @@
 
     @media (max-width: @screen-lg-min) {
       height: auto;
+      max-height: unset;
       padding: 40px 45px;
+      margin-bottom: 50px;
     }
 
-    @media (max-width: @screen-lg-min) {
+    @media (max-width: @screen-md-min) {
       padding: 32px;
     }
 
@@ -65,6 +73,10 @@
       font-size: 16px;
       color: #fff;
       margin-bottom: 25px;
+
+      @media (max-width: @custom-middle-lg) {
+        margin-bottom: 20px;
+      }
     }
 
     p {
@@ -84,7 +96,7 @@
 
       @media (max-width: @screen-xl-min) {
         font-size: 25px;
-        line-height: 35px;
+        line-height: 33px;
       }
 
       @media (max-width: @screen-lg-min) {
@@ -104,16 +116,52 @@
     width: 100%;
     height: 50%;
     position: absolute;
-    top: 55%;
+    // top: 55%;
     left: 0;
+    bottom: 0;
 
     @media (max-width: @screen-lg-min) {
       position: static;
+      height: unset;
     }
   }
 
   &SlidesSmallCarousel {
-    
+    :global {
+      .slick-prev {
+        left: 35%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
+
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+
+      .slick-next {
+        right: 35%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
+
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+    }
   }
 
   &SlidesBig {
@@ -126,6 +174,40 @@
   }
 
   &SlidesBigCarousel {
+    :global {
+      .slick-prev {
+        left: 3%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
 
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+
+      .slick-next {
+        right: 3%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
+
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'dva'
 import PropTypes from 'prop-types';
 import { Carousel } from 'antd';
+import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 import MissionSlide1 from '../../../assets/img/mission-slide1.jpg'
 import MissionSlide2 from '../../../assets/img/mission-slide2.jpg'
 // import MissionSlide3 from '../../../assets/img/mission-slide3.jpg'
@@ -49,6 +50,8 @@ const Mission = ({ isMobile, lang }) => {
               autoplay
               autoplaySpeed={2500}
               arrows
+              nextArrow={<RightOutlined />}
+              prevArrow={<LeftOutlined />}
               slidesPerRow={1}
               className={styles.missionSlidesSmallCarousel}
             >
@@ -68,6 +71,8 @@ const Mission = ({ isMobile, lang }) => {
             autoplaySpeed={3000}
             arrows
             slidesPerRow={1}
+            nextArrow={<RightOutlined />}
+            prevArrow={<LeftOutlined />}
             className={styles.missionSlidesBigCarousel}
           >
             {slide(GalleryImgNew1, 'GalleryImgNew1')}

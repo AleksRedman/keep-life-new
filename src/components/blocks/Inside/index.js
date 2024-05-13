@@ -37,20 +37,20 @@ const Inside = ({ isMobile, lang }) => {
       <div className={styles.insideWrap}>
         <Carousel
           infinite
-          autoplay
-          autoplaySpeed={3000}
+          // autoplay
+          // autoplaySpeed={3000}
           arrows
           slidesPerRow={1}
           nextArrow={<RightOutlined />}
           prevArrow={<LeftOutlined />}
           className={styles.insideSlidesBigCarousel}
         >
-          {slide(InsideImg, 'InsideImg')}
-          {slide(Inside1Img, 'Inside1Img')}
-          {slide(Inside2Img, 'Inside2Img')}
-          {slide(Inside3Img, 'Inside3Img')}
-          {slide(Inside4Img, 'Inside4Img')}
           {slide(Inside5Img, 'Inside5Img')}
+          {/* {slide(Inside1Img, 'Inside1Img')} */}
+          {slide(Inside2Img, 'Inside2Img')}
+          {slide(Inside4Img, 'Inside4Img')}
+          {slide(Inside3Img, 'Inside3Img')}
+          {slide(InsideImg, 'InsideImg')}
         </Carousel>
       </div>
     </section>

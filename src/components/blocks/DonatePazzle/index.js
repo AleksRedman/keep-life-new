@@ -352,7 +352,8 @@ const DonatePazzle = ({ isMobile, lang, isScreenMdMin }) => {
               <p>{`${langCollection[`${lang}`].ip3} `}</p>
               <p>{`${langCollection[`${lang}`].ip4} `}</p>
               <p>{`${langCollection[`${lang}`].ip5} `}</p>
-              <p>{`${langCollection[`${lang}`].ip6} `}<strong><a href="mailto: keeplife911@gmail.com">keeplife911@gmail.com</a></strong></p>
+              {/* <p>{`${langCollection[`${lang}`].ip6} `}<strong><a href="mailto: keeplife911@gmail.com">keeplife911@gmail.com</a></strong></p> */}
+              <p><strong><a href="mailto: keeplife911@gmail.com">keeplife911@gmail.com</a></strong></p>
             </div>
           </div>
         </div>

@@ -6,26 +6,33 @@ import { Carousel } from 'antd';
 import ScrollElement from 'rc-scroll-anim/lib/ScrollElement';
 import { DownOutlined } from '@ant-design/icons';
 import QueueAnim from 'rc-queue-anim';
-// import TrallerImg from '../../../assets/img/traller.png';
-import DiamontBankImg from '../../../assets/img/diamont_bank.jpeg';
-import ExtremeLTDImg from '../../../assets/img/extreme_ltd.png';
-import FirstMemImg from '../../../assets/img/first_mem.jpeg';
-import IcrossCanadaImg from '../../../assets/img/icross_canada.png';
-import LRMRImg from '../../../assets/img/LRMR.png';
-import MedeximImg from '../../../assets/img/medexim.png';
-import SEImg from '../../../assets/img/se.png';
-import ShippingCompImg from '../../../assets/img/shipping_comp.jpg';
-import TyingVinesImg from '../../../assets/img/tying_vines.png';
+import DiamontBankImg from '../../../assets/img/partners_logos_grey/logo-01.png';
+import MetalHolding from '../../../assets/img/partners_logos_grey/logo-02.png'
+import LRMRImg from '../../../assets/img/partners_logos_grey/logo-03.png';
+import MedeximImg from '../../../assets/img/partners_logos_grey/logo-04.png';
+import ShippingCompImg from '../../../assets/img/partners_logos_grey/logo-05.png';
+import WalkWithMeImg from '../../../assets/img/partners_logos_grey/logo-06.png';
+import BudMallImg from '../../../assets/img/partners_logos_grey/logo-07.png'
+import OkkoImg from '../../../assets/img/partners_logos_grey/logo-08.png'
+import OnePlusOne from '../../../assets/img/partners_logos_grey/logo-09.png'
+import BridgeOfKindness from '../../../assets/img/partners_logos_grey/logo-10.png';
+import VolonterRyadnina from '../../../assets/img/partners_logos_grey/logo-11.png'
+import ExtremeLTDImg from '../../../assets/img/partners_logos_grey/logo-12.png';
+import FirstMemImg from '../../../assets/img/partners_logos_grey/logo-13.png';
+import IcrossCanadaImg from '../../../assets/img/partners_logos_grey/logo-14.png';
+import UkrnaftaImg from '../../../assets/img/partners_logos_grey/logo-15.png';
+import TyingVinesImg from '../../../assets/img/partners_logos_grey/logo-16.png';
+import OperationChargeImg from '../../../assets/img/partners_logos_grey/logo-17.png';
+import SEImg from '../../../assets/img/partners_logos_grey/logo-18.png';
 import TrallerImg from '../../../assets/img/TRAILLER.png';
-import UkrnaftaImg from '../../../assets/img/ukrnafta.png';
-import WalkWithMeImg from '../../../assets/img/walk_with_me.png';
-import OperationChargeImg from '../../../assets/img/operation_charge.png';
-import BridgeOfKindness from '../../../assets/img/bridge_of_kindness.png';
-import VolonterRyadnina from '../../../assets/img/volonter_ryadnina.jpg'
-import BudMallImg from '../../../assets/img/budmall_partner_icon.jpg'
-import OkkoImg from '../../../assets/img/okko_logo.jpeg'
-import OnePlusOne from '../../../assets/img/onePlusOne.jpeg'
-import MetalHolding from '../../../assets/img/metalHolding.jpg'
+import TrallerImgSmall from '../../../assets/img/trailler_small.png';
+
+
+
+
+
+
+
 import { ParallaxBanner } from 'react-scroll-parallax'
 import styles from './index.less'
 
@@ -72,7 +79,11 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
           </h1>
         </div>
         <div className={styles.bannerImgWrapper}>
-          <img key="TrallerImg" alt="TrallerImg" src={TrallerImg} />
+          {
+            isScreenSmMin
+              ? <img key="TrallerImgSmall" alt="TrallerImg" src={TrallerImgSmall} />
+              : <img key="TrallerImg" alt="TrallerImg" src={TrallerImg} />
+          }
         </div>
         <div className={styles.bannerDescr}>
           <p>{langCollection[`${lang}`].descr}</p>
@@ -82,7 +93,8 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
         <Carousel
           infinite
           autoplay
-          arrows
+          dots={false}
+          // arrows
           // adaptiveHeight
           slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 7}
           className={styles.bannerPartnersCarousel}
