@@ -5,14 +5,16 @@ import styles from './index.less';
 
 const langCollection = {
   UA: {
-    h1: 'Проблеми роботи польових медиків',
+    h0: 'Пріоритет Keep Life',
+    p_prior: 'У військовій медицині є ключове поняття «золота година»: 90% постраждалих можна врятувати, якщо надати їм допомогу протягом години після поранення. Наш пріоритет - забезпечити такою можливістю військових медиків уздовж всієї лінії фронту.',
+    h1: 'Проблеми роботи медиків у прифронтовій зоні',
     li1_1: 'Пошкоджені дороги',
     li2_1: 'Обстрілювані шляхи евакуації',
     li3_1: 'Навмисне ураження росіянами медзакладів',
     li4_1: 'Відсутність санітарних умов y стабпунктах',
     li5_1: 'Нестабільність температури/погодних умов',
     li6_1: 'Нестача медичного обладнання',
-    h2: 'Переваги KL',
+    h2: 'Переваги Keep Life',
     li1_2: 'мінімальні зовнішні габарити',
     li2_2: 'розсувна робоча зона',
     li3_2: ' час розгортання та прогріву',
@@ -22,6 +24,8 @@ const langCollection = {
     li7_2: 'повна автономність',
   },
   EN: {
+    h0: 'Keep Life Priority',
+    p_prior: 'In military medicine, there is a key concept of the "golden hour": 90% of casualties can be saved if they are treated within an hour of injury. Our priority is to provide this opportunity to military medics along the entire front line.',
     h1: 'Challenges of Field Medics',
     li1_1: 'Damaged roads',
     li2_1: 'Shelled evacuation routes',
@@ -44,7 +48,13 @@ const Problems = ({ isMobile, lang }) => {
   return (
     <section id="problems" className={styles.problems}>
       <div className={styles.problemsWrap}>
-        <div className={styles.problemsImgWrap} />
+        {/* <div className={styles.problemsImgWrap} /> */}
+        <div className={styles.problemsWrapPriority}>
+          <h4 className={styles.problemsListOfPriorityTitle}>{langCollection[`${lang}`].h0}</h4>
+          <p className={styles.problemsListOfPriority}>
+            {langCollection[`${lang}`].p_prior}
+          </p>
+        </div>
         <div className={styles.problemsWrapProblems}>
           <h4 className={styles.problemsListOfProblemsTitle}>{langCollection[`${lang}`].h1}</h4>
           <ul className={styles.problemsListOfProblems}>
@@ -79,7 +89,7 @@ Problems.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile: state.application.isMobile
 })
 

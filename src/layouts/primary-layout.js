@@ -56,7 +56,17 @@ class PrimaryLayout extends Component {
   }
 
   handleGoToDonate = () => {
-    router.push('/donate')
+    const curPath = document?.location?.pathname
+    const curLangPath = curPath.slice(0,3)
+
+    if (curLangPath === '/en') {
+      router.push('/en/donate')
+    } else if (curLangPath === '/') {
+      router.push('/donate')
+    } else {
+      router.push('/donate')
+    }
+
     window.scrollTo(0, 0)
   }
 
@@ -73,7 +83,7 @@ class PrimaryLayout extends Component {
             {children}
           </Content>
           {
-            locationPath ==='/' 
+            (locationPath ==='/' || locationPath ==='/en')
               ? <Button
                 className={styles.primaryLayoutDonateBtn}
                 shape='circle'

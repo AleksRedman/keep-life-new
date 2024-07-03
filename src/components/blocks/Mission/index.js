@@ -18,12 +18,12 @@ import styles from './index.less';
 
 const langCollection = {
   UA: {
-    h1: "Місія / завдання Keep Life",
-    p1: "Дати можливість оперативно надавати екстрену медичну допомогу постраждалим, не витрачаючи час на їхнє транспортування",
+    h1: "Місія Keep Life",
+    p1: "Забезпечити можливість оперативно надавати екстрену медичну допомогу постраждалим в зонах активних бойових дій, не втрачаючи час на їх транспортування",
   },
   EN: {
-    h1: "Mission / Task Keep Life",
-    p1: "To enable the prompt provision of emergency medical assistance to the injured without spending time on their transportation.",
+    h1: "Keep Life Mission",
+    p1: "Provide the ability to quickly provide emergency medical care to victims in active combat zones, without losing time for their transportation",
   },
 };
 
@@ -94,7 +94,7 @@ Mission.propTypes = {
 
 const mapStateToProps = (state) => ({
   isMobile: state.application.isMobile,
-  lang: state.application.lang
+  // lang: state.application.lang
 })
 
 export default connect(mapStateToProps, null)(Mission)

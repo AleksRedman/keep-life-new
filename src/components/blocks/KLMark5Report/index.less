@@ -1,0 +1,94 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.klMark5Report {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+  }
+
+  &Banner {
+    margin-bottom: 30px;
+  }
+
+  &Title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: rgba(32, 32, 32, 1);
+    margin-bottom: 40px;
+    padding: 0 25px;
+  }
+
+  &Slides {
+    padding: 0 5vw;
+    margin-bottom: 30px;
+
+    &Item {
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &Carousel {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    :global {
+      .slick-prev {
+        left: 2%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
+
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+
+      .slick-next {
+        right: 2%;
+        font-size: 18px;
+        color: #ffffff;
+        z-index: 10!important;
+
+        &:hover {
+          color: #ffffff;
+          font-size: 18px;
+        }
+
+        &:focus {
+          color: #ffffff;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &Text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #202020;
+    margin-bottom: 30px;
+    padding: 0 25px;
+  }
+}

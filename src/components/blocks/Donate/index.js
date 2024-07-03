@@ -10,7 +10,6 @@ import RedCrossIcon from '../../../assets/img/red-cross.png'
 import MonobankIcon from '../../../assets/img/monobankIconTrsprnt.png'
 import MonobankQRImg from '../../../assets/img/monobankKLqr.png'
 import MonobankBtnIcon from '../../../assets/img/monobankBtnIconTrsprnt.png'
-import classNames from 'classnames'
 import router from 'umi/router'
 import styles from './index.less'
 
@@ -34,14 +33,17 @@ const Donate = ({ isMobile, lang }) => {
   }
 
   const handleGoToPuzzleDonate = () => {
-    router.push('/donate-puzzle')
+    const curPath = document?.location?.pathname
+    console.log('handleGoToPuzzleDonate', curPath)
+
+    if (curPath === '/en/donate') {
+      router.push('/en/donate-puzzle')
+    } else if (curPath === '/donate') {
+      router.push('/donate-puzzle')
+    }
+
     window.scrollTo(0, 0)
   }
-
-  const donateCardPPPaymentDetailsStyles = classNames(
-    styles.donateCardPaymentDetails,
-    styles.donateCardPaymentDetailsWide
-  )
 
   return (
     <div className={styles.donate}>
@@ -195,7 +197,7 @@ Donate.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile:  state.application.isMobile
 })
 

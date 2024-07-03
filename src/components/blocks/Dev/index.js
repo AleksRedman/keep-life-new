@@ -37,7 +37,6 @@ const Dev = ({ isMobile, lang }) => {
           autoplay
           arrows
           adaptiveHeight
-          // slidesPerRow={isMobile ? 2 : 4}
           slidesPerRow={isMobile ? 1 : 4}
           nextArrow={<RightOutlined />}
           prevArrow={<LeftOutlined />}
@@ -67,7 +66,7 @@ Dev.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile: state.application.isMobile
 })
 

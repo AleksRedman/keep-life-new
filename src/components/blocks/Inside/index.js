@@ -63,8 +63,8 @@ Inside.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  isMobile: state.application.isMobile,
-  lang: state.application.lang
+  isMobile: state.application.isMobile
+  // lang: state.application.lang
 })
 
 export default connect(mapStateToProps, null)(Inside)

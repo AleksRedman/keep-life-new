@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'dva'
 import PropTypes from 'prop-types';
-import { Carousel } from 'antd';
-import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 import Equip1Img from '../../../assets/img/equip1.png';
 import Equip2Img from '../../../assets/img/equip2.png';
 import Equip3Img from '../../../assets/img/equip3.png';
@@ -12,7 +10,8 @@ import Equip6Img from '../../../assets/img/equip6.png';
 import Equip7Img from '../../../assets/img/equip7.png';
 import Equip8Img from '../../../assets/img/equip8.jpeg';
 import Equip9Img from '../../../assets/img/equip9.png';
-import Equip10Img from '../../../assets/img/equip10.png';
+// import Equip10Img from '../../../assets/img/equip10.png';
+import Equip10Img from '../../../assets/img/compressor_fridge_img.jpg'
 import Equip11Img from '../../../assets/img/equip11.png';
 import Equip12Img from '../../../assets/img/equip12.png';
 import Equip13Img from '../../../assets/img/equip13.png';
@@ -22,44 +21,75 @@ import styles from './index.less';
 const langCollection = {
   UA: {
     h1: 'МЕДИЧНЕ ОБЛАДНАННЯ',
-    p1: 'Апарат вентиляції легень S1100A',
-    p2: 'Концентратор кисню AE-10 Brightfield',
-    p3: 'Модульний монітор Osen8000Е',
-    p4: 'Насос шприцевий OSP-500',
-    p5: 'Електрокоагулятор BOWA ARC303',
-    p6: 'Операційна лампа Maestro LED300 ',
-    p7: 'Стіл операційний TDY-1',
-    p8: 'Стерилізатор паровий малий Q70B',
-    p9: 'Аспіратор хірургічний Aspira Go',
-    p10: 'Холодильник NYC-68A',
-    p11: 'Дефібрилятор Defi 8',
-    p12: 'ПортативнийУЗИ 1 DP10 Mindray',
-    p13: 'Рентген EcoRay ULTRA 100',
-    p14: 'ІВЛ портативний Oxylog® 3000 plus'
+    p1: 'Апарат штучної вентиляції легень S1100A',
+    p2: 'Монітор пацієнта Brightfield Healthcare OSEN 8000',
+    p3: 'Кисневий концентратор Brightfield AE-10',
+    p4: 'Насос шприцевий інфузійний Brightfield Healthcare OSP-500',
+    p5: 'Електрокоагулятор BOWA ARC 303',
+    p6: 'Операційна лампа Maestro LED300',
+    p7: 'Хірургічний рентгенпрозорий стіл TDY-1',
+    p8: 'Паровий стерилізатор Q70B',
+    p9: 'Аспіратор хірургічний портативний Aspira Go 30',
+    p10: 'Компресорний автохолодильник Alpicool TW35',
+    p11: 'Зовнішній дефібрилятор Defi 8',
+    p12: 'Портативний УЗД апарат Mindray DP-10',
+    p13: 'Портативный рентген аппарат EcoRay ULTRA 100',
+    p14: 'Портативний апарат ШВЛ OXYLOG 3000 Plus'
   },
   EN: {
-    h1: 'Medical Equipment',
-    p1: 'S1100A lung ventilation machine',
-    p2: 'AE-10 Brightfield oxygen concentrator',
-    p3: 'Osen8000E modular monitor',
-    p4: 'OSP-500 syringe pump',
-    p5: 'BOWA ARC303 electrosurgical unit',
+    h1: 'MEDICAL EQUIPMENT',
+    p1: 'S1100A Ventilator',
+    p2: 'Brightfield Healthcare OSEN 8000 Patient Monitor',
+    p3: 'Brightfield AE-10 Oxygen Concentrator',
+    p4: 'Infusion syringe pump Brightfield Healthcare OSP-500',
+    p5: 'BOWA ARC 303 electrocoagulator',
     p6: 'Maestro LED300 operating lamp',
-    p7: 'TDY-1 operating table',
-    p8: 'Small steam sterilizer Q70B',
-    p9: 'Aspira Go surgical aspirator',
-    p10: 'NYC-68A refrigerator',
-    p11: 'Defi 8 defibrillator',
-    p12: 'Portable ultrasound DP10 Mindray',
-    p13: 'EcoRay ULTRA 100 X-ray machine',
-    p14: 'Portable ventilator Oxylog® 3000 plus',
+    p7: 'Surgical x-ray table TDY-1',
+    p8: 'Steam sterilizer Q70B',
+    p9: 'Surgical portable Aspira Go 30 aspirator',
+    p10: 'Compressor car refrigerator Alpicool TW35',
+    p11: 'Defi 8 External Defibrillator',
+    p12: 'Mindray DP-10 portable ultrasound device',
+    p13: 'EcoRay ULTRA 100 portable x-ray machine',
+    p14: 'Portable ventilator OXYLOG 3000 Plus'
   },
 };
 
 const Equipment = ({ isMobile, lang }) => {
+  const [hoveredItem, setHoverItem] = useState(null);
+  const [hoveredImgItem, setHoveredImgItem] = useState(null);
+
+  const handleHoverItem = (val) => {
+    setHoverItem(val)
+    setHoveredImgItem(val)
+  }
+
+  const hoverStyles = {
+    borderRadius: "15px",
+    background: "linear-gradient(145deg, #cacaca, #ffffff)",
+    boxShadow:  "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
+  }
+
+  const hoverStylesDescr = {
+    borderRadius: "2px",
+    background: "linear-gradient(145deg, #cacaca, #ffffff)",
+    // boxShadow:  "20px 20px 60px #bebebe, -20px -20px 60px #ffffff"
+    boxShadow: "19px 19px 64px #bebebe, -19px -19px 64px #ffffff"
+  }
+
   const equip = (image, key, label, longLabel) => {
     return (
-      <div className={styles.equipImagesListItem}>
+      <div
+        className={styles.equipImagesListItem}
+        onMouseEnter={() => handleHoverItem(label)}
+        onMouseLeave={() => handleHoverItem(null)}
+        style={
+          label === hoveredItem
+            // ? { backgroundColor: '#D7DDDE' }
+            ? hoverStyles
+            : {}
+        }
+      >
         <div className={styles.equipImagesListItemImgWrap}>
           <div className={styles.equipImagesListItemImgContent}>
             <img key={key} alt={key} src={image} style={{ width: '100%' }} className={styles.equipImagesListItemImg} />
@@ -70,8 +100,27 @@ const Equipment = ({ isMobile, lang }) => {
     )
   }
 
+  const equipDescr = (key, text) => {
+    return (
+      <div
+        className={styles.equipListItem}
+        onMouseEnter={() => handleHoverItem(key)}
+        onMouseLeave={() => handleHoverItem(null)}
+        style={
+          hoveredImgItem === key
+            // ? { backgroundColor: '#D7DDDE' }
+            ? hoverStylesDescr
+            : {}
+          }
+      >
+        <span>{key}</span><span>{text}</span>
+      </div>
+    )
+  }
+
   return (
     <section id="equipment" className={styles.equip}>
+      {console.log('hoveredItem', hoveredItem)}
       <div className={styles.equipWrap}>
         <div className={styles.equipImagesList}>
           {equip(Equip1Img, 'Equip1Img', '1', langCollection[`${lang}`].p1)}
@@ -92,20 +141,34 @@ const Equipment = ({ isMobile, lang }) => {
         <div className={styles.equipList}>
           <h3 className={styles.equipTitle}>{langCollection[`${lang}`].h1}</h3>
           <div className={styles.equipListWrap}>
-            <div className={styles.equipListItem}><span>1</span><span>{langCollection[`${lang}`].p1}</span></div>
-            <div className={styles.equipListItem}><span>2</span><span>{langCollection[`${lang}`].p2}</span></div>
-            <div className={styles.equipListItem}><span>3</span><span>{langCollection[`${lang}`].p3}</span></div>
-            <div className={styles.equipListItem}><span>4</span><span>{langCollection[`${lang}`].p4}</span></div>
-            <div className={styles.equipListItem}><span>5</span><span>{langCollection[`${lang}`].p5}</span></div>
-            <div className={styles.equipListItem}><span>6</span><span>{langCollection[`${lang}`].p6}</span></div>
-            <div className={styles.equipListItem}><span>7</span><span>{langCollection[`${lang}`].p7}</span></div>
-            <div className={styles.equipListItem}><span>8</span><span>{langCollection[`${lang}`].p8}</span></div>
-            <div className={styles.equipListItem}><span>9</span><span>{langCollection[`${lang}`].p9}</span></div>
-            <div className={styles.equipListItem}><span>10</span><span>{langCollection[`${lang}`].p10}</span></div>
-            <div className={styles.equipListItem}><span>11</span><span>{langCollection[`${lang}`].p11}</span></div>
-            <div className={styles.equipListItem}><span>12</span><span>{langCollection[`${lang}`].p12}</span></div>
-            <div className={styles.equipListItem}><span>13</span><span>{langCollection[`${lang}`].p13}</span></div>
-            <div className={styles.equipListItem}><span>14</span><span>{langCollection[`${lang}`].p14}</span></div>
+            {equipDescr('1', langCollection[`${lang}`].p1)}
+            {equipDescr('2', langCollection[`${lang}`].p2)}
+            {equipDescr('3', langCollection[`${lang}`].p3)}
+            {equipDescr('4', langCollection[`${lang}`].p4)}
+            {equipDescr('5', langCollection[`${lang}`].p5)}
+            {equipDescr('6', langCollection[`${lang}`].p6)}
+            {equipDescr('7', langCollection[`${lang}`].p7)}
+            {equipDescr('8', langCollection[`${lang}`].p8)}
+            {equipDescr('9', langCollection[`${lang}`].p9)}
+            {equipDescr('10', langCollection[`${lang}`].p10)}
+            {equipDescr('11', langCollection[`${lang}`].p11)}
+            {equipDescr('12', langCollection[`${lang}`].p12)}
+            {equipDescr('13', langCollection[`${lang}`].p13)}
+            {equipDescr('14', langCollection[`${lang}`].p14)}
+            {/* <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('1')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '1' ? { backgroundColor: '#D7DDDE' } : {}}><span>1</span><span>{langCollection[`${lang}`].p1}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('2')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '2' ? { backgroundColor: '#D7DDDE' } : {}}><span>2</span><span>{langCollection[`${lang}`].p2}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('3')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '3' ? { backgroundColor: '#D7DDDE' } : {}}><span>3</span><span>{langCollection[`${lang}`].p3}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('4')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '4' ? { backgroundColor: '#D7DDDE' } : {}}><span>4</span><span>{langCollection[`${lang}`].p4}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('5')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '5' ? { backgroundColor: '#D7DDDE' } : {}}><span>5</span><span>{langCollection[`${lang}`].p5}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('6')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '6' ? { backgroundColor: '#D7DDDE' } : {}}><span>6</span><span>{langCollection[`${lang}`].p6}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('7')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '7' ? { backgroundColor: '#D7DDDE' } : {}}><span>7</span><span>{langCollection[`${lang}`].p7}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('8')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '8' ? { backgroundColor: '#D7DDDE' } : {}}><span>8</span><span>{langCollection[`${lang}`].p8}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('9')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '9' ? { backgroundColor: '#D7DDDE' } : {}}><span>9</span><span>{langCollection[`${lang}`].p9}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('10')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '10' ? { backgroundColor: '#D7DDDE' } : {}}><span>10</span><span>{langCollection[`${lang}`].p10}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('11')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '11' ? { backgroundColor: '#D7DDDE' } : {}}><span>11</span><span>{langCollection[`${lang}`].p11}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('12')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '12' ? { backgroundColor: '#D7DDDE' } : {}}><span>12</span><span>{langCollection[`${lang}`].p12}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('13')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '13' ? { backgroundColor: '#D7DDDE' } : {}}><span>13</span><span>{langCollection[`${lang}`].p13}</span></div>
+            <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('14')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '14' ? { backgroundColor: '#D7DDDE' } : {}}><span>14</span><span>{langCollection[`${lang}`].p14}</span></div> */}
           </div>
         </div>
       </div>
@@ -119,8 +182,8 @@ Equipment.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  isMobile: state.application.isMobile,
-  lang: state.application.lang
+  isMobile: state.application.isMobile
+  // lang: state.application.lang
 })
 
 export default connect(mapStateToProps, null)(Equipment)

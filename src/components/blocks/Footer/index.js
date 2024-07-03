@@ -43,9 +43,10 @@ const Footer = ({ lang, sectionId, onHandleSectionId, short }) => {
           <div className={styles.footerContactsDetails}>
             <div className={styles.footerContactsAddress}>{langCollection[`${lang}`].adr}</div>
             <div className={styles.footerContactsItemsWrap}>
-              <a href="tel:+38(096)213-44-48" className={styles.footerContactsItem}><PhoneOutlined /><span>+38(097)270-28-22</span></a>
+              {/* <a href="tel:+38(096)213-44-48" className={styles.footerContactsItem}><PhoneOutlined /><span>+38(097)270-28-22</span></a> */}
+              <a href="tel:+380(97)238-89-11" className={styles.footerContactsItem}><PhoneOutlined /><span>+380(97)238-89-11</span></a>
               <a href="mailto:keeplife911@gmail.com" className={styles.footerContactsItem}><GlobalOutlined /><span>keeplife911@gmail.com</span></a>
-              <a href="mailto:office@cfbvoznytskyy.org" className={styles.footerContactsItem}><GlobalOutlined /><span>office@cfbvoznytskyy.org</span></a>
+              {/* <a href="mailto:office@cfbvoznytskyy.org" className={styles.footerContactsItem}><GlobalOutlined /><span>office@cfbvoznytskyy.org</span></a> */}
             </div>
           </div>
         </div>
@@ -81,7 +82,7 @@ Footer.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   sectionId: state.application.sectionId
 })
 

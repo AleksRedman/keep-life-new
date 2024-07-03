@@ -1,0 +1,91 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+
+.kl2Report {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    margin-top: 50px;
+  }
+
+  &Title {
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #202020;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  &ImagesWrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @media (max-width: @screen-sm-min) {
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &ImagesBlock1 {
+    width: 33.3%;
+    background: center / cover url(../../../assets/img/kl_cards.jpg) no-repeat;
+
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      order: 3
+    }
+  }
+
+  &ImagesBlock2 {
+    width: 33.3%;
+    background: center / cover url(../../../assets/img/report2_equipment.jpg) no-repeat;
+
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      height: 100vw;
+      order: 2
+    }
+  }
+
+  &ImagesBlock3 {
+    width: 33.3%;
+    background: center / cover url(../../../assets/img/report2-kl.jpg) no-repeat;
+    padding-top: 32px;
+
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      height: 100vw;
+      order: 1
+    }
+  }
+
+  &ImagesBlock3Text {
+    width: 100%;
+    font-size: 18px;
+    color: #8f1919;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+}

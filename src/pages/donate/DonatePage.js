@@ -7,9 +7,9 @@ import styles from './index.less'
 const DonatePage = () => {
   return (
     <div className={styles.donatesPage}>
-      <Header />
-      <Donate />
-      <Footer short />
+      <Header lang='UA' />
+      <Donate lang='UA' />
+      <Footer short lang='UA' />
     </div>
   )
 }

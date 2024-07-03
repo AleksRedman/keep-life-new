@@ -7,11 +7,11 @@ import styles from './index.less'
 const DonatePuzzlePage = () => {
   return (
     <div className={styles.donatesPuzzlePage}>
-      <Header />
+      <Header lang='UA' />
       <div className={styles.donatesPuzzlePageContentWrap}>
-        <DonatePuzzle />
+        <DonatePuzzle lang='UA' />
       </div>
-      <Footer short />
+      <Footer short lang='UA' />
     </div>
   )
 }

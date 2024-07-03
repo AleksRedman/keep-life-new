@@ -1,21 +1,21 @@
 import { useEffect } from 'react'
 import Header from '@/components/blocks/Header'
-import Page5 from '@/components/Page5'
-import ReportKL2 from '@/components/ReportKL2'
-import NewsAboutKL1 from '@/components/NewsAboutKL1'
-import NewsAboutKL2 from '@/components/NewsAboutKL2'
+import KL1Report from '@/components/blocks/KL1Report'
+import KL2Report from '@/components/blocks/KL2Report'
+import NewsAboutKL1 from '@/components/blocks/NewsAboutKL1'
+import NewsAboutKL2 from '@/components/blocks/NewsAboutKL2'
 import Footer from '@/components/blocks/Footer'
 import styles from './index.less'
 
 const ReportsPage = () => {
   return (
     <div className={styles.reportsPage}>
-      <Header />
-      <Page5 key="ReportKL1" />
-      <NewsAboutKL1 key="NewsAboutKL1" />
-      <ReportKL2 key="ReportKL2" />
-      <NewsAboutKL2 key="NewsAboutKL2" />
-      <Footer short />
+      <Header lang='UA' />
+      <KL1Report key="ReportKL1" lang='UA' />
+      <NewsAboutKL1 key="NewsAboutKL1" lang='UA' />
+      <KL2Report key="ReportKL2" lang='UA' />
+      <NewsAboutKL2 key="NewsAboutKL2" lang='UA' />
+      <Footer short lang='UA' />
     </div>
   )
 }

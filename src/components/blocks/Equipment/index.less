@@ -43,12 +43,15 @@
 
     &Item {
       width: 20%;
-      padding: 10px 20px 0;
+      padding: 10px 20px 10px;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: flex-start;
       margin-bottom: 15px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
 
       @media (max-width: @screen-xl-min) {
         padding: 10px 10px 0;
@@ -56,6 +59,7 @@
 
       @media (max-width: @screen-lg-min) {
         width: 25%;
+        cursor: auto;
       }
 
       @media (max-width: @screen-md-min) {
@@ -119,7 +123,7 @@
 
   &List {
     width: 25%;
-    padding: 32px;
+    padding: 32px 40px 32px 22px;
     min-width: 360px;
     background-color: #fff;
 
@@ -143,6 +147,7 @@
     font-size: 16px;
     color: #202020;
     margin-bottom: 25px;
+    padding-left: 10px;
   }
 
   &ListWrap {
@@ -155,10 +160,14 @@
   &ListItem {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
+    margin-bottom: 2px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 
     span {
       font-family: 'Inter', sans-serif;

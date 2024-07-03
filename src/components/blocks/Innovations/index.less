@@ -16,6 +16,7 @@
     align-items: stretch;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 
     @media (max-width: @screen-xl-min) {
       flex-direction: column;
@@ -48,8 +49,54 @@
     p {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 16px;
       color: #202020;
+    }
+  }
+
+  &DescrList {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    padding: 30px 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #202020;
+
+    p {
+      padding-left: 20px;
+      font-weight: 600;
+    }
+
+    @media (max-width: @screen-xl-min) {
+      width: 100%;
+      position: static;
+      background-color: #F1F1F1;
+    }
+
+    ul {
+      @media (max-width: @screen-xl-min) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @media (max-width: @screen-xs-min) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      li {
+        @media (max-width: @screen-xl-min) {
+          width: 50%;
+        }
+      }
     }
   }
 

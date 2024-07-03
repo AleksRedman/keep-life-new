@@ -68,7 +68,7 @@ NewsAboutKL1.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile: state.application.isMobile,
   isScreenMdMin: state.application.isScreenMdMin
 })

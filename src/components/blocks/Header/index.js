@@ -1,11 +1,10 @@
 import React from 'react';
 import Headroom from 'react-headroom'
 import { connect } from 'dva'
-import { DownOutlined, MenuOutlined } from '@ant-design/icons';
+import { MenuOutlined } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Menu, Popover, Dropdown } from 'antd';
-import { setLocalData } from '@/utils/helpers'
 import LogoImg from '@/assets/img/logo.png';
 import Shevron from '@/assets/img/shevron.png'
 import router from 'umi/router'
@@ -18,7 +17,8 @@ const langCollection = {
     p3: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ',
     p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
     pvdo: '3D МОДЕЛЬ',
-    p5: 'ЗВІТИ',
+    // p5: 'ЗВІТИ',
+    p5: 'ПРОЄКТИ',
   },
   EN: {
     p1: 'WORKING CONDITIONS',
@@ -26,9 +26,15 @@ const langCollection = {
     p3: 'TECHNICAL SUPPORT',
     p4: 'MEDICAL EQUIPMENT',
     pvdo: '3D MODEL',
-    p5: 'REPORTS',
+    // p5: 'REPORTS',
+    p5: 'PROJECTS',
   },
 };
+
+const langMapping = {
+  'EN': '/en',
+  'UA': ''
+}
 
 class Header extends React.Component {
   static propTypes = {
@@ -59,13 +65,22 @@ class Header extends React.Component {
   }
 
   handleMenuItemClick = (navId) => {
+    const { lang } = this.props
     const { onHandleSectionId } = this.props
-    if (document?.location?.pathname !== '/' ) {
+    if (document?.location?.pathname !== '/' && document?.location?.pathname !== '/en' ) {
       onHandleSectionId(navId)
-      router.push('/')
-    } if (navId === 'reports') {
+      if (lang === 'UA') {
+        router.push('/')
+      } else if (lang === 'EN') {
+        router.push('/en')
+      }
+    } if (navId === 'projects') {
       onHandleSectionId(navId)
-      router.push('/reports')
+      if (lang === 'UA') {
+        router.push('/projects')
+      } else if (lang === 'EN') {
+        router.push('/en/projects')
+      }
       window.scrollTo(0, 0)
     } else {
       const element = document.getElementById(navId);
@@ -76,11 +91,47 @@ class Header extends React.Component {
   }
 
   handleLangMenuClick = ({ key }) => {
-    this.props.onHandleChangeLang(key);
+    const { lang } = this.props
+    const lngPath = langMapping[`${key}`]
+    const curPath = document?.location?.pathname
+    const curLangPath = curPath.slice(0,3)
+
+    if (curLangPath === '/en') {
+      const curRestPath = curPath.slice(3)
+      if (key !== 'EN') {
+        router.push(`${lngPath}${curRestPath}`)
+      }
+    } else if (curLangPath === '/') {
+      if (key !== 'UA') {
+        router.push(`${lngPath}`)
+      }
+    } else {
+      if (key !== 'UA') {
+        router.push(`${lngPath}${curPath}`)
+      }
+    }
+
+    console.log('handleLangMenuClick', { lang, lngPath, curPath, curLangPath })
+    // if (pathArray?.length > 1 && pathArray[(pathArray?.length) - 1]) {
+    //   console.log('pathArray > 1 && pathArray[1]', `${lngPath}/${pathArray[(pathArray?.length) - 1]}`)
+    //   router.push(`${lngPath}/${pathArray[(pathArray?.length) - 1]}`)
+    // } else if (pathArray?.length === 1 && pathArray[0]) {
+    //   console.log('pathArray?.length === 1 && pathArray[0]', `${lngPath}/${pathArray[0]}`)
+    //   router.push(`${lngPath}/${pathArray[0]}`)
+    // } else if (pathArray?.length < 1) {
+    //   console.log('pathArray?.length < 1', `${lngPath || '/'}`)
+    //   router.push(`${lngPath || '/'}`)
+    // }
   }
 
   handleGoHome = () => {
-    router.push('/')
+    const { lang } = this.props
+    if (lang === 'EN') {
+      router.push('/en')
+    } else {
+      router.push('/')
+    }
+    
     window.scrollTo(0, 0)
   }
 
@@ -108,19 +159,19 @@ class Header extends React.Component {
         <Menu.Item key="problems">
           {langCollection[`${lang}`].p1}
         </Menu.Item>
-        <Menu.Item key="mission">
+        {/* <Menu.Item key="mission">
           {langCollection[`${lang}`].p2}
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="technicalProvision">
           {langCollection[`${lang}`].p3}
         </Menu.Item>
-        <Menu.Item key="equipment">
+        {/* <Menu.Item key="equipment">
           {langCollection[`${lang}`].p4}
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="innovations">
           {langCollection[`${lang}`].pvdo}
         </Menu.Item>
-        <Menu.Item key="reports">
+        <Menu.Item key="projects">
           {langCollection[`${lang}`].p5}
         </Menu.Item>
       </Menu>,
@@ -135,11 +186,6 @@ class Header extends React.Component {
           minWidth: '100%',
           zIndex: 999
         }}
-        // downTolerance={140}
-        // style={{
-        //   zIndex: '20',
-        //   // height: '6.5em'
-        // }}
       >
         <header id="header" className={headerClassName}>
           {console.log('isMoblie', isMobile)}
@@ -178,7 +224,6 @@ class Header extends React.Component {
                 <a onClick={e => e.preventDefault()}>
                   {lang}
                   <span><img alt="shevron" src={Shevron} /></span>
-                  {/* <DownOutlined /> */}
                 </a>
               </Dropdown>
             </div>
@@ -190,7 +235,7 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isFirstScreen: state.application.isFirstScreen,
   isMobile: state.application.isMobile
 })

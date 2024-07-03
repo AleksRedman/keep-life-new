@@ -51,24 +51,24 @@ const Partners = ({ isMobile, lang }) => {
       <div className={styles.partnersWrap}>
         <h2 className={styles.partnersTitle}>{langCollection[`${lang}`].h2}</h2>
         <div className={styles.partnersList}>
-          {item(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank', true)}
-          {item(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding', true)}
-          {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
-          {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')}
-          {item(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
-          {item(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
-          {item(BudMallImg, 'https://budmall.center/', 'Volonter Ryadnina Sergii', true)}
-          {item(OkkoImg, 'https://www.okko.ua/', 'Okko')}
           {item(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
-          {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
-          {item(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')}
+          {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
           {item(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD', true)}
-          {item(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')}
-          {item(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')}
+          {item(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank', true)}
+          {item(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
           {item(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines', true)}
+          {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
+          {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')}
+          {item(OkkoImg, 'https://www.okko.ua/', 'Okko')}
           {item(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta', true)}
           {item(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge', true)}
-          {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
+          {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
+          {item(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')}
+          {/* {item(BudMallImg, 'https://budmall.center/', 'Budmall', true)} */}
+          {item(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding', true)}
+          {item(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')}
+          {/* {item(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
+          {item(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')} */}
         </div>
       </div>
     </section>
@@ -81,7 +81,7 @@ Partners.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile: state.application.isMobile
 })
 

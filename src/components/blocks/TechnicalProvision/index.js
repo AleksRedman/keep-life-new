@@ -14,7 +14,7 @@ import styles from './index.less';
 
 const langCollection = {
   UA: {
-    h1: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ',
+    h1: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ ХІРУРГІЇ',
     p1: 'ВАНТАЖІВКА',
     p2: 'МЕТАЛЕВИЙ МОДУЛЬ',
     p3: 'РОЗСУВНА КОНСТРУКЦІЯ',
@@ -26,7 +26,7 @@ const langCollection = {
     p9: 'ВОДЯНИЙ БАК',
   },
   EN: {
-    h1: 'Technical Equipment',
+    h1: 'TECHNICAL SUPPLY OF SURGERY',
     p1: 'Truck',
     p2: 'Metal module',
     p3: 'Sliding structure',
@@ -77,7 +77,7 @@ TechnicalProvision.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang,
+  // lang: state.application.lang,
   isMobile: state.application.isMobile
 })
 

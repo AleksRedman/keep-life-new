@@ -65,7 +65,7 @@ Page5.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  lang: state.application.lang
+  // lang: state.application.lang
 })
 
 export default connect(mapStateToProps, null)(Page5)

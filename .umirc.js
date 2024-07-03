@@ -13,10 +13,45 @@ export default {
       routes: [
         { path: '/', component: '../pages/index' }
       ].concat(
-        configUI().hidePages.find((i) => i === 'reports')
+        // configUI().hidePages.find((i) => i === 'reports')
+        //   ? []
+        //   : [
+        //     { path: '/reports', component: '../pages/reports' }
+        //   ]
+        configUI().hidePages.find((i) => i === 'projects')
           ? []
           : [
-            { path: '/reports', component: '../pages/reports' }
+            { path: '/projects', component: '../pages/projects' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-1')
+          ? []
+          : [
+            { path: '/projects/kl-mark-1', component: '../pages/kl-mark-1' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-2')
+          ? []
+          : [
+            { path: '/projects/kl-mark-2', component: '../pages/kl-mark-2' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-3')
+          ? []
+          : [
+            { path: '/projects/kl-mark-3', component: '../pages/kl-mark-3' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-4')
+          ? []
+          : [
+            { path: '/projects/kl-mark-4', component: '../pages/kl-mark-4' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-5')
+          ? []
+          : [
+            { path: '/projects/kl-mark-5', component: '../pages/kl-mark-5' }
           ]
       ).concat(
         configUI().hidePages.find((i) => i === 'donate')
@@ -29,6 +64,63 @@ export default {
           ? []
           : [
             { path: '/donate-puzzle', component: '../pages/donate-puzzle' }
+          ]
+      ).concat([
+        { path: '/en', component: '../pages/index-en' }
+        // ]).concat(
+        //   configUI().hidePages.find((i) => i === 'reports')
+        //     ? []
+        //     : [
+        //       { path: '/en/reports', component: '../pages/reports-en' }
+        //     ]
+        // ).concat(
+      ]).concat(
+        configUI().hidePages.find((i) => i === 'projects')
+          ? []
+          : [
+            { path: '/en/projects', component: '../pages/projects-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-1')
+          ? []
+          : [
+            { path: 'en/projects/kl-mark-1', component: '../pages/kl-mark-1-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-2')
+          ? []
+          : [
+            { path: 'en/projects/kl-mark-2', component: '../pages/kl-mark-2-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-3')
+          ? []
+          : [
+            { path: 'en/projects/kl-mark-3', component: '../pages/kl-mark-3-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-4')
+          ? []
+          : [
+            { path: 'en/projects/kl-mark-4', component: '../pages/kl-mark-4-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-5')
+          ? []
+          : [
+            { path: 'en/projects/kl-mark-5', component: '../pages/kl-mark-5-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'donate')
+          ? []
+          : [
+            { path: '/en/donate', component: '../pages/donate-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'donate-puzzle')
+          ? []
+          : [
+            { path: '/en/donate-puzzle', component: '../pages/donate-puzzle-en' }
           ]
       )
     }
