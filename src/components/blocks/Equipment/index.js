@@ -16,6 +16,7 @@ import Equip11Img from '../../../assets/img/equip11.png';
 import Equip12Img from '../../../assets/img/equip12.png';
 import Equip13Img from '../../../assets/img/equip13.png';
 import Equip14Img from '../../../assets/img/equip14.png';
+import Equip15Img from '../../../assets/img/equip15.jpeg';
 import styles from './index.less';
 
 const langCollection = {
@@ -128,7 +129,7 @@ const Equipment = ({ isMobile, lang }) => {
           {equip(Equip3Img, 'Equip3Img', '3', langCollection[`${lang}`].p3)}
           {equip(Equip4Img, 'Equip4Img', '4', langCollection[`${lang}`].p4)}
           {equip(Equip5Img, 'Equip5Img', '5', langCollection[`${lang}`].p5)}
-          {equip(Equip6Img, 'Equip6Img', '6', langCollection[`${lang}`].p6)}
+          {equip(Equip15Img, 'Equip15Img', '6', langCollection[`${lang}`].p6)}
           {equip(Equip7Img, 'Equip7Img', '7', langCollection[`${lang}`].p7)}
           {equip(Equip8Img, 'Equip8Img', '8', langCollection[`${lang}`].p8)}
           {equip(Equip9Img, 'Equip9Img', '9', langCollection[`${lang}`].p9)}

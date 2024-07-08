@@ -69,7 +69,7 @@ const KLMark1Report = ({ isMobile, lang }) => {
             arrows
             nextArrow={<RightOutlined />}
             prevArrow={<LeftOutlined />}
-            slidesPerRow={2}
+            slidesPerRow={isMobile ? 1 : 2}
             className={styles.klMark3ReportCarousel}
           >
             
@@ -92,7 +92,7 @@ const KLMark1Report = ({ isMobile, lang }) => {
             arrows
             nextArrow={<RightOutlined />}
             prevArrow={<LeftOutlined />}
-            slidesPerRow={2}
+            slidesPerRow={isMobile ? 1 : 2}
             className={styles.klMark3ReportCarousel}
           >
             {slide(KLMark3Img5, 'KLMark4Img5')}

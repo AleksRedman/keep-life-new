@@ -58,15 +58,15 @@ const Partners = ({ isMobile, lang }) => {
           {item(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
           {item(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines', true)}
           {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
-          {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')}
+          {/* {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
           {item(OkkoImg, 'https://www.okko.ua/', 'Okko')}
           {item(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta', true)}
           {item(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge', true)}
           {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
-          {item(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')}
+          {/* {item(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')} */}
           {/* {item(BudMallImg, 'https://budmall.center/', 'Budmall', true)} */}
           {item(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding', true)}
-          {item(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')}
+          {/* {item(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')} */}
           {/* {item(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
           {item(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')} */}
         </div>

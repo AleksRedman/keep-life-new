@@ -30,7 +30,7 @@ const langCollection = {
     tm_6: 'ПУНКТ УПРАВЛІННЯ ДРОНАМИ',
     tm_7: 'РЕМОНТНИЙ ШТАБ',
     tm_8: 'МОБІЛЬНА КУХНЯ',
-    tm_9: 'ПРАЛЬНЯ',
+    tm_9: 'ПРАЛЬНО-БАННИЙ КОМПЛЕКС',
   },
   EN: {
     h1: "Innovations",
@@ -46,7 +46,7 @@ const langCollection = {
     tm_6: 'Drone Control Point',
     tm_7: 'Repair Center',
     tm_8: 'Mobile Kitchen',
-    tm_9: 'Laundry'
+    tm_9: 'Laundry and Bath Complex'
   },
 };
 

@@ -38,8 +38,8 @@ const langCollection = {
   EN: {
     h1: 'AUTONOMUS',
     h2: 'MOBILE',
-    h3: 'MODULES',
-    descr: 'Autonomous medical centers on wheels that save the lives of military and civilians close to the front line'
+    h3: 'UNITS',
+    descr: 'Autonomous medical units on wheels that save the lives of military and civilians close to the front line'
   },
 };
 
@@ -109,15 +109,15 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
           {slide(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
           {slide(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines')}
           {slide(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric')}
-          {slide(MedeximImg, 'https://medexim.ua/', 'Med Exim')}
+          {/* {slide(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
           {slide(OkkoImg, 'https://www.okko.ua/', 'Okko')}
           {slide(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta')}
           {slide(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge')}
           {slide(BridgeOfKindness, '#', 'Bridge Of Kindness')}
-          {slide(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')}
+          {/* {slide(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')} */}
           {/* {slide(BudMallImg, 'https://budmall.center/', 'Budmall')} */}
           {slide(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding')}
-          {slide(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')}
+          {/* {slide(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')} */}
           
           
 

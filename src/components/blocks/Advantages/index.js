@@ -15,7 +15,7 @@ const langCollection = {
     p4: 'Загалом потрібно для розгортання пункту та початку роботи',
   },
   EN: {
-    h1: 'BY 50%+',
+    h1: '50%+',
     p1: 'CHANCES OF SURVIVAL INCREASE AFTER SUSTAINING A SEVERE INJURY',
     h2: 'UP TO 3',
     p2: 'MEDICAL BRIGADES OPERATE WITH ONE STABILIZATION POINT',
