@@ -16,18 +16,16 @@ const langCollection = {
     p2: 'ЗАДАЧІ',
     p3: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ',
     p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
-    pvdo: '3D МОДЕЛЬ',
-    // p5: 'ЗВІТИ',
-    p5: 'ПРОЄКТИ',
+    p5: '3D МОДЕЛЬ',
+    p6: 'ПРОЄКТИ',
   },
   EN: {
     p1: 'WORKING CONDITIONS',
     p2: 'TASKS',
     p3: 'TECHNICAL SUPPORT',
     p4: 'MEDICAL EQUIPMENT',
-    pvdo: '3D MODEL',
-    // p5: 'REPORTS',
-    p5: 'PROJECTS',
+    p5: '3D MODEL',
+    p6: 'PROJECTS',
   },
 };
 
@@ -169,10 +167,10 @@ class Header extends React.Component {
           {langCollection[`${lang}`].p4}
         </Menu.Item> */}
         <Menu.Item key="innovations">
-          {langCollection[`${lang}`].pvdo}
+          {langCollection[`${lang}`].p5}
         </Menu.Item>
         <Menu.Item key="projects">
-          {langCollection[`${lang}`].p5}
+          {langCollection[`${lang}`].p6}
         </Menu.Item>
       </Menu>,
     ];

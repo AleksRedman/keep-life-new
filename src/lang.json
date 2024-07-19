@@ -1,0 +1,293 @@
+{
+  "HEADER": {
+    "UA": {
+      "p1": "УМОВИ РОБОТИ",
+      "p2": "ЗАДАЧІ",
+      "p3": "ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ",
+      "p4": "МЕДИЧНЕ ОБЛАДНАННЯ",
+      "p5": "3D МОДЕЛЬ",
+      "p6": "ПРОЄКТИ"
+    },
+    "EN": {
+      "p1": "WORKING CONDITIONS",
+      "p2": "TASKS",
+      "p3": "TECHNICAL SUPPORT",
+      "p4": "MEDICAL EQUIPMENT",
+      "p5": "3D MODEL",
+      "p6": "PROJECTS"
+    }
+  },
+
+  "BANNER": {
+    "UA": {
+      "h1": "АВТОНОМНІ",
+      "h2": "МОБІЛЬНІ",
+      "h3": "МОДУЛІ",
+      "descr": "Автономні медичні пункти на колесах, які рятують життя військовим та цивільним впритул до лінії фронту"
+    },
+    "EN": {
+      "h1": "AUTONOMUS",
+      "h2": "MOBILE",
+      "h3": "UNITS",
+      "descr": "Autonomous medical units on wheels that save the lives of military and civilians close to the front line"
+    }
+  },
+
+  "PROBLEMS": {
+    "UA": {
+      "h0": "Пріоритет Keep Life",
+      "p_prior": "У військовій медицині є ключове поняття «золота година»: 90% постраждалих можна врятувати, якщо надати їм допомогу протягом години після поранення. Наш пріоритет - забезпечити такою можливістю військових медиків уздовж всієї лінії фронту.",
+      "h1": "Проблеми роботи медиків у прифронтовій зоні",
+      "li1_1": "Пошкоджені дороги",
+      "li2_1": "Обстрілювані шляхи евакуації",
+      "li3_1": "Навмисне ураження росіянами медзакладів",
+      "li4_1": "Відсутність санітарних умов y стабпунктах",
+      "li5_1": "Нестабільність температури/погодних умов",
+      "li6_1": "Нестача медичного обладнання",
+      "h2": "Переваги Keep Life",
+      "li1_2": "мінімальні зовнішні габарити",
+      "li2_2": "розсувна робоча зона",
+      "li3_2":"час розгортання та прогріву",
+      "li4_2": "оперативна передислокація",
+      "li5_2":"прохідність по бездоріжжю",
+      "li6_2": "дотримання санітарних норм",
+      "li7_2": "повна автономність"
+    },
+    "EN": {
+      "h0": "Keep Life Priority",
+      "p_prior": "In military medicine, there is a key concept of the golden hour: 90% of casualties can be saved if they are treated within an hour of injury. Our priority is to provide this opportunity to military medics along the entire front line.",
+      "h1": "Challenges of Field Medics",
+      "li1_1": "Damaged roads",
+      "li2_1": "Shelled evacuation routes",
+      "li3_1": "Deliberate targeting of medical facilities by Russians",
+      "li4_1": "Lack of sanitary conditions at stabilization points",
+      "li5_1": "Temperature/weather instability",
+      "li6_1": "Shortage of medical equipment",
+      "h2": "Advantages of KL",
+      "li1_2": "Minimal external dimensions",
+      "li2_2": "Sliding working area",
+      "li3_2": "deployment and heating time",
+      "li4_2": "Operational redeployment",
+      "li5_2": "off-road capability",
+      "li6_2": "Compliance with sanitary standards",
+      "li7_2": "Full autonomy"
+    }
+  },
+
+  "MISSION": {
+    "UA": {
+      "h1": "Місія Keep Life",
+      "p1": "Забезпечити можливість оперативно надавати екстрену медичну допомогу постраждалим в зонах активних бойових дій, не втрачаючи час на їх транспортування до шпиталів"
+    },
+    "EN": {
+      "h1": "Keep Life Mission",
+      "p1": "Provide the ability to quickly provide emergency medical care to victims in active combat zones, without losing time on transporting them to hospitals"
+    }
+  },
+
+  "INNOVATIONS": {
+    "UA": {
+      "h1": "Новації",
+      "p1": "Наші пункти створюються на базі металевих модулів та мають розсувні конструкції, які збільшують їхню загальну площу до 28 м².",
+      "p2": "Сучасні технології та власні інновації дозволяють забезпечити максимальну ефективність попри незначні габарити пунктів. Ми передаємо модулі готові до використання та повністю обладнані усім необхідним.",
+      "p3": "Автономне функціонування дає можливість їм працювати ефективно, навіть за відсутність комунікацій. Це робить модульні станції ідеальним вибором для впровадження на прифронтових територіях, де ворог постійно знищує інфраструктуру.",
+      "tm_title": "Типи модулі",
+      "tm_1": "ХІРУРГІ",
+      "tm_2": "ТЕРАПІ",
+      "tm_3": "СТОМАТОЛОГІ",
+      "tm_4": "ГІНЕГОЛОГІ",
+      "tm_5": "КОМАНДНИЙ ШТАБ",
+      "tm_6": "ПУНКТ УПРАВЛІННЯ ДРОНАМ",
+      "tm_7": "РЕМОНТНИЙ ШТА",
+      "tm_8": "МОБІЛЬНА КУХНЯ",
+      "tm_9": "ПРАЛЬНО-БАННИЙ КОМПЛЕКС"
+    },
+    "EN": {
+      "h1": "Innovations",
+      "p1": "Our points are created on the basis of metal modules and have sliding structures that increase their total area to 28 m².",
+      "p2": "Modern technologies and our own innovations allow us to ensure maximum efficiency despite the small dimensions of the points. We deliver modules ready for use and fully equipped with everything you need.",
+      "p3": "Autonomous operation allows them to work effectively, even in the absence of communications. This makes modular stations an ideal choice for deployment in front-line areas where the enemy is constantly destroying infrastructure.",
+      "tm_title": "Types of Modules",
+      "tm_1": "Surgery",
+      "tm_2": "Therapy",
+      "tm_3": "Dentistry",
+      "tm_4": "Gynecology",
+      "tm_5": "Command Center",
+      "tm_6": "Drone Control Point",
+      "tm_7": "Repair Center",
+      "tm_8": "Mobile Kitchen",
+      "tm_9": "Laundry and Bath Complex"
+    }
+  },
+
+  "ADVANTAGES": {
+    "UA": {
+      "h1": "НА 50%+",
+      "p1": "Зростають шанси у важкопоранених вижити, якщо поблизу є стабпункт",
+      "h2": "24/7",
+      "p2": "Функціонує стабпункт за умови ротації медичних бригад",
+      "h3": "5-15 КМ",
+      "p": "Від лінії зіткнення до дислокації модулів",
+      "h4": "10-15 ХВ",
+      "p4": "Загалом потрібно для розгортання пункту та початку роботи"
+    },
+    "EN": {
+      "h1": "50%+",
+      "p1": "The chances of survival for the severely wounded increase if there is a stabilization point nearby",
+      "h2": "24/7",
+      "p2": "The stabilization unit operates with the rotation of medical teams",
+      "h3": "5-15 KM",
+      "p3": "From the front line to the module deployment",
+      "h4": "10-15 MIN",
+      "p4": "Generally required for setting up the point and starting work"
+    }
+  },
+
+  "TECHNICAL_PROVISION": {
+    "UA": {
+      "h1": "ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ ХІРУРГІЇ",
+      "p1": "ВАНТАЖІВКА",
+      "p2": "МЕТАЛЕВИЙ МОДУЛЬ",
+      "p3": "РОЗСУВНА КОНСТРУКЦІЯ",
+      "p4": "АВАРІЙНІ АКУМУЛЯТОРИ",
+      "p5": "ВЕНТИЛЯЦІЯ",
+      "p6": "ОПАЛЕННЯ",
+      "p7": "ДИЗЕЛЬНИЙ ГЕНЕРАТОР",
+      "p8": "ПАЛИВНИЙ БАК",
+      "p9": "ВОДЯНИЙ БАК"
+    },
+    "EN": {
+      "h1": "TECHNICAL SUPPLY OF SURGERY",
+      "p1": "Truck",
+      "p2": "Metal module",
+      "p3": "Sliding structure",
+      "p4": "EMERGENCY BATTERIES",
+      "p5": "Ventilation",
+      "p6": "Heating",
+      "p7": "Diesel generator",
+      "p8": "Fuel tank",
+      "p9": "Water tank"
+    }
+  },
+
+  "UA": {
+    "h1": "МЕДИЧНЕ ОБЛАДНАННЯ",
+    "p1": "Апарат штучної вентиляції легень S1100A",
+    "p2": "Монітор пацієнта Brightfield Healthcare OSEN 8000",
+    "p3": "Кисневий концентратор Brightfield AE-10",
+    "p4": "Насос шприцевий інфузійний Brightfield Healthcare OSP-500",
+    "p5": "Електрокоагулятор BOWA ARC 303",
+    "p6": "Операційна лампа Maestro LED300",
+    "p7": "Хірургічний рентгенпрозорий стіл TDY-1",
+    "p8": "Паровий стерилізатор Q70B",
+    "p9": "Аспіратор хірургічний портативний Aspira Go 30",
+    "p10": "Компресорний автохолодильник Alpicool TW35",
+    "p11": "Зовнішній дефібрилятор Defi 8",
+    "p12": "Портативний УЗД апарат Mindray DP-10",
+    "p13": "Портативный рентген аппарат EcoRay ULTRA 100",
+    "p14": "Портативний апарат ШВЛ OXYLOG 3000 Plus"
+  },
+  "EN": {
+    "h1": "MEDICAL EQUIPMENT",
+    "p1": "S1100A Ventilator",
+    "p2": "Brightfield Healthcare OSEN 8000 Patient Monitor",
+    "p3": "Brightfield AE-10 Oxygen Concentrator",
+    "p4": "Infusion syringe pump Brightfield Healthcare OSP-500",
+    "p5": "BOWA ARC 303 electrocoagulator",
+    "p6": "Maestro LED300 operating lamp",
+    "p7": "Surgical x-ray table TDY-1",
+    "p8": "Steam sterilizer Q70B",
+    "p9": "Surgical portable Aspira Go 30 aspirator",
+    "p10": "Compressor car refrigerator Alpicool TW35",
+    "p11": "Defi 8 External Defibrillator",
+    "p12": "Mindray DP-10 portable ultrasound device",
+    "p13": "EcoRay ULTRA 100 portable x-ray machine",
+    "p14": "Portable ventilator OXYLOG 3000 Plus"
+  },
+
+  "FOOTER": {
+    "UA": {
+      "h1": "Контакти",
+      "adr": "79018, Україна, м. Львів, вул. Юрія Федьковича 58, офіс 305"
+    },
+    "EN": {
+      "h1": "Contacts",
+      "adr": "58 Yuri Fedkovycha Street, Office 305, Lviv, Ukraine, 79018"
+    }
+  },
+
+  "PRJCT_1": {
+    "UA": {
+      "p1": "Історія «Keep Life» почалася з того, що група волонтерів, розуміючи нагальну потребу в мобільних стабілізаційних пунктах на фронті, самостійно почала виготовлення модулів з нуля. При цьому вони мали лише теоретичні знання та створювали перші стабпункти без креслень та чітких уявлень, яким буде кінцевий результат.",
+      "p2": "Вже з часом це стало тим, чим є зараз: від групи людей, які в дощ та сніг збирали металеві конструкції  без необхідного обладнання до масштабного проекту з чітким планом, графіками виконаних робіт, застосуванням сучасних технологій, постійною комунікацією з медиками та військовими експертами.",
+      "p3": "23 грудня 2022 року волонтери передали перший мобільний стабілізаційний пункт представникам Міністерства оборони. Наразі в ньому медики проводять хірургічні операції підвищеної складності поблизу лінії активних бойових дій на Запоріжжі.",
+      "p4": "Проект першого Keep Life від самого початку був під патронатом колишнього командувача Медичних сил Збройних Сил України, бригадного генерала медичної служби – Тетяни Миколаївни Остащенко. Консультаційну підтримку також здійснювали лікарі-фахівці військово-медичного клінічного центру Західного регіону МОУ.",
+      "p5": "Для цього проекту ми використали контейнер, який укріпили та утеплили. Мобільний шпиталь складається з повноцінних передопераційної та операційно-санітарної кімнат, душової кабіни та міні-лабораторії.",
+      "p6": "Він є повністю автономним та може працювати за відсутності енергопостачання до 4 днів. Модуль оснащений двома потужними генераторами, баком для дизельного палива на 300 л, акумуляторними батареями, ємностями водопостачання та водовідведення.",
+      "p7": "Стабпункт також оснащений системами вентиляції та кондиціонування, а також по контейнеру розведена електрика. Внутрішні поверхні вкриті волого- та зносостійкою фарбою. Комплектація шпиталю включає в себе сучасне медичне обладнання."
+    },
+    "EN": {
+      "p1": "The history of 'Keep Life' began when a group of volunteers, understanding the urgent need for mobile stabilization points at the front, started making the modules from scratch by themselves. They had only theoretical knowledge and created the first stabilization points without drawings or a clear idea of what the final result would be.",
+      "p2": "Over time, this evolved into what it is now: from a group of people assembling metal structures in rain and snow without the necessary equipment to a large-scale project with a clear plan, work schedules, the use of modern technologies, and constant communication with medical and military experts.",
+      "p3": "On December 23, 2022, volunteers handed over the first mobile stabilization point to representatives of the Ministry of Defense. Currently, in this unit, doctors perform complex surgical operations near the line of active combat in the Zaporizhzhia region.",
+      "p4": "The first Keep Life project was initially under the patronage of the former commander of the Medical Forces of the Armed Forces of Ukraine, Brigadier General of the Medical Service – Tetiana Mykolaivna Ostashchenko. Consultation support was also provided by specialist doctors from the Military Medical Clinical Center of the Western Region of the Ministry of Defense.",
+      "p5": "For this project, we used a container, which we reinforced and insulated. The mobile hospital consists of full-fledged preoperative and surgical sanitary rooms, a shower cabin, and a mini-laboratory.",
+      "p6": "It is completely autonomous and can operate without power supply for up to 4 days. The module is equipped with two powerful generators, a 300-liter diesel fuel tank, rechargeable batteries, and water supply and drainage tanks.",
+      "p7": "The stabilization point is also equipped with ventilation and air conditioning systems, and electricity is distributed throughout the container. The internal surfaces are covered with moisture and wear-resistant paint. The hospital's equipment includes modern medical devices."
+    }
+  },
+
+  "PRJCT_2": {
+    "UA": {
+      "p1": "Друга вдосконалена модель Keep Life була створена на базі вдвічі меншого 20-футового контейнера з розкладними конструкціями, що дозволило зберегти внутрішню робочу площу та розмістити там два робочі місця для хірургів, щоб проводити кілька операцій одночасно. Таким чином, пропускна можливість пункту збільшилася і медики можуть врятувати більше життів.",
+      "p2": "Також для другої моделі встановили потужнішу вентиляцію, завдяки цьому в контейнері одночасно можуть перебувати до 13 осіб, та збільшили об’єм баку для води до 600 літрів. Окрім того, два генератори замінили на один з більшими технічними можливостями.",
+      "p3": "Цей проект був запущений, враховуючи побажання та зауваження медиків, які працюють на передовій. Основними вимогами до стабпункту залишилися мобільність, автономність, швидке розгортання та безпека. Однак, основною перевагою моделі є автономність контейнера від автівки. Модуль можна зняти та встановити його в будь-якому доступному для цього місці."
+    },
+    "EN": {
+      "p1": "The second improved model of Keep Life was created based on a container that is twice as small, a 20-foot container with folding structures. This allowed for maintaining the internal working area and accommodating two workstations for surgeons, enabling multiple surgeries to be performed simultaneously. Thus, the throughput of the unit increased, allowing medical personnel to save more lives.",
+      "p2": "Additionally, the second model features a more powerful ventilation system, allowing up to 13 people to be inside the container at the same time. The water tank capacity was also increased to 600 liters. Moreover, two generators were replaced with one that has greater technical capabilities.",
+      "p3": "This project was launched taking into account the wishes and comments of medics working on the front lines. The main requirements for the mobile unit remained mobility, autonomy, quick deployment, and safety. However, the main advantage of the model is the container's independence from the vehicle. The module can be removed and installed in any suitable location."
+    }
+  },
+
+  "PRJCT_3": {
+    "UA": {
+      "p1": "Третя модель Keep Life, на відміну від попередніх двох, розрахована більше на цивільне населення прифронтових регіонів. Наразі мобільна терапія та гінекологія вже працюють в областях, де є проблеми з медичними закладами.",
+      "p2": "Ця модель створена на базі 20-футового контейнера, однак не має розсувних конструкцій, що робить її найкомпактнішою з усіх. Всередині розміщені коридор, приймальня, оглядова гінекологічна кімната та санвузол.",
+      "p3": "Також ми врахували, що ця модель здебільшого використовуватиметься в населених пунктах, тому ми провели каналізацію з контейнера. Змін зазнав і зовнішній пандус. Тут він складається з двох частин, опускається та піднімається за допомогою механічної лебідки.",
+      "p4": "Головною перевагою третьої моделі стала вантажівка MAN з подвійним рядом сидінь в кабіні. Це дозволить всій команді медиків безперешкодно пересуватися між точками призначення."
+    },
+    "EN": {
+      "p1": "The third model of Keep Life, unlike the previous two, is designed more for the civilian population in frontline regions. Currently, mobile therapy and gynecology services are already operating in areas with medical facility issues.",
+      "p2": "This model is based on a 20-foot container but does not have sliding structures, making it the most compact of all. Inside, it features a corridor, reception area, gynecological examination room, and a bathroom.",
+      "p3": "We also took into account that this model will mostly be used in populated areas, so we installed sewage from the container. The external ramp was also modified; it now consists of two parts and can be lowered and raised using a mechanical winch.",
+      "p4:": "The main advantage of the third model is the MAN truck with a double row of seats in the cab. This allows the entire medical team to move seamlessly between destinations."
+    }
+  },
+
+  "PRJCT_4": {
+    "UA": {
+      "p1": "Четверта модель Keep Life стала першим кроком до серійного виробництва мобільних шпиталів. Ми розробили всі необхідні креслення та запустили виробництво на заводі. До цього всі модулі ми збирали самостійно у непризначених для цього місцях. Це важливо, бо так ми можемо мінімізувати час на виготовлення кожного контейнера та швидше забезпечити ними усі ділянки фронту.",
+      "p2:": "У цій моделі ми збільшили каркас на 50 см, а також врахували побажання медиків щодо комфортної висоти контейнера. Окрім того, модуль буде затягнений арамідною тканиною (кевларом), яка забезпечує захист від дрібних уламків.",
+      "p3": "Щодо внутрішнього оснащення, ми додали ще одну мийку та сейф, замість балонів встановили додатковий кисневий концентратор. Також ми посилили автономність модуля за рахунок акумулятора, який забезпечує функціонування ще протягом 8 годин після від’єднання від електромережі."
+    },
+    "EN": {
+      "p1": "The fourth model of Keep Life marks the first step towards serial production of mobile hospitals. We developed all the necessary blueprints and launched production at a factory. Previously, we assembled all the modules ourselves in locations not suited for this purpose. This is important because it allows us to minimize the manufacturing time for each container and more quickly supply them to all frontline areas.",
+      "p2": "In this model, we increased the frame by 50 cm and considered the medics' requests for a comfortable container height. Additionally, the module will be covered with aramid fabric (Kevlar), which provides protection against small fragments.",
+      "p3": "Regarding internal equipment, we added an extra sink and a safe, and instead of cylinders, we installed an additional oxygen concentrator. We also enhanced the module's autonomy with a battery that ensures operation for another 8 hours after being disconnected from the power grid."
+    }
+  },
+
+  "PRJCT_5": {
+    "UA": {
+      "p1": "П’ята модель Keep Life найбільш подібна до другої моделі – 20-футового контейнера з розкладними конструкціями. Втім, його найбільшою перевагою стала безпека – модуль затягнений арамідною тканиною (кевларом), а також має засоби радіоелектронної боротьби (РЕБ).",
+      "p2": "Окрім того, контейнери цієї моделі утеплюються пінополіуретаном (ППУ), що у 2,5 рази ефективніший мінеральної вати, екологічно чистий, шумоізолюючий та має термін експлуатації 50+ років.",
+      "p3": "Як і четверта модель, ці Keep Life обладнані акумуляторами, які забезпечують функціонування модуля протягом 8 годин після від’єднання від електромережі."
+    },
+    "EN": {
+      "p1": "The fifth model of Keep Life is most similar to the second model – a 20-foot container with folding structures. However, its greatest advantage has become safety – the module is covered with aramid fabric (Kevlar) and also has electronic warfare (EW) capabilities.",
+      "p2": "Additionally, containers of this model are insulated with polyurethane foam (PUF), which is 2.5 times more effective than mineral wool, environmentally friendly, soundproof, and has a service life of 50+ years.",
+      "p3": "Like the fourth model, these Keep Life units are equipped with batteries that provide module operation for up to 8 hours after disconnecting from the power grid."
+    }
+  } 
+}

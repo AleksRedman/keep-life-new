@@ -16,13 +16,13 @@ const langCollection = {
   },
   EN: {
     h1: '50%+',
-    p1: 'CHANCES OF SURVIVAL INCREASE AFTER SUSTAINING A SEVERE INJURY',
-    h2: 'UP TO 3',
-    p2: 'MEDICAL BRIGADES OPERATE WITH ONE STABILIZATION POINT',
-    h3: '1-2 HOURS',
-    p3: 'WITHIN THIS TIMEFRAME, PRIMARY MEDICAL ASSISTANCE WILL BE PROVIDED TO THE INJURED',
+    p1: 'The chances of survival for the severely wounded increase if there is a stabilization point nearby',
+    h2: '24/7',
+    p2: "The stabilization unit operates with the rotation of medical teams",
+    h3: '5-15 KM',
+    p3: 'From the front line to the module deployment',
     h4: '10-15 MIN',
-    p4: 'REQUIRED FOR DEPLOYING THE MOBILE STABILIZATION POINT',
+    p4: 'Generally required for setting up the point and starting work',
   }
 };
 

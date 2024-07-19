@@ -59,8 +59,23 @@ const Innovations = ({ isMobile, lang }) => {
           <p>{langCollection[`${lang}`].p1}</p>
           <p>{langCollection[`${lang}`].p2}</p>
           <p>{langCollection[`${lang}`].p3}</p>
+
+          <div className={styles.innovationsDescrList}>
+            <p>{langCollection[`${lang}`].tm_title}</p>
+            <ul>
+              <li>{langCollection[`${lang}`].tm_1}</li>
+              <li>{langCollection[`${lang}`].tm_2}</li>
+              <li>{langCollection[`${lang}`].tm_3}</li>
+              <li>{langCollection[`${lang}`].tm_4}</li>
+              <li>{langCollection[`${lang}`].tm_5}</li>
+              <li>{langCollection[`${lang}`].tm_6}</li>
+              <li>{langCollection[`${lang}`].tm_7}</li>
+              <li>{langCollection[`${lang}`].tm_8}</li>
+              <li>{langCollection[`${lang}`].tm_9}</li>
+            </ul>
+          </div>
         </div>
-        <div className={styles.innovationsDescrList}>
+        {/* <div className={styles.innovationsDescrList}>
           <p>{langCollection[`${lang}`].tm_title}</p>
           <ul>
             <li>{langCollection[`${lang}`].tm_1}</li>
@@ -73,7 +88,7 @@ const Innovations = ({ isMobile, lang }) => {
             <li>{langCollection[`${lang}`].tm_8}</li>
             <li>{langCollection[`${lang}`].tm_9}</li>
           </ul>
-        </div>
+        </div> */}
         <div className={styles.innovationsVideo}>
           {
             Sample
