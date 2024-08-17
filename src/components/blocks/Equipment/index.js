@@ -1,59 +1,101 @@
 import React, { useState } from 'react';
 import { connect } from 'dva'
 import PropTypes from 'prop-types';
-import Equip1Img from '../../../assets/img/equip1.png';
-import Equip2Img from '../../../assets/img/equip2.png';
+// import Equip1Img from '../../../assets/img/equip1.png';
+// import Equip2Img from '../../../assets/img/equip2.png';
+import Equip1Img from '../../../assets/img/kl-new-eqp/1.jpg';
+import Equip2Img from '../../../assets/img/kl-new-eqp/2.png';
 import Equip3Img from '../../../assets/img/equip3.png';
-import Equip4Img from '../../../assets/img/equip4.png';
+// import Equip4Img from '../../../assets/img/equip4.png';
+import Equip4Img from '../../../assets/img/kl-new-eqp/4.jpg';
 import Equip5Img from '../../../assets/img/equip5.png';
-import Equip6Img from '../../../assets/img/equip6.png';
+import Equip6Img from '../../../assets/img/kl-new-eqp/18.jpg';
 import Equip7Img from '../../../assets/img/equip7.png';
-import Equip8Img from '../../../assets/img/equip8.jpeg';
-import Equip9Img from '../../../assets/img/equip9.png';
-// import Equip10Img from '../../../assets/img/equip10.png';
+// import Equip8Img from '../../../assets/img/equip8.jpeg';
+// import Equip9Img from '../../../assets/img/equip9.png';
+import Equip8Img from '../../../assets/img/kl-new-eqp/8.png';
+import Equip9Img from '../../../assets/img/kl-new-eqp/9.png';
+// TODO, import Equip10Img from '../../../assets/img/equip10.png';
 import Equip10Img from '../../../assets/img/compressor_fridge_img.jpg'
-import Equip11Img from '../../../assets/img/equip11.png';
-import Equip12Img from '../../../assets/img/equip12.png';
-import Equip13Img from '../../../assets/img/equip13.png';
-import Equip14Img from '../../../assets/img/equip14.png';
-import Equip15Img from '../../../assets/img/equip15.jpeg';
+// import Equip11Img from '../../../assets/img/equip11.png';
+// import Equip12Img from '../../../assets/img/equip12.png';
+import Equip18Img from '../../../assets/img/equip13.png';
+// import Equip14Img from '../../../assets/img/equip14.png';
+// import Equip15Img from '../../../assets/img/equip15.jpeg';
+
+// import Equip16Img from '../../../assets/img/equip16.jpeg';
+// import Equip17Img from '../../../assets/img/equip17.jpeg';
+
+import Equip11Img from '../../../assets/img/kl-new-eqp/11.png';
+import Equip12Img from '../../../assets/img/kl-new-eqp/12.png';
+import Equip13Img from '../../../assets/img/kl-new-eqp/13.jpg';
+import Equip14Img from '../../../assets/img/kl-new-eqp/14.jpg';
+import Equip15Img from '../../../assets/img/kl-new-eqp/15.jpg';
+
+import Equip16Img from '../../../assets/img/kl-new-eqp/16.png';
+import Equip17Img from '../../../assets/img/kl-new-eqp/17.png';
 import styles from './index.less';
 
 const langCollection = {
   UA: {
     h1: 'МЕДИЧНЕ ОБЛАДНАННЯ',
-    p1: 'Апарат штучної вентиляції легень S1100A',
-    p2: 'Монітор пацієнта Brightfield Healthcare OSEN 8000',
+    p1: 'Комплекс анестезіологічний Drager Primus ',
+    p2: 'Монітор пацієнта Biolight М-12',
     p3: 'Кисневий концентратор Brightfield AE-10',
-    p4: 'Насос шприцевий інфузійний Brightfield Healthcare OSP-500',
+    p4: 'Насос шприцевий інфузійний Brightfield Healthcare KL-602',
     p5: 'Електрокоагулятор BOWA ARC 303',
     p6: 'Операційна лампа Maestro LED300',
     p7: 'Хірургічний рентгенпрозорий стіл TDY-1',
-    p8: 'Паровий стерилізатор Q70B',
-    p9: 'Аспіратор хірургічний портативний Aspira Go 30',
-    p10: 'Компресорний автохолодильник Alpicool TW35',
-    p11: 'Зовнішній дефібрилятор Defi 8',
-    p12: 'Портативний УЗД апарат Mindray DP-10',
-    p13: 'Портативный рентген аппарат EcoRay ULTRA 100',
-    p14: 'Портативний апарат ШВЛ OXYLOG 3000 Plus'
+    p8: 'Сухожарова шафа ГП-80 для стерилізації',
+    p9: 'Аспіратор медичний електричний пересувний 20 л H002 Folee',
+    p10: 'Компресорний автохолодильник Alpicool TW45',
+    p11: 'Дефібрилятор-монітор Біомед S6',
+    p12: 'Портативний УЗД апарат PHILIPS Lumify C5-2',
+    p13: 'Підігрівач інфузійних розчинів і крові FT70',
+    p14: 'Апарат ШВЛ Drager Oxylog 3000 plus',
+    p15: 'Камера ультрафіолетова Мобіл Заповіт',
+    p16: 'Пакувальна машина X330, Lifedent',
+    p17: 'Бактерицидний опромінювач BactoSfera OBB 15S ECO',
+    p18: 'Портативный рентген аппарат EcoRay ULTRA 100'
   },
+  // EN: {
+  //   h1: 'MEDICAL EQUIPMENT',
+  //   p1: 'S1100A Ventilator',
+  //   p2: 'Brightfield Healthcare OSEN 8000 Patient Monitor',
+  //   p3: 'Brightfield AE-10 Oxygen Concentrator',
+  //   p4: 'Infusion syringe pump Brightfield Healthcare OSP-500',
+  //   p5: 'BOWA ARC 303 electrocoagulator',
+  //   p6: 'Maestro LED300 operating lamp',
+  //   p7: 'Surgical x-ray table TDY-1',
+  //   p8: 'Steam sterilizer Q70B',
+  //   p9: 'Surgical portable Aspira Go 30 aspirator',
+  //   p10: 'Compressor car refrigerator Alpicool TW45',
+  //   p11: 'Defi 8 External Defibrillator',
+  //   p12: 'Mindray DP-10 portable ultrasound device',
+  //   p13: 'EcoRay ULTRA 100 portable x-ray machine',
+  //   p14: 'Portable ventilator OXYLOG 3000 Plus'
+  // },
   EN: {
     h1: 'MEDICAL EQUIPMENT',
-    p1: 'S1100A Ventilator',
-    p2: 'Brightfield Healthcare OSEN 8000 Patient Monitor',
+    p1: 'Drager Primus Anesthesia Workstation',
+    p2: 'Biolight M-12 Patient Monitor',
     p3: 'Brightfield AE-10 Oxygen Concentrator',
-    p4: 'Infusion syringe pump Brightfield Healthcare OSP-500',
-    p5: 'BOWA ARC 303 electrocoagulator',
-    p6: 'Maestro LED300 operating lamp',
-    p7: 'Surgical x-ray table TDY-1',
-    p8: 'Steam sterilizer Q70B',
-    p9: 'Surgical portable Aspira Go 30 aspirator',
-    p10: 'Compressor car refrigerator Alpicool TW35',
-    p11: 'Defi 8 External Defibrillator',
-    p12: 'Mindray DP-10 portable ultrasound device',
-    p13: 'EcoRay ULTRA 100 portable x-ray machine',
-    p14: 'Portable ventilator OXYLOG 3000 Plus'
-  },
+    p4: 'Brightfield Healthcare KL-602 Syringe Infusion Pump',
+    p5: 'BOWA ARC 303 Electrosurgical Unit',
+    p6: 'Maestro LED300 Surgical Lamp',
+    p7: 'TDY-1 Radiolucent Surgical Table',
+    p8: 'GP-80 Dry Heat Sterilizer',
+    p9: 'H002 Folee 20L Electric Portable Medical Suction Unit',
+    p10: 'Alpicool TW45 Compressor Car Refrigerator',
+    p11: 'Biomed S6 Defibrillator-Monitor',
+    p12: 'PHILIPS Lumify C5-2 Portable Ultrasound Machine',
+    p13: 'FT70 Infusion and Blood Warmer',
+    p14: 'Drager Oxylog 3000 plus Ventilator',
+    p15: 'Mobil Zapovit Ultraviolet Chamber',
+    p16: 'X330 Packing Machine, Lifedent',
+    p17: 'BactoSfera OBB 15S ECO Bactericidal Lamp',
+    p18: 'EcoRay ULTRA 100 portable x-ray machine',
+  }
 };
 
 const Equipment = ({ isMobile, lang }) => {
@@ -129,7 +171,7 @@ const Equipment = ({ isMobile, lang }) => {
           {equip(Equip3Img, 'Equip3Img', '3', langCollection[`${lang}`].p3)}
           {equip(Equip4Img, 'Equip4Img', '4', langCollection[`${lang}`].p4)}
           {equip(Equip5Img, 'Equip5Img', '5', langCollection[`${lang}`].p5)}
-          {equip(Equip15Img, 'Equip15Img', '6', langCollection[`${lang}`].p6)}
+          {equip(Equip6Img, 'Equip6Img', '6', langCollection[`${lang}`].p6)}
           {equip(Equip7Img, 'Equip7Img', '7', langCollection[`${lang}`].p7)}
           {equip(Equip8Img, 'Equip8Img', '8', langCollection[`${lang}`].p8)}
           {equip(Equip9Img, 'Equip9Img', '9', langCollection[`${lang}`].p9)}
@@ -138,6 +180,10 @@ const Equipment = ({ isMobile, lang }) => {
           {equip(Equip12Img, 'Equip12Img', '12', langCollection[`${lang}`].p12)}
           {equip(Equip13Img, 'Equip13Img', '13', langCollection[`${lang}`].p13)}
           {equip(Equip14Img, 'Equip14Img', '14', langCollection[`${lang}`].p14)}
+          {equip(Equip15Img, 'Equip14Img', '15', langCollection[`${lang}`].p15)}
+          {equip(Equip16Img, 'Equip14Img', '16', langCollection[`${lang}`].p16)}
+          {equip(Equip17Img, 'Equip14Img', '17', langCollection[`${lang}`].p17)}
+          {equip(Equip18Img, 'Equip18Img', '18', langCollection[`${lang}`].p18)}
         </div>
         <div className={styles.equipList}>
           <h3 className={styles.equipTitle}>{langCollection[`${lang}`].h1}</h3>
@@ -156,6 +202,10 @@ const Equipment = ({ isMobile, lang }) => {
             {equipDescr('12', langCollection[`${lang}`].p12)}
             {equipDescr('13', langCollection[`${lang}`].p13)}
             {equipDescr('14', langCollection[`${lang}`].p14)}
+            {equipDescr('15', langCollection[`${lang}`].p15)}
+            {equipDescr('16', langCollection[`${lang}`].p16)}
+            {equipDescr('17', langCollection[`${lang}`].p17)}
+            {equipDescr('18', langCollection[`${lang}`].p18)}
             {/* <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('1')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '1' ? { backgroundColor: '#D7DDDE' } : {}}><span>1</span><span>{langCollection[`${lang}`].p1}</span></div>
             <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('2')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '2' ? { backgroundColor: '#D7DDDE' } : {}}><span>2</span><span>{langCollection[`${lang}`].p2}</span></div>
             <div className={styles.equipListItem} onMouseEnter={() => handleHoverItem('3')} onMouseLeave={() => handleHoverItem(null)} style={hoveredImgItem === '3' ? { backgroundColor: '#D7DDDE' } : {}}><span>3</span><span>{langCollection[`${lang}`].p3}</span></div>

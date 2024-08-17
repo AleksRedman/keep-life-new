@@ -84,10 +84,10 @@ const Donate = ({ isMobile, lang }) => {
               <p className={styles.donatePBCardPaymentDetailsRow}>
                 <span className={styles.donatePBCardPaymentDetailsLabel}>IBAN:</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>
-                  UA823052990000026007021034880
+                  UA963052990000026007001034877
                   <Tooltip
                     title={
-                      (copiedId === 'UA823052990000026007021034880')
+                      (copiedId === 'UA963052990000026007001034877')
                         ? <div>
                           <CheckOutlined />
                           <span>Copied to clipboard</span>
@@ -98,7 +98,7 @@ const Donate = ({ isMobile, lang }) => {
                     <Button
                       type='link'
                       icon={<CopyOutlined />}
-                      onClick={() => handleCopyText( 'UA823052990000026007021034880' )}
+                      onClick={() => handleCopyText( 'UA963052990000026007001034877' )}
                       className={styles.donateCardPaymentDetailsCopy}
                     />
                   </Tooltip>
@@ -106,11 +106,11 @@ const Donate = ({ isMobile, lang }) => {
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
                 <span className={styles.donatePBCardPaymentDetailsLabel}>Отримувач:</span>
-                <span className={styles.donatePBCardPaymentDetailsValue}>БО ІМ.Б.ВОЗНИЦЬКОГО БФ</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>БО КІП ЛАЙФ</span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
                 <span className={styles.donatePBCardPaymentDetailsLabel}>ЄДРПОУ:</span>
-                <span className={styles.donatePBCardPaymentDetailsValue}>43108345</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>45569234</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>АТ КБ "ПРИВАТБАНК"</span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>

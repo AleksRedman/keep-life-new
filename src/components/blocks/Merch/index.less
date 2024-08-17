@@ -1,0 +1,198 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.merch {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &Header {
+    width: 100%;
+    padding: 32px;
+    color: #fff;
+    background-color: #A81A20;
+  }
+
+  &HeaderText {
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 27px;
+    color: #fff;
+  }
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: @screen-md-min) {
+      background-color: #B3BFC2;
+    }
+
+    @media (max-width: @custom-screen-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &List {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    // padding: 0 64px;
+    padding: 0 32px;
+
+    @media (max-width: @screen-md-min) {
+      flex-direction: column;
+    }
+  }
+
+  &Card {
+    width: 33.3%;
+    padding: 64px;
+    padding-bottom: 30px;
+    // margin-bottom: 32px;
+
+    @media (max-width: @screen-xl-min) {
+      width: 50%;
+    }
+
+    @media (max-width: @screen-md-min) {
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 25px;
+    }
+
+    &MediaBlock {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    &Carousel {
+      :global {
+        .slick-prev {
+          left: 35%;
+          font-size: 18px;
+          color: #ffffff;
+          z-index: 10!important;
+  
+          &:hover {
+            color: #ffffff;
+            font-size: 18px;
+          }
+  
+          &:focus {
+            color: #ffffff;
+            font-size: 18px;
+          }
+        }
+  
+        .slick-next {
+          right: 35%;
+          font-size: 18px;
+          color: #ffffff;
+          z-index: 10!important;
+  
+          &:hover {
+            color: #ffffff;
+            font-size: 18px;
+          }
+  
+          &:focus {
+            color: #ffffff;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &Title {
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 32px;
+      color: rgba(32, 32, 32, 1);
+      margin-bottom: 25px;
+
+      @media (max-width: @screen-lg-min) {
+        font-size: 22px;
+        line-height: 22px;
+      }
+
+      @media (max-width: @screen-md-min) {
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+
+    &Price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: rgba(32, 32, 32, 1);
+    }
+
+    &Date {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(32, 32, 32, 1);
+    }
+
+    &MassMediaTitle {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: rgba(32, 32, 32, 1);
+    }
+
+    &ReadyDate {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 21px;
+    }
+
+    &MassMediaList {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      // justify-content: space-between;
+
+      a {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        // margin-left: 24px;
+        margin-right: 24px;
+        margin-bottom: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

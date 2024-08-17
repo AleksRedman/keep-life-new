@@ -75,6 +75,12 @@ export default {
         //     ]
         // ).concat(
       ]).concat(
+        configUI().hidePages.find((i) => i === 'merch')
+          ? []
+          : [
+            { path: '/merch', component: '../pages/merch' }
+          ]
+      ).concat(
         configUI().hidePages.find((i) => i === 'projects')
           ? []
           : [
@@ -121,6 +127,12 @@ export default {
           ? []
           : [
             { path: '/en/donate-puzzle', component: '../pages/donate-puzzle-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'merch')
+          ? []
+          : [
+            { path: '/en/merch', component: '../pages/merch-en' }
           ]
       )
     }

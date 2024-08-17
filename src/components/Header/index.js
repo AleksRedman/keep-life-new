@@ -17,6 +17,7 @@ const langCollection = {
     p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
     pvdo: '3D МОДЕЛЬ',
     p5: 'ЗВІТИ',
+    p6: 'НАШ МЕРЧ'
   },
   EN: {
     p1: 'WORKING CONDITIONS',
@@ -25,6 +26,7 @@ const langCollection = {
     p4: 'MEDICAL EQUIPMENT',
     pvdo: '3D MODEL',
     p5: 'REPORTS',
+    p6: 'OUR MERCH'
   },
 };
 
@@ -64,6 +66,10 @@ class Header extends React.Component {
     } if (navId === 'reports') {
       onHandleSectionId(navId)
       router.push('/reports')
+      window.scrollTo(0, 0)
+    } else if (navId === 'merch') {
+      onHandleSectionId(navId)
+      router.push('/merch')
       window.scrollTo(0, 0)
     } else {
       const element = document.getElementById(navId);
@@ -121,6 +127,9 @@ class Header extends React.Component {
         <Menu.Item key="reports">
           {langCollection[`${lang}`].p5}
         </Menu.Item>
+        {/* <Menu.Item key="merch">
+          {langCollection[`${lang}`].p6}
+        </Menu.Item> */}
       </Menu>,
     ];
 
