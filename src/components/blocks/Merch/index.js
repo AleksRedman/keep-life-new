@@ -20,7 +20,7 @@ const merchList = [
   'bracelet',
   'fresher',
   'keychain',
-  'lighter',
+  'zippoLighter',
   'numberHolder',
   'pen',
   'pendant',
@@ -29,7 +29,7 @@ const merchList = [
   'sticker',
   'support',
   'tShirt',
-  'zippoLighter'
+  'lighter'
 ]
 
 const langCollection = {
@@ -58,7 +58,7 @@ const langCollection = {
     },
     numberHolder: {
       title: 'Тримач номеру',
-      descr: 'Автомобільний тримач для номеру. Цифри світяться в темряві',
+      descr: 'Автомобільний тримач для номеру. Цифри флуоресцентні',
       price: 100
     },
     pen: {
@@ -68,7 +68,7 @@ const langCollection = {
     },
     pendant: {
       title: 'Підвіска',
-      descr: 'Підвіска для автомобіля',
+      descr: 'Підвіска в автомобіль',
       price: 100
     },
     pendantPuzzle: {
@@ -83,7 +83,7 @@ const langCollection = {
     },
     sticker: {
       title: 'Стікери',
-      descr: 'Набір наших фірмових стікерів',
+      descr: 'Набір наших авторських стікерів',
       price: 100
     },
     support: {
@@ -98,7 +98,7 @@ const langCollection = {
     },
     zippoLighter: {
       title: 'Бензинова запальничка',
-      descr: 'Брендована бензинова запальничка.',
+      descr: 'Брендована бензинова запальничка',
       price: 100
     },
     btn: 'Донат'
@@ -128,7 +128,7 @@ const langCollection = {
     },
     numberHolder: {
       title: 'Number Holder',
-      descr: 'Car number holder. The numbers glow in the dark',
+      descr: 'Car number holder. The numbers are fluorescent',
       price: 100
     },
     pen: {
@@ -153,7 +153,7 @@ const langCollection = {
     },
     sticker: {
       title: 'Stickers',
-      descr: 'Set of our branded stickers',
+      descr: 'Set of our original stickers',
       price: 100
     },
     support: {

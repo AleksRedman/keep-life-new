@@ -81,6 +81,18 @@ export default {
             { path: '/merch', component: '../pages/merch' }
           ]
       ).concat(
+        configUI().hidePages.find((i) => i === 'reviews')
+          ? []
+          : [
+            { path: '/reviews', component: '../pages/reviews' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'reviews')
+          ? []
+          : [
+            { path: '/en/reviews', component: '../pages/reviews-en' }
+          ]
+      ).concat(
         configUI().hidePages.find((i) => i === 'projects')
           ? []
           : [

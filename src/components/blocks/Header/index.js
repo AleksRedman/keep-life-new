@@ -18,7 +18,8 @@ const langCollection = {
     p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
     p5: '3D МОДЕЛЬ',
     p6: 'ПРОЄКТИ',
-    p7: 'НАШ МЕРЧ'
+    p7: 'НАШ МЕРЧ',
+    p8: 'ВІДГУКИ'
   },
   EN: {
     p1: 'WORKING CONDITIONS',
@@ -27,7 +28,8 @@ const langCollection = {
     p4: 'MEDICAL EQUIPMENT',
     p5: '3D MODEL',
     p6: 'PROJECTS',
-    p7: 'OUR MERCH'
+    p7: 'OUR MERCH',
+    p8: 'REVIEWS'
   },
 };
 
@@ -88,6 +90,14 @@ class Header extends React.Component {
         router.push('/merch')
       } else if (lang === 'EN') {
         router.push('/en/merch')
+      }
+      window.scrollTo(0, 0)
+    }  if (navId === 'reviews') {
+      onHandleSectionId(navId)
+      if (lang === 'UA') {
+        router.push('/reviews')
+      } else if (lang === 'EN') {
+        router.push('/en/reviews')
       }
       window.scrollTo(0, 0)
     } else {
@@ -185,6 +195,9 @@ class Header extends React.Component {
         {/* <Menu.Item key="merch">
           {langCollection[`${lang}`].p7}
         </Menu.Item> */}
+        <Menu.Item key="reviews">
+          {langCollection[`${lang}`].p8}
+        </Menu.Item>
       </Menu>,
     ];
 

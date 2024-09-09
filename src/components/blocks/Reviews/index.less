@@ -1,0 +1,119 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.reviews {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 100px;
+  flex-grow: 1;
+
+  &Wrap {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    // @media (max-width: @screen-md-min) {
+    //   background-color: #B3BFC2;
+    // }
+
+    @media (max-width: @custom-screen-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &List {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 32px;
+
+    @media (max-width: @screen-md-min) {
+      flex-direction: column;
+    }
+
+    &Item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      padding: 0 30px;
+      margin-bottom: 80px;
+
+      &Wrap {
+        max-width: 60%;
+        padding: 32px;
+        background-color: #A81A20;
+        position: relative;
+
+        -webkit-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.45);
+        -moz-box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.45);
+        box-shadow: 0px 3px 40px 6px rgba(0,0,0,0.45);
+
+        @media (max-width: @screen-sm-min) {
+          max-width: 80%;
+        }
+
+        @media (max-width: @screen-xs-min) {
+          max-width: 90%;
+        }
+
+        &::before {
+          display: block;
+          content: "";
+          bottom: -10px;
+          left: 50px;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          transform: rotate(45deg);
+          background-color: #A81A20;
+        }
+      }
+
+      &Title {
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      &Text {
+        color: #ffffff;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+      }
+
+      &Right {
+        justify-content: right;
+
+        .reviewsListItemWrap {
+          &::before {
+            display: block;
+            content: "";
+            bottom: -10px;
+            right: 50px;
+            left: auto;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            transform: rotate(45deg);
+            background-color: #A81A20;
+          }
+        }
+      }
+    }
+  }
+}

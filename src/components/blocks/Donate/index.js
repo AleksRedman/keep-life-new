@@ -4,7 +4,8 @@ import { connect } from 'dva'
 import { Button, Tooltip } from 'antd'
 import { CopyOutlined, CheckOutlined } from '@ant-design/icons'
 import PrivatBankIcon from '../../../assets/img/privatbankIconTrsprnt.png';
-import PrivatBankQRImg from '../../../assets/img/qr-privat-bank-common.png';
+// import PrivatBankQRImg from '../../../assets/img/qr-privat-bank-common.png';
+import PrivatBankQRImg from '../../../assets/img/pb-qr.png';
 import PayPalIcon from '../../../assets/img/paypal-logo-trsprnt.png'
 import RedCrossIcon from '../../../assets/img/red-cross.png'
 import MonobankIcon from '../../../assets/img/monobankIconTrsprnt.png'

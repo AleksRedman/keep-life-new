@@ -56,7 +56,7 @@ const langCollection = {
     p15: 'Камера ультрафіолетова Мобіл Заповіт',
     p16: 'Пакувальна машина X330, Lifedent',
     p17: 'Бактерицидний опромінювач BactoSfera OBB 15S ECO',
-    p18: 'Портативный рентген аппарат EcoRay ULTRA 100'
+    p18: 'Портативний рентген аппарат EcoRay ULTRA 100'
   },
   // EN: {
   //   h1: 'MEDICAL EQUIPMENT',
