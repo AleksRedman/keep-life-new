@@ -9,8 +9,10 @@ import PrivatBankQRImg from '../../../assets/img/pb-qr.png';
 import PayPalIcon from '../../../assets/img/paypal-logo-trsprnt.png'
 import RedCrossIcon from '../../../assets/img/red-cross.png'
 import MonobankIcon from '../../../assets/img/monobankIconTrsprnt.png'
-import MonobankQRImg from '../../../assets/img/monobankKLqr.png'
+// import MonobankQRImg from '../../../assets/img/monobankKLqr.png'
+import MonobankQRImg from '../../../assets/img/mb-kl-qr-new.png'
 import MonobankBtnIcon from '../../../assets/img/monobankBtnIconTrsprnt.png'
+import LiqPayForm from '../LiqPayForm'
 import router from 'umi/router'
 import styles from './index.less'
 
@@ -140,7 +142,8 @@ const Donate = ({ isMobile, lang }) => {
                   // icon={<CopyOutlined />}
                   // onClick={() => handleCopyText( 'UA823052990000026007021034880' )}
                   className={styles.donateMBCardPaymentDetailsMonoBtn}
-                  href='https://send.monobank.ua/jar/9HpA1JoFxq'
+                  // href='https://send.monobank.ua/jar/9HpA1JoFxq'
+                  href='https://send.monobank.ua/jar/49vTCiG8nt'
                   target='_blank'
                   referrerPolicy='no-referrer'
                 >
@@ -188,6 +191,14 @@ const Donate = ({ isMobile, lang }) => {
             </div>
           </div>
         </div>
+        {/* <div className={styles.donateWholeBlock}>
+          <div className={styles.donateLiqPayCard}>
+            <LiqPayForm
+              isMobile={isMobile}
+              lang={lang}
+            />
+          </div>
+        </div> */}
       </div>
     </div>
   );

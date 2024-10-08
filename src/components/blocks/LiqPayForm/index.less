@@ -1,6 +1,121 @@
 @import "~antd/lib/style/themes/default.less";
 @import "../../../vars";
 
+.liqPayForm {
+  :global {
+    .ant-tabs {
+      .ant-tabs-nav-list {
+        .ant-tabs-tab {
+          .ant-tabs-tab-btn {
+            color: rgba(32, 32, 32, 1);
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  &Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    &ImgWrap {
+      max-width: 30%;
+  
+      img {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &PaymentPeriod {
+    width: 100%;
+  }
+
+  &Amount {
+
+  }
+
+  &AmountSuffix {
+
+  }
+
+  &AmountQuickSelection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &AmountQuickSelectionBtn {
+    border-radius: 20px;
+  }
+
+  &SubmitWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &Submit {
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(94, 166, 1, 1);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(94, 166, 1, 0.8);
+    }
+  }
+
+  :global {
+    .ant-input-number-group-wrapper {
+      width: 100%;
+      margin-bottom: 25px;
+
+      .ant-input-number {
+        border: none;
+        border-bottom: 2px dotted rgba(128, 141, 159, 0.3);
+
+        .ant-input-number-input-wrap {
+          border: none;
+          // border-bottom: 1px dotted #c5c5c5;
+        }
+      }
+
+      .ant-input-number-group-addon {
+        border: none;
+        background-color: #fff;
+        border-bottom: 2px dotted rgba(128, 141, 159, 0.3);
+      }
+    }
+  }
+}
+
+
 .donate {
   width: 100%;
   // padding-top: 160px;
@@ -15,7 +130,6 @@
     width: 100%;
     max-width: 1600px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -180,23 +294,6 @@
       width: 100%;
       max-width: 100%;
     }
-  }
-
-  &WholeBlock {
-    width: 100%;
-    padding: 100px 35px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: #B2BFC2;
-  }
-
-  &LiqPayCard {
-    max-width: 40%;
-    min-width: 300px;
-    background-color: #FBFBFB;
-    padding: 35px;
   }
 
   &MBCard {
