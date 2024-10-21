@@ -4,24 +4,30 @@ import { connect } from 'dva'
 import { Carousel, Tag } from 'antd'
 import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 
+import Stamp from '../../../assets/img/completed_stamp2.png'
+
 import ArmyInform from '../../../assets/img/army_inform1.png';
 import EspressoTV from '../../../assets/img/EspressoTV.png';
 import ShoTam from '../../../assets/img/sho_tam.png'
 import LvivNews from '../../../assets/img/lvivNews.png'
 import Suspilne from '../../../assets/img/suspilne.jpeg'
 
-import KLMark5Img1 from '../../../assets/img/kl-mark5/kl5_1.jpg';
-import KLMark5Img2 from '../../../assets/img/kl-mark5/kl5_2.jpg';
-import KLMark5Img3 from '../../../assets/img/kl-mark5/kl5_3.jpg';
-import KLMark5Img4 from '../../../assets/img/kl-mark5/kl5_4.jpg';
-import KLMark5Img5 from '../../../assets/img/kl-mark5/kl5_5.jpg';
+import mindUA from '../../../assets/img/mind-ua-logo.jpeg';
+import Channel5 from '../../../assets/img/5-channel-logo.png';
+import ICTV from '../../../assets/img/ictv-logo.png'
+import WoMo from '../../../assets/img/womo-logo.png'
 
+import KLMark5Img1 from '../../../assets/img/kl-mark5/new/kl5_1_sq.png';
+import KLMark5Img2 from '../../../assets/img/kl-mark5/new/kl5_2_sq.png';
+import KLMark5Img3 from '../../../assets/img/kl-mark5/new/kl5_3_sq.png';
+
+import KLMark4Img5 from '../../../assets/img/kl-mark4/new/kl4_1_qr.png';
 import KLMark4Img1 from '../../../assets/img/kl-mark4/kl4_1.jpg';
 import KLMark4Img2 from '../../../assets/img/kl-mark4/kl4_2.jpg';
 import KLMark4Img3 from '../../../assets/img/kl-mark4/kl4_3.jpg';
 import KLMark4Img4 from '../../../assets/img/kl-mark4/kl4_4.jpg';
-import KLMark4Img5 from '../../../assets/img/kl-mark4/kl4_5.jpg';
-import KLMark4Img8 from '../../../assets/img/kl-mark4/kl4_8.jpg';
+import KLMark4Img6 from '../../../assets/img/kl-mark4/new/kl4_5_qr.png';
+import KLMark4Img8 from '../../../assets/img/kl-mark4/new/kl4_6_qr.png';
 
 import KLMark3Img1 from '../../../assets/img/kl-mark3/SquareImgs/kl3_19.jpg';
 import KLMark3Img2 from '../../../assets/img/kl-mark3/SquareImgs/kl3_15.jpg';
@@ -68,10 +74,10 @@ const langCollection = {
     kl_3_date: '2024',
     kl_4_path: '/projects/kl-mark-4',
     kl_4_title: 'Keep Life Mark 4',
-    kl_4_date: '2024',
+    kl_4_date: 'Жовтень 2024',
     kl_5_path: '/projects/kl-mark-5',
     kl_5_title: 'Keep Life Mark 5',
-    kl_5_date: '2024',
+    kl_5_date: 'Жовтень 2024',
     link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
     mbBtn: 'Підтримати'
   },
@@ -89,10 +95,10 @@ const langCollection = {
     kl_3_date: '2024',
     kl_4_path: '/en/projects/kl-mark-4',
     kl_4_title: 'Keep Life Mark 4',
-    kl_4_date: '2024',
+    kl_4_date: 'October 2024',
     kl_5_path: '/en/projects/kl-mark-5',
     kl_5_title: 'Keep Life Mark 5',
-    kl_5_date: '2024',
+    kl_5_date: 'October 2024',
     link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
     mbBtn: 'Support'
   },
@@ -134,20 +140,57 @@ const Projects = ({ isMobile, lang }) => {
                 prevArrow={<LeftOutlined />}
                 className={styles.projectsCardCarousel}
               >
-                {slide(KLMark5Img2, 'KLMark5Img2')}
-                {slide(KLMark5Img5, 'KLMark5Img5')}
                 {slide(KLMark5Img1, 'KLMark5Img1')}
                 {slide(KLMark5Img3, 'KLMark5Img3')}
-                {slide(KLMark5Img4, 'KLMark5Img4')}
+                {slide(KLMark5Img2, 'KLMark5Img2')}
               </Carousel>
             </div>
-            <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_5_path}>
-              {langCollection[`${lang}`].kl_5_title}
-            </Link>
+            <div className={styles.projectsCardTitleWrap}>
+              <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_5_path}>
+                {langCollection[`${lang}`].kl_5_title}
+              </Link>
+              <div className={styles.projectsCardStamp}>
+                <img src={Stamp} alt='Completed' />
+              </div>
+            </div>
+            
             <p className={styles.projectsCardDate}>
               {langCollection[`${lang}`].kl_5_date}
             </p>
-            <Tag color="#87d068">{langCollection[`${lang}`].kl_tag_progress}</Tag>
+            {/* <Tag color="#87d068">{langCollection[`${lang}`].kl_tag_progress}</Tag> */}
+            <p className={styles.projectsCardMassMediaTitle}>
+              {langCollection[`${lang}`].kl_mass_media}
+            </p>
+            {/* <p className={styles.projectsCardReadyDate}>
+              Ready Date
+            </p> */}
+            <div className={styles.projectsCardMassMediaList}>
+              <a href='https://tsn.ua/video/video-novini/kupili-za-pidtrimki-glyadachiv-tsn-u-kiyevi-prezentuvali-peresuvni-stabpunkti-dlya-poranenih-biyciv.html' target='_blank' rel="noreferrer">
+                <img src={TSNImg} alt='ТСН' />
+              </a>
+              <a href='https://www.facebook.com/share/v/fndH2wBnV4Eymdc2/?mibextid=zWBbVw' target='_blank' rel="noreferrer">
+                <img src={TROMedia} alt='TRO Media' />
+              </a>
+              <a href='https://photonew.ukrinform.com/stock-photo/prezentaciya-dvoh-stabilizaciynyh-punktiv-keep-life-u-kyievi-182583.html' target='_blank' rel="noreferrer">
+                <img src={Ukrinform} alt='Ukrinform' />
+              </a>
+              <a href='https://youtu.be/e2XIM57nQRc?t=7657' target='_blank' rel="noreferrer">
+                <img src={Suspilne} alt='Suspilne' />
+              </a>
+
+              <a href='https://mind.ua/news/20279966-proekt-keep-life-na-front-peredano-shche-dva-mobilnih-hirurgichno-stabilizacijnih-punkti' target='_blank' rel="noreferrer">
+                <img src={mindUA} alt='MIND UA' />
+              </a>
+              <a href='https://www.youtube.com/watch?v=j_J_D7ZBdWs&t=1630s' target='_blank' rel="noreferrer">
+                <img src={Channel5} alt='5 Channel' />
+              </a>
+              <a href='https://www.youtube.com/watch?v=Vv_IxH14RFo' target='_blank' rel="noreferrer">
+                <img src={ICTV} alt='ICTV' />
+              </a>
+              <a href='https://womo.ua/proyekt-keep-life-na-front-peredano-shhe-dva-mobilnih-hirurgichno-stabilizatsiynih-punkti/' target='_blank' rel="noreferrer">
+                <img src={WoMo} alt='WoMo' />
+              </a>
+            </div>
           </div>
 
           <div className={styles.projectsCard}>
@@ -161,20 +204,56 @@ const Projects = ({ isMobile, lang }) => {
                 className={styles.projectsCardCarousel}
               >
                 {slide(KLMark4Img5, 'KLMark4Img5')}
+                {slide(KLMark4Img6, 'KLMark4Img6')}
                 {slide(KLMark4Img8, 'KLMark4Img8')}
-                {slide(KLMark4Img1, 'KLMark4Img1')}
-                {slide(KLMark4Img2, 'KLMark4Img2')}
-                {slide(KLMark4Img3, 'KLMark4Img3')}
-                {slide(KLMark4Img4, 'KLMark4Img4')}
               </Carousel>
             </div>
-            <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_4_path}>
-              {langCollection[`${lang}`].kl_4_title}
-            </Link>
+            <div className={styles.projectsCardTitleWrap}>
+              <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_4_path}>
+                {langCollection[`${lang}`].kl_4_title}
+              </Link>
+              <div className={styles.projectsCardStamp}>
+                <img src={Stamp} alt='Completed' />
+              </div>
+            </div>
+            
             <p className={styles.projectsCardDate}>
               {langCollection[`${lang}`].kl_4_date}
             </p>
-            <Tag color="#87d068">{langCollection[`${lang}`].kl_tag_progress}</Tag>
+            {/* <Tag color="#87d068">{langCollection[`${lang}`].kl_tag_progress}</Tag> */}
+            <p className={styles.projectsCardMassMediaTitle}>
+              {langCollection[`${lang}`].kl_mass_media}
+            </p>
+            {/* <p className={styles.projectsCardReadyDate}>
+              Ready Date
+            </p> */}
+            <div className={styles.projectsCardMassMediaList}>
+              <a href='https://tsn.ua/video/video-novini/kupili-za-pidtrimki-glyadachiv-tsn-u-kiyevi-prezentuvali-peresuvni-stabpunkti-dlya-poranenih-biyciv.html' target='_blank' rel="noreferrer">
+                <img src={TSNImg} alt='ТСН' />
+              </a>
+              <a href='https://www.facebook.com/share/v/fndH2wBnV4Eymdc2/?mibextid=zWBbVw' target='_blank' rel="noreferrer">
+                <img src={TROMedia} alt='TRO Media' />
+              </a>
+              <a href='https://photonew.ukrinform.com/stock-photo/prezentaciya-dvoh-stabilizaciynyh-punktiv-keep-life-u-kyievi-182583.html' target='_blank' rel="noreferrer">
+                <img src={Ukrinform} alt='Ukrinform' />
+              </a>
+              <a href='https://youtu.be/e2XIM57nQRc?t=7657' target='_blank' rel="noreferrer">
+                <img src={Suspilne} alt='Suspilne' />
+              </a>
+
+              <a href='https://mind.ua/news/20279966-proekt-keep-life-na-front-peredano-shche-dva-mobilnih-hirurgichno-stabilizacijnih-punkti' target='_blank' rel="noreferrer">
+                <img src={mindUA} alt='MIND UA' />
+              </a>
+              <a href='https://www.youtube.com/watch?v=j_J_D7ZBdWs&t=1630s' target='_blank' rel="noreferrer">
+                <img src={Channel5} alt='5 Channel' />
+              </a>
+              <a href='https://www.youtube.com/watch?v=Vv_IxH14RFo' target='_blank' rel="noreferrer">
+                <img src={ICTV} alt='ICTV' />
+              </a>
+              <a href='https://womo.ua/proyekt-keep-life-na-front-peredano-shhe-dva-mobilnih-hirurgichno-stabilizatsiynih-punkti/' target='_blank' rel="noreferrer">
+                <img src={WoMo} alt='WoMo' />
+              </a>
+            </div>
           </div>
 
           <div className={styles.projectsCard}>
@@ -196,9 +275,15 @@ const Projects = ({ isMobile, lang }) => {
                 {slide(KLMark3Img6, 'KLMark3Img6')}
               </Carousel>
             </div>
-            <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_3_path}>
-              {langCollection[`${lang}`].kl_3_title}
-            </Link>
+            <div className={styles.projectsCardTitleWrap}>
+              <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_3_path}>
+                {langCollection[`${lang}`].kl_3_title}
+              </Link>
+              <div className={styles.projectsCardStamp}>
+                <img src={Stamp} alt='Completed' />
+              </div>
+            </div>
+            
             <p className={styles.projectsCardDate}>
               {langCollection[`${lang}`].kl_3_date}
             </p>
@@ -221,9 +306,14 @@ const Projects = ({ isMobile, lang }) => {
                 {slide(Gallery7Img, 'Gallery7Img')}
               </Carousel>
             </div>
-            <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_2_path}>
-              {langCollection[`${lang}`].kl_2_title}
-            </Link>
+            <div className={styles.projectsCardTitleWrap}>
+              <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_2_path}>
+                {langCollection[`${lang}`].kl_2_title}
+              </Link>
+              <div className={styles.projectsCardStamp}>
+                <img src={Stamp} alt='Completed' />
+              </div>
+            </div>
             <p className={styles.projectsCardDate}>
               {langCollection[`${lang}`].kl_2_date}
             </p>
@@ -272,9 +362,14 @@ const Projects = ({ isMobile, lang }) => {
                 {slide(KLMark1Img4, 'KLMark1Img4')}
               </Carousel>
             </div>
-            <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_1_path}>
-              {langCollection[`${lang}`].kl_1_title}
-            </Link>
+            <div className={styles.projectsCardTitleWrap}>
+              <Link className={styles.projectsCardTitle} to={langCollection[`${lang}`].kl_1_path}>
+                {langCollection[`${lang}`].kl_1_title}
+              </Link>
+              <div className={styles.projectsCardStamp}>
+                <img src={Stamp} alt='Completed' />
+              </div>
+            </div>
             <p className={styles.projectsCardDate}>
               {langCollection[`${lang}`].kl_1_date}
             </p>

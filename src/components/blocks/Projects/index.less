@@ -44,6 +44,27 @@
     width: 50%;
     padding: 64px;
     padding-bottom: 30px;
+
+    &TitleWrap {
+      width: 100%;
+      position: relative;
+    }
+
+    &Stamp {
+      width: 100px;
+      // max-width: 100px;
+      height: auto;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
     // margin-bottom: 32px;
 
     @media (max-width: @screen-lg-min) {
@@ -54,6 +75,7 @@
       width: 100%;
       background-color: #fff;
       margin-bottom: 25px;
+      padding: 15px 15px 35px;
     }
 
     &MediaBlock {

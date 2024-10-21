@@ -23,6 +23,11 @@ import OperationChargeImg from '../../../assets/img/partners_logos_grey/logo-17.
 import SEImg from '../../../assets/img/partners_logos_grey/logo-18.png';
 import TrallerImg from '../../../assets/img/TRAILLER.png';
 import TrallerImgSmall from '../../../assets/img/trailler_small.png';
+
+import Avenir from '../../../assets/img/partners_logos_grey/avenir-grey.png'
+import MiaMed from '../../../assets/img/partners_logos_grey/mia-med-grey.png'
+import Stalkon from '../../../assets/img/partners_logos_grey/stalkon-grey2.png'
+
 import styles from './index.less'
 
 const langCollection = {
@@ -72,6 +77,8 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
     )
   }
 
+  // #646C6E
+
   return (
     <section className={pageStyles}>
       {console.log('lang', lang)}
@@ -100,23 +107,33 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
           autoplay
           dots={false}
           className={styles.bannerPartnersCarousel}
-          slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 7}
+          // slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 7}
+          slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 8}
         >
           {slide(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
           {slide(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
-          {slide(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD')}
-          {slide(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank')}
-          {slide(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
-          {slide(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines')}
           {slide(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric')}
-          {/* {slide(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
-          {slide(OkkoImg, 'https://www.okko.ua/', 'Okko')}
-          {slide(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta')}
-          {slide(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge')}
+          {slide(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD')}
+          {slide(Stalkon, 'https://pro.stalkon.com.ua/en/', 'Stalkon')}
+          {slide(Avenir, 'https://avenir-franco-ukrainien.org/', 'Avenir')}
           {slide(BridgeOfKindness, '#', 'Bridge Of Kindness')}
+          {slide(MiaMed, 'https://miamed.company/', 'MiaMed')}
+
+
+
+         
+          {/* {slide(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank')} */}
+          {/* {slide(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')} */}
+          {/* {slide(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines')} */}
+          
+          {/* {slide(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
+          {/* {slide(OkkoImg, 'https://www.okko.ua/', 'Okko')} */}
+          {/* {slide(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta')} */}
+          {/* {slide(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge')} */}
+          
           {/* {slide(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')} */}
           {/* {slide(BudMallImg, 'https://budmall.center/', 'Budmall')} */}
-          {slide(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding')}
+          {/* {slide(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding')} */}
           {/* {slide(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')} */}
           
           

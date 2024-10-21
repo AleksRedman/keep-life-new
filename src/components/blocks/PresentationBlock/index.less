@@ -1,0 +1,60 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.videoBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  &Wrap {
+    width: 100%;
+    padding: 11vw 8vw 9vw;
+    max-width: 1600px;
+    background: radial-gradient(93.63% 93.59% at 50% 51.96%, rgba(255, 255, 255, 0.8) 0%, rgba(119, 140, 145, 0.8) 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: @screen-lg-min) {
+      padding: 5vw;
+    }
+
+    @media (max-width: @custom-screen-sm) {
+      padding: 0;
+    }
+  }
+
+  &Shadow {
+    width: 30vw;
+    height: 1px;
+    display: flex;
+    background: rgba(53, 78, 88, 0.3);
+    margin-top: 50px;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 1px 0px 2px 1px rgba(53,78,88,0.3);
+    -moz-box-shadow: 1px 0px 2px 1px rgba(53,78,88,0.3);
+    box-shadow: 1px 0px 2px 1px rgba(53,78,88,0.3);
+
+    @media (max-width: @custom-screen-sm) {
+      display: none;
+    }
+
+    &Img {
+      width: 50vw;
+      height: auto;
+      margin-top: 40px;
+
+      @media (max-width: @custom-screen-sm) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

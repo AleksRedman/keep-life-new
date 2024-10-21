@@ -2,6 +2,7 @@ import Header from '@/components/blocks/Header'
 import Banner from '@/components/blocks/Banner'
 import Advantages from '@/components/blocks/Advantages'
 import VideoBlock from '@/components/blocks/VideoBlock'
+import PresentationBlock from '@/components/blocks/PresentationBlock'
 import Problems from '@/components/blocks/Problems'
 import Innovations from '@/components/blocks/Innovations'
 import Mission from '@/components/blocks/Mission'
@@ -26,6 +27,7 @@ export default function() {
   return ([
       <Header key='header' lang='UA' />,
       <Banner key="banner" lang='UA' />,
+      <PresentationBlock key="presentationBlock" lang='UA' />,
       <Problems key="problems" lang='UA' />,
       <Mission key="mission" lang='UA' />,
       <VideoBlock key="videoBlock" lang='UA' />,

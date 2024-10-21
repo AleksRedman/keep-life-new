@@ -18,8 +18,12 @@ import BridgeOfKindness from '../../../assets/img/bridge_of_kindness.png';
 import VolonterRyadnina from '../../../assets/img/volonter_ryadnina.jpg'
 import BudMallImg from '../../../assets/img/budmall_partner_icon.jpg'
 import OkkoImg from '../../../assets/img/okko_logo.jpeg'
-import OnePlusOne from '../../../assets/img/onePlusOne.jpeg'
+import OnePlusOne from '../../../assets/img/partners_logos/1plus1-logo.png'
 import MetalHolding from '../../../assets/img/metalHolding.jpg'
+
+import Avenir from '../../../assets/img/partners_logos/avenir-logo.png'
+import MiaMed from '../../../assets/img/partners_logos/mia-med-logo.png'
+import Stalkon from '../../../assets/img/partners_logos/stalkon-logo.png'
 import styles from './index.less';
 
 const langCollection = {
@@ -46,6 +50,16 @@ const Partners = ({ isMobile, lang }) => {
       </div>
     )
   }
+
+  // Плюси
+  // Леруа
+  // Шнайдер
+  // Екстрим
+  // Сталкон
+  // Авенір
+  // Міст добра
+  // Міа мед
+
   return (
     <section id="partners" className={styles.partners}>
       <div className={styles.partnersWrap}>
@@ -53,19 +67,23 @@ const Partners = ({ isMobile, lang }) => {
         <div className={styles.partnersList}>
           {item(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
           {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
-          {item(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD', true)}
-          {item(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank', true)}
-          {item(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
-          {item(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines', true)}
           {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
-          {/* {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
-          {item(OkkoImg, 'https://www.okko.ua/', 'Okko')}
-          {item(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta', true)}
-          {item(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge', true)}
+          {item(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD', true)}
+          {item(Stalkon, 'https://pro.stalkon.com.ua/en/', 'Stalkon', true)}
+          {item(Avenir, 'https://avenir-franco-ukrainien.org/', 'Avenir', true)}
           {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
+          {item(MiaMed, 'https://miamed.company/', 'MiaMed', true)}
+
+          {/* {item(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank', true)} */}
+          {/* {item(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')} */}
+          {/* {item(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines', true)} */}
+          {/* {item(MedeximImg, 'https://medexim.ua/', 'Med Exim')} */}
+          {/* {item(OkkoImg, 'https://www.okko.ua/', 'Okko')} */}
+          {/* {item(UkrnaftaImg, 'https://www.ukrnafta.com/', 'Ukrnafta', true)} */}
+          {/* {item(OperationChargeImg, 'https://operation-change.org/', 'Operation Charge', true)} */}
           {/* {item(FirstMemImg, 'https://t.me/privatnamemarnya', 'First Memarnia')} */}
           {/* {item(BudMallImg, 'https://budmall.center/', 'Budmall', true)} */}
-          {item(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding', true)}
+          {/* {item(MetalHolding, 'https://metal-holding.ua/lvov/', 'Metal Holding', true)} */}
           {/* {item(VolonterRyadnina, '#', 'Volonter Ryadnina Sergii')} */}
           {/* {item(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
           {item(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')} */}
