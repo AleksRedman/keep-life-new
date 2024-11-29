@@ -19,11 +19,19 @@ import styles from './index.less'
 const langCollection = {
   UA: {
     link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
-    mbBtn: 'Підтримати'
+    mbBtn: 'Підтримати',
+    pbCurrency: 'Валюта:',
+    pbRecpt: 'Recipient:',
+    pbEDRPOU: 'ЄДРПОУ:',
+    pbPurp: 'Призначення платежу:'
   },
   EN: {
     link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
-    mbBtn: 'Support'
+    mbBtn: 'Support',
+    pbCurrency: 'Currency:',
+    pbRecpt: 'Recipient:',
+    pbEDRPOU: 'EDRPOU:',
+    pbPurp: 'Purpose of payment:'
   },
 };
 
@@ -46,6 +54,31 @@ const Donate = ({ isMobile, lang }) => {
     }
 
     window.scrollTo(0, 0)
+  }
+
+  const copyValue = (val) => {
+    return (
+      <>
+        {val}
+        <Tooltip
+          title={
+            (copiedId === val)
+              ? <div>
+                <CheckOutlined />
+                <span>Copied to clipboard</span>
+              </div>
+              : <span>Click to copy</span>
+          }
+        >
+          <Button
+            type='link'
+            icon={<CopyOutlined />}
+            onClick={() => handleCopyText(val)}
+            className={styles.donateCardPaymentDetailsCopy}
+          />
+        </Tooltip>
+      </>
+    )
   }
 
   return (
@@ -81,7 +114,7 @@ const Donate = ({ isMobile, lang }) => {
             </div>
             <div className={styles.donatePBCardPaymentDetails}>
               <p className={styles.donatePBCardPaymentDetailsRow}>
-                <span className={styles.donatePBCardPaymentDetailsLabel}>Валюта:</span>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbCurrency}</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>UAH</span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
@@ -108,16 +141,16 @@ const Donate = ({ isMobile, lang }) => {
                 </span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
-                <span className={styles.donatePBCardPaymentDetailsLabel}>Отримувач:</span>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbRecpt}</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>БО КІП ЛАЙФ</span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
-                <span className={styles.donatePBCardPaymentDetailsLabel}>ЄДРПОУ:</span>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbEDRPOU}</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>45569234</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>АТ КБ "ПРИВАТБАНК"</span>
               </p>
               <p className={styles.donatePBCardPaymentDetailsRow}>
-                <span className={styles.donatePBCardPaymentDetailsLabel}>Призначення платежу:</span>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbPurp}</span>
                 <span className={styles.donatePBCardPaymentDetailsValue}>Благодійна пожертва</span>
               </p>
             </div>
@@ -187,6 +220,195 @@ const Donate = ({ isMobile, lang }) => {
                     />
                   </Tooltip>
                 </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.donateBlock3}>
+          <div className={styles.donatePBCard}>
+            <div className={styles.donatePBCardImgsWrap}>
+              <div className={styles.donatePBCardPaymentMethodShort}>
+                <img key="icon-pb" alt="PrivatBank Icon" src={PrivatBankIcon} />
+              </div>
+              {/* <div className={styles.donatePBCardPaymentQR}>
+                <img key="qr-pb" alt="PrivatBank QR" src={PrivatBankQRImg} />
+              </div> */}
+            </div>
+            <div className={styles.donatePBCardPaymentDetails}>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbCurrency}</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>EUR</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Реквізити компанії / Company details</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Назва компанії / Company Name:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('БО КІП ЛАЙФ')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>IBAN Code:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('UA233052990000026003001036909')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Назва банку / Name of the bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT code банку / Bank SWIFT Code:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('PBANUA2X')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Адреса компанії / Company address:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('79018, УКРАЇНА, ОБЛ. ЛЬВІВСЬКА, М. ЛЬВІВ, ВУЛ. ФЕДЬКОВИЧА Ю, Б. 58, КВ. 304Б.')}</span>
+              </p>
+              <br />
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банки кореспонденти/Correspondent banks</span>
+              </p>
+              <br />
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('400886700401')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('COBADEFF')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('Commerzbank AG, Frankfurt am Main, Germany')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Або / Or</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('6231605145')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('CHASDEFX')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('J.P.MORGAN AG, FRANKFURT AM MAIN, GERMANY')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Або / Or</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('5184099710, IBAN DE39503303005184099710')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('IRVTDEFX')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('THE BANK OF NEW YORK MELLON, FRANKFURT AM MAIN')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Або / Or</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('0042997188, IBAN IE96CITI99005142997188')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('CITIIE2X')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('CITIBANK EUROPE PLC')}</span>
+              </p>
+            </div>
+          </div>
+          <div className={styles.donatePBCard}>
+            <div className={styles.donatePBCardImgsWrap}>
+              <div className={styles.donatePBCardPaymentMethodShort}>
+                <img key="icon-pb" alt="PrivatBank Icon" src={PrivatBankIcon} />
+              </div>
+              {/* <div className={styles.donatePBCardPaymentQR}>
+                <img key="qr-pb" alt="PrivatBank QR" src={PrivatBankQRImg} />
+              </div> */}
+            </div>
+            <div className={styles.donatePBCardPaymentDetails}>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>{langCollection[`${lang}`].pbCurrency}</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>USD</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Реквізити компанії / Company details</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Назва компанії / Company Name:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('БО КІП ЛАЙФ')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>IBAN Code:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('UA383052990000026001001024582')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Назва банку / Name of the bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT code банку / Bank SWIFT Code:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('PBANUA2X')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Адреса компанії / Company address:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('79018, УКРАЇНА, ОБЛ. ЛЬВІВСЬКА, М. ЛЬВІВ, ВУЛ. ФЕДЬКОВИЧА Ю, Б. 58, КВ. 304Б.')}</span>
+              </p>
+              <br />
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банки кореспонденти/Correspondent banks</span>
+              </p>
+              <br />
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('001-1-000080')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('CHASUS33')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('JP Morgan Chase Bank, New York ,USA')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Або / Or</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('890-0085-754')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('IRVT US 3N')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('The Bank of New York Mellon, New York, USA')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Або / Or</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Рахунок у банку-кореспонденті / Account in the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('36445343')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>SWIFT Code банку-кореспондента / SWIFT Code of the correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('CITI US 33')}</span>
+              </p>
+              <p className={styles.donatePBCardPaymentDetailsRow}>
+                <span className={styles.donatePBCardPaymentDetailsLabel}>Банк-кореспондент / Correspondent bank:</span>
+                <span className={styles.donatePBCardPaymentDetailsValue}>{copyValue('Citibank N.A., NEW YORK, USA')}</span>
               </p>
             </div>
           </div>

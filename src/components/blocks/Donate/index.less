@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
 
     @media (max-width: @custom-screen-sm) {
@@ -30,7 +30,7 @@
     max-width: 50%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
 
     @media (max-width: @screen-lg-min) {
@@ -118,6 +118,16 @@
       }
     }
 
+    &PaymentMethodShort {
+      width: 50%;
+      max-width: 50%;
+      margin-bottom: 40px;
+
+      img {
+        width: 100%;
+      }
+    }
+
     &PaymentQR {
       width: 100%;
       max-width: 100%;
@@ -169,7 +179,7 @@
     max-width: 50%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
 
     @media (max-width: @screen-lg-min) {
@@ -335,6 +345,24 @@
 
     &PaymentDetailsCopy {
 
+    }
+  }
+
+  &Block3 {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: @screen-lg-min) {
+      flex-direction: column;
+    }
+
+    @media (max-width: @custom-screen-sm) {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

@@ -81,6 +81,12 @@ export default {
             { path: '/merch', component: '../pages/merch' }
           ]
       ).concat(
+        configUI().hidePages.find((i) => i === 'model-3d')
+          ? []
+          : [
+            { path: '/model-3d', component: '../pages/model-3d' }
+          ]
+      ).concat(
         configUI().hidePages.find((i) => i === 'reviews')
           ? []
           : [
@@ -145,6 +151,12 @@ export default {
           ? []
           : [
             { path: '/en/merch', component: '../pages/merch-en' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'model-3d')
+          ? []
+          : [
+            { path: '/en/model-3d', component: '../pages/model-3d-en' }
           ]
       )
     }
