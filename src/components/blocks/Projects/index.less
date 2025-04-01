@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 
   &Wrap {
@@ -15,6 +15,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 50px;
 
     @media (max-width: @screen-md-min) {
       background-color: #B3BFC2;
@@ -189,6 +190,35 @@
           height: 100%;
         }
       }
+    }
+  }
+
+  &ReportBtnWrap {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+
+  &ReportBtn {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: center;
+    background-color: #A81A1F;
+
+    &:hover {
+      background-color: #b6161b;
+      color: #fff;
     }
   }
 }

@@ -17,11 +17,16 @@ export default {
         //   ? []
         //   : [
         //     { path: '/reports', component: '../pages/reports' }
-        //   ]
         configUI().hidePages.find((i) => i === 'projects')
           ? []
           : [
             { path: '/projects', component: '../pages/projects' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'activity-reporting')
+          ? []
+          : [
+            { path: '/activity-reporting', component: '../pages/activity-reporting' }
           ]
       ).concat(
         configUI().hidePages.find((i) => i === 'projects/kl-mark-1')
@@ -75,6 +80,12 @@ export default {
         //     ]
         // ).concat(
       ]).concat(
+        configUI().hidePages.find((i) => i === 'activity-reporting')
+          ? []
+          : [
+            { path: '/en/activity-reporting', component: '../pages/activity-reporting-en' }
+          ]
+      ).concat(
         configUI().hidePages.find((i) => i === 'merch')
           ? []
           : [

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'dva'
-import { Carousel, Tag } from 'antd'
+import { Carousel, Tag, Button } from 'antd'
 import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 
 import Stamp from '../../../assets/img/completed_stamp2.png'
@@ -79,7 +79,9 @@ const langCollection = {
     kl_5_title: 'Keep Life Mark 5',
     kl_5_date: 'Жовтень 2024',
     link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
-    mbBtn: 'Підтримати'
+    mbBtn: 'Підтримати',
+    reportBtn: 'Звітність Діяльності',
+    reportPath: '/activity-reporting'
   },
   EN: {
     kl_1_title: 'Keep Life Mark 1',
@@ -100,7 +102,9 @@ const langCollection = {
     kl_5_title: 'Keep Life Mark 5',
     kl_5_date: 'October 2024',
     link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
-    mbBtn: 'Support'
+    mbBtn: 'Support',
+    reportBtn: 'Activity Reporting',
+    reportPath: '/en/activity-reporting'
   },
 };
 
@@ -125,6 +129,20 @@ const Projects = ({ isMobile, lang }) => {
       </div>
     )
   }
+
+  const handleGoToActivityReport = () => {
+    const curPath = document?.location?.pathname
+    console.log('handleGoToActivityReport', curPath)
+
+    if (curPath === '/en/projects') {
+      router.push('/en/activity-reporting')
+    } else if (curPath === '/projects') {
+      router.push('/activity-reporting')
+    }
+
+    window.scrollTo(0, 0)
+  }
+  window.scrollTo(0, 0)
 
   return (
     <div className={styles.projects}>
@@ -398,6 +416,17 @@ const Projects = ({ isMobile, lang }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.projectsReportBtnWrap}>
+        {/* <Link className={styles.projectsReportBtn} to={langCollection[`${lang}`].reportPath}>
+          <span>{langCollection[`${lang}`].reportBtn}</span>
+        </Link> */}
+        <Button
+          onClick={() => handleGoToActivityReport()}
+          className={styles.projectsReportBtn}
+        >
+          <span>{langCollection[`${lang}`].reportBtn}</span>
+        </Button>
       </div>
     </div>
   );

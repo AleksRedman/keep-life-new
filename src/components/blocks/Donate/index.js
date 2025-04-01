@@ -10,7 +10,8 @@ import PayPalIcon from '../../../assets/img/paypal-logo-trsprnt.png'
 import RedCrossIcon from '../../../assets/img/red-cross.png'
 import MonobankIcon from '../../../assets/img/monobankIconTrsprnt.png'
 // import MonobankQRImg from '../../../assets/img/monobankKLqr.png'
-import MonobankQRImg from '../../../assets/img/mb-kl-qr-new.png'
+// import MonobankQRImg from '../../../assets/img/mb-kl-qr-new.png'
+import MonobankQRImg from '../../../assets/img/mb-kl-qr-new2.png'
 import MonobankBtnIcon from '../../../assets/img/monobankBtnIconTrsprnt.png'
 import LiqPayForm from '../LiqPayForm'
 import router from 'umi/router'
@@ -176,7 +177,8 @@ const Donate = ({ isMobile, lang }) => {
                   // onClick={() => handleCopyText( 'UA823052990000026007021034880' )}
                   className={styles.donateMBCardPaymentDetailsMonoBtn}
                   // href='https://send.monobank.ua/jar/9HpA1JoFxq'
-                  href='https://send.monobank.ua/jar/49vTCiG8nt'
+                  // href='https://send.monobank.ua/jar/49vTCiG8nt'
+                  href='https://send.monobank.ua/jar/f4JBE7KdN'
                   target='_blank'
                   referrerPolicy='no-referrer'
                 >

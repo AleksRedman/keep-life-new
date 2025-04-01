@@ -1,0 +1,121 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../../vars";
+
+.activityReporting {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  &Container {
+    width: 80%;
+    padding: 50px;
+    margin: 20px auto 0;
+    background-image: url(../../../assets/img/gallery_new_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: @screen-xl-min) {
+      width: 100%;
+    }
+  }
+  
+  &Title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  &Year {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  &SectionTitle {
+    color: #000;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(25px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(25px); /* Safari support */
+    background-color: rgba(255, 255, 255, 0.2)
+  }
+  
+  &GridContainer {
+    gap: 20px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    backdrop-filter: blur(30px); /* Blurs the background */
+    -webkit-backdrop-filter: blur(30px); /* Safari support */
+    background-color: rgba(255, 255, 255, 0.2)
+  }
+  
+  &GridItem {
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.2)
+  }
+  
+  &Amount {
+    font-size: 30px;
+    font-weight: bold;
+    color: #A81A20;
+  }
+  
+  &Description {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  &ImageGallery {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  &GalleryImage {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    &:hover {
+      scale: 1.6;
+      border: 5px solid #c5c5c5;
+    }
+
+    @media (max-width: @screen-xl-min) {
+      width: 45vw;
+      height: 45vw;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    @media (max-width: @screen-sm-min) {
+      width: 90vw;
+      height: 90vw;
+
+      &:hover {
+        scale: 1;
+        border: none;
+      }
+    }
+  }
+}
