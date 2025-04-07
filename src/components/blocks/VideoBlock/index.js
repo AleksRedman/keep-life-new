@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import TROMediaVideo from '../../../assets/troMediaVideo.mp4';
 import TROMediaSbtUKR from '../../../assets/troMediaVideoUKR.vtt'
 import TROMediaSbtENG from '../../../assets/troMediaVideoENG.vtt'
+import TROMediaSbtGRM from '../../../assets/troMediaVideoGRM.vtt'
 import TROMediaImg from '../../../assets/img/troMediaImg.png';
 import ShadowLine from '../../../assets/img/shadowLine.png'
 import styles from './index.less';
@@ -17,6 +18,7 @@ const VideoBlock = ({ isMobile, lang }) => {
             ? <video width="100%" height="100%" controls autoPlay muted loop playsInline poster={TROMediaImg} src={TROMediaVideo} >
               <source src={TROMediaVideo} type="video/mp4" />
               <track src={TROMediaSbtENG} kind='subtitles' srcLang='en' label='English' default />
+              <track src={TROMediaSbtGRM} kind='subtitles' srcLang='de' label='German' default />
               <track src={TROMediaSbtUKR} kind='subtitles' srcLang='ua' label='Ukrainian' />
               Your browser does not support HTML5 video.
             </video>

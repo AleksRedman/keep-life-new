@@ -8,18 +8,22 @@ import { Layout, Button } from 'antd'
 import isMobOS from '../utils/mobile-os-detection'
 import { getLocalData, setLocalData } from '@/utils/helpers'
 import router from 'umi/router'
+import Redirect from 'umi/redirect'
 import styles from './primary-layout.less'
 
 const { Content } = Layout
+const { text, hidePages, country } = process.env.CONFIG_UI
 
-const langCollection = {
-  UA: {
-    p: 'DONATE!'
-  },
-  EN: {
-    p: 'DONATE!'
-  },
-};
+const langCollection = text?.primary_layout
+
+// const langCollection = {
+//   UA: {
+//     p: 'DONATE!'
+//   },
+//   EN: {
+//     p: 'DONATE!'
+//   },
+// };
 
 class PrimaryLayout extends Component {
   static propTypes = {
@@ -76,6 +80,51 @@ class PrimaryLayout extends Component {
       lang,
       locationPath
     } = this.props
+
+    if ((!locationPath || locationPath === '/') && country !== 'Ukraine') {
+      console.log(`(!locationPath || locationPath === '/') && country !== 'Ukraine')`, locationPath)
+      return <Redirect to={'/en'} />
+    }
+    // if ((locationPath === '/de') && country !== 'Ukraine') {
+    //   return <Redirect to={'/de'} />
+    // }
+    if ((locationPath === '/projects') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects'} />
+    }
+    if ((locationPath === '/activity-reporting') && country !== 'Ukraine') {
+      return <Redirect to={'/en/activity-reporting'} />
+    }
+    if ((locationPath === '/projects/kl-mark-1') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects/kl-mark-1'} />
+    }
+    if ((locationPath === '/projects/kl-mark-2') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects/kl-mark-2'} />
+    }
+    if ((locationPath === '/projects/kl-mark-3') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects/kl-mark-3'} />
+    }
+    if ((locationPath === '/projects/kl-mark-4') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects/kl-mark-4'} />
+    }
+    if ((locationPath === '/projects/kl-mark-5') && country !== 'Ukraine') {
+      return <Redirect to={'/en/projects/kl-mark-5'} />
+    }
+    if ((locationPath === '/reviews') && country !== 'Ukraine') {
+      return <Redirect to={'/en'} />
+    }
+    if ((locationPath === '/donate') && country !== 'Ukraine') {
+      return <Redirect to={'/en'} />
+    }
+    if ((locationPath === '/donate-puzzle') && country !== 'Ukraine') {
+      return <Redirect to={'/en'} />
+    }
+    if ((locationPath === '/merch') && country !== 'Ukraine') {
+      return <Redirect to={'/en'} />
+    }
+    if ((locationPath === '/model-3d') && country !== 'Ukraine') {
+      return <Redirect to={'/en/model-3d'} />
+    }
+
     return (
       <Fragment>
         <Layout className={styles.primaryLayout}>
@@ -83,7 +132,10 @@ class PrimaryLayout extends Component {
             {children}
           </Content>
           {
-            (locationPath ==='/' || locationPath ==='/en')
+            (
+              !hidePages.includes('donate') &&
+              (locationPath ==='/' || locationPath ==='/en')
+            )
               ? <Button
                 className={styles.primaryLayoutDonateBtn}
                 shape='circle'

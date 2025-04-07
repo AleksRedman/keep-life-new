@@ -26,26 +26,30 @@ import KLMark4Img17 from '../../../assets/img/kl-mark4/new/kl4_18.jpg';
 
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    p1: "Четверта модель Keep Life найбільш подібна до другої – 20-футового контейнера з розсувними частинами, які збільшують робочу площу до 27 м². Втім, головна перевага четвертої моделі – відділена передопераційна, в якій є все необхідне для підготовки поранених для подальших операційних втручань.",
-    p2: "Передопераційна обладнана в причепі, який можна від’єднати від основного стабілізаційно-хірургічного модуля за потреби. Вона дозволяє максимально полегшити роботу медикам та зберегти стерильність безпосередньо в операційній, адже дуже часто поранених доставляють у стабілізаційні пункти в одязі та амуніції.",
-    p3: "До передопераційної та від неї до основного модуля під’єднані пандуси, на які встановлені конструкції для кріплення тентів. Відтак, пацієнтів можна з легкістю на ношах перевезти в хірургічний пункт.",
-    p4: "Модулі цієї моделі мають додаткові підпірні конструкції, які дозволяють збільшити навантаження на розсувні частини. Також пункт можна передислоковувати у розкладеному стані за необхідності, що є надважливо під час роботи поблизу лінії зіткнення, де ворог веде постійні обстріли.",
-    p5: "Ця модель, як і п’ята, має окремий технічний відсік, у якому розміщені акумулятори, генератор, інвертор, бак з водою, зовнішній блок кондиціонера та приточно-витяжна система вентиляції. Окрім системи кондиціонування, ми додали мобільний повітряний опалювач типу Webasto для підтримки комфортної температури всередині пункту.",
-    p6: "Будучи на постійному контакті з медиками, військовими та експертами, ми додали необхідну кількість розеток, світильників та інші важливі речі: сейф для зберігання препаратів, підвісні конструкції з нержавіючої сталі для зручного використання підігрівачів інфузійних розчинів та систем крапельниць, габаритну мийку, призначену спеціально для хірургів.",
-    p7: "Також до вже наявних повітряних стерилізаторів ми додали пакувальну машинку для простерилізованих медичних інструментів та ультрафіолетову лампу для їх зберігання."
-  },
-  EN: {
-    p1: "The fourth model of Keep Life is most similar to the second one—a 20-foot container with sliding sections that increase the working area to 27 m². However, the main advantage of the fourth model is the separate pre-operative area, which has everything necessary to prepare wounded individuals for further surgical interventions.",
-    p2: "The pre-operative area is equipped in a trailer, which can be detached from the main stabilization and surgical module if needed. It allows for easing the work of medical staff and maintaining sterility in the operating room, as wounded individuals are often brought to stabilization points in clothes and gear.",
-    p3: "Ramps are connected to the pre-operative area and from it to the main module, on which tent frames are installed. This makes it easy to transport patients on stretchers to the surgical unit.",
-    p4: "The modules of this model have additional support structures that allow for increased load on the sliding sections. The unit can also be relocated in a deployed state if necessary, which is extremely important when working near the frontlines where the enemy constantly shells.",
-    p5: "Like the fifth model, this one has a separate technical compartment that houses batteries, a generator, an inverter, a water tank, an external air conditioning unit, and a supply-exhaust ventilation system. In addition to the air conditioning system, we added a Webasto-type mobile air heater to maintain a comfortable temperature inside the unit.",
-    p6: "Being in constant contact with medical staff, military personnel, and experts, we added the necessary number of sockets, lights, and other essential items: a safe for storing medications, stainless steel hanging structures for convenient use of infusion solution warmers and drip systems, and a large sink designed specifically for surgeons.",
-    p7: "We also added a packing machine for sterilized medical instruments and an ultraviolet lamp for their storage, alongside the existing air sterilizers."
-}
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.kl_mark_4
+
+// const langCollection = {
+//   UA: {
+//     p1: "Четверта модель Keep Life найбільш подібна до другої – 20-футового контейнера з розсувними частинами, які збільшують робочу площу до 27 м². Втім, головна перевага четвертої моделі – відділена передопераційна, в якій є все необхідне для підготовки поранених для подальших операційних втручань.",
+//     p2: "Передопераційна обладнана в причепі, який можна від’єднати від основного стабілізаційно-хірургічного модуля за потреби. Вона дозволяє максимально полегшити роботу медикам та зберегти стерильність безпосередньо в операційній, адже дуже часто поранених доставляють у стабілізаційні пункти в одязі та амуніції.",
+//     p3: "До передопераційної та від неї до основного модуля під’єднані пандуси, на які встановлені конструкції для кріплення тентів. Відтак, пацієнтів можна з легкістю на ношах перевезти в хірургічний пункт.",
+//     p4: "Модулі цієї моделі мають додаткові підпірні конструкції, які дозволяють збільшити навантаження на розсувні частини. Також пункт можна передислоковувати у розкладеному стані за необхідності, що є надважливо під час роботи поблизу лінії зіткнення, де ворог веде постійні обстріли.",
+//     p5: "Ця модель, як і п’ята, має окремий технічний відсік, у якому розміщені акумулятори, генератор, інвертор, бак з водою, зовнішній блок кондиціонера та приточно-витяжна система вентиляції. Окрім системи кондиціонування, ми додали мобільний повітряний опалювач типу Webasto для підтримки комфортної температури всередині пункту.",
+//     p6: "Будучи на постійному контакті з медиками, військовими та експертами, ми додали необхідну кількість розеток, світильників та інші важливі речі: сейф для зберігання препаратів, підвісні конструкції з нержавіючої сталі для зручного використання підігрівачів інфузійних розчинів та систем крапельниць, габаритну мийку, призначену спеціально для хірургів.",
+//     p7: "Також до вже наявних повітряних стерилізаторів ми додали пакувальну машинку для простерилізованих медичних інструментів та ультрафіолетову лампу для їх зберігання."
+//   },
+//   EN: {
+//     p1: "The fourth model of Keep Life is most similar to the second one—a 20-foot container with sliding sections that increase the working area to 27 m². However, the main advantage of the fourth model is the separate pre-operative area, which has everything necessary to prepare wounded individuals for further surgical interventions.",
+//     p2: "The pre-operative area is equipped in a trailer, which can be detached from the main stabilization and surgical module if needed. It allows for easing the work of medical staff and maintaining sterility in the operating room, as wounded individuals are often brought to stabilization points in clothes and gear.",
+//     p3: "Ramps are connected to the pre-operative area and from it to the main module, on which tent frames are installed. This makes it easy to transport patients on stretchers to the surgical unit.",
+//     p4: "The modules of this model have additional support structures that allow for increased load on the sliding sections. The unit can also be relocated in a deployed state if necessary, which is extremely important when working near the frontlines where the enemy constantly shells.",
+//     p5: "Like the fifth model, this one has a separate technical compartment that houses batteries, a generator, an inverter, a water tank, an external air conditioning unit, and a supply-exhaust ventilation system. In addition to the air conditioning system, we added a Webasto-type mobile air heater to maintain a comfortable temperature inside the unit.",
+//     p6: "Being in constant contact with medical staff, military personnel, and experts, we added the necessary number of sockets, lights, and other essential items: a safe for storing medications, stainless steel hanging structures for convenient use of infusion solution warmers and drip systems, and a large sink designed specifically for surgeons.",
+//     p7: "We also added a packing machine for sterilized medical instruments and an ultraviolet lamp for their storage, alongside the existing air sterilizers."
+//   }
+// };
 
 const KLMark1Report = ({ isMobile, lang }) => {
   const slide = (image, key) => {

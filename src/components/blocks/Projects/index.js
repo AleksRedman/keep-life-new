@@ -59,54 +59,58 @@ import Link from 'umi/link'
 import router from 'umi/router'
 import styles from './index.less'
 
-const langCollection = {
-  UA: {
-    kl_1_title: 'Keep Life Mark 1',
-    kl_1_path: '/projects/kl-mark-1',
-    kl_1_date: 'Грудень 2022',
-    kl_mass_media: 'ЗМІ про нас',
-    kl_tag_progress: 'В Розробці',
-    kl_2_title: 'Keep Life Mark 2',
-    kl_2_path: '/projects/kl-mark-2',
-    kl_2_date: 'Листопад 2023',
-    kl_3_path: '/projects/kl-mark-3',
-    kl_3_title: 'Keep Life Mark 3',
-    kl_3_date: '2024',
-    kl_4_path: '/projects/kl-mark-4',
-    kl_4_title: 'Keep Life Mark 4',
-    kl_4_date: 'Жовтень 2024',
-    kl_5_path: '/projects/kl-mark-5',
-    kl_5_title: 'Keep Life Mark 5',
-    kl_5_date: 'Жовтень 2024',
-    link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
-    mbBtn: 'Підтримати',
-    reportBtn: 'Звітність Діяльності',
-    reportPath: '/activity-reporting'
-  },
-  EN: {
-    kl_1_title: 'Keep Life Mark 1',
-    kl_1_path: '/en/projects/kl-mark-1',
-    kl_1_date: 'December 2022',
-    kl_mass_media: 'Mass Media about us',
-    kl_tag_progress: 'In Progress',
-    kl_2_title: 'Keep Life Mark 2',
-    kl_2_path: '/en/projects/kl-mark-2',
-    kl_2_date: 'November 2023',
-    kl_3_path: '/en/projects/kl-mark-3',
-    kl_3_title: 'Keep Life Mark 3',
-    kl_3_date: '2024',
-    kl_4_path: '/en/projects/kl-mark-4',
-    kl_4_title: 'Keep Life Mark 4',
-    kl_4_date: 'October 2024',
-    kl_5_path: '/en/projects/kl-mark-5',
-    kl_5_title: 'Keep Life Mark 5',
-    kl_5_date: 'October 2024',
-    link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
-    mbBtn: 'Support',
-    reportBtn: 'Activity Reporting',
-    reportPath: '/en/activity-reporting'
-  },
-};
+const { text, hidePages } = process.env.CONFIG_UI
+
+const langCollection = text?.projects
+
+// const langCollection = {
+//   UA: {
+//     kl_1_title: 'Keep Life Mark 1',
+//     kl_1_path: '/projects/kl-mark-1',
+//     kl_1_date: 'Грудень 2022',
+//     kl_mass_media: 'ЗМІ про нас',
+//     kl_tag_progress: 'В Розробці',
+//     kl_2_title: 'Keep Life Mark 2',
+//     kl_2_path: '/projects/kl-mark-2',
+//     kl_2_date: 'Листопад 2023',
+//     kl_3_path: '/projects/kl-mark-3',
+//     kl_3_title: 'Keep Life Mark 3',
+//     kl_3_date: '2024',
+//     kl_4_path: '/projects/kl-mark-4',
+//     kl_4_title: 'Keep Life Mark 4',
+//     kl_4_date: 'Жовтень 2024',
+//     kl_5_path: '/projects/kl-mark-5',
+//     kl_5_title: 'Keep Life Mark 5',
+//     kl_5_date: 'Жовтень 2024',
+//     link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
+//     mbBtn: 'Підтримати',
+//     reportBtn: 'Звітність Діяльності',
+//     reportPath: '/activity-reporting'
+//   },
+//   EN: {
+//     kl_1_title: 'Keep Life Mark 1',
+//     kl_1_path: '/en/projects/kl-mark-1',
+//     kl_1_date: 'December 2022',
+//     kl_mass_media: 'Mass Media about us',
+//     kl_tag_progress: 'In Progress',
+//     kl_2_title: 'Keep Life Mark 2',
+//     kl_2_path: '/en/projects/kl-mark-2',
+//     kl_2_date: 'November 2023',
+//     kl_3_path: '/en/projects/kl-mark-3',
+//     kl_3_title: 'Keep Life Mark 3',
+//     kl_3_date: '2024',
+//     kl_4_path: '/en/projects/kl-mark-4',
+//     kl_4_title: 'Keep Life Mark 4',
+//     kl_4_date: 'October 2024',
+//     kl_5_path: '/en/projects/kl-mark-5',
+//     kl_5_title: 'Keep Life Mark 5',
+//     kl_5_date: 'October 2024',
+//     link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
+//     mbBtn: 'Support',
+//     reportBtn: 'Activity Reporting',
+//     reportPath: '/en/activity-reporting'
+//   },
+// };
 
 const Projects = ({ isMobile, lang }) => {
   const handleGoToPuzzleDonate = () => {
@@ -417,17 +421,21 @@ const Projects = ({ isMobile, lang }) => {
           </div>
         </div>
       </div>
-      <div className={styles.projectsReportBtnWrap}>
-        {/* <Link className={styles.projectsReportBtn} to={langCollection[`${lang}`].reportPath}>
-          <span>{langCollection[`${lang}`].reportBtn}</span>
-        </Link> */}
-        <Button
-          onClick={() => handleGoToActivityReport()}
-          className={styles.projectsReportBtn}
-        >
-          <span>{langCollection[`${lang}`].reportBtn}</span>
-        </Button>
-      </div>
+      {
+        hidePages.includes('activity-reporting')
+          ? null
+          : <div className={styles.projectsReportBtnWrap}>
+            {/* <Link className={styles.projectsReportBtn} to={langCollection[`${lang}`].reportPath}>
+              <span>{langCollection[`${lang}`].reportBtn}</span>
+            </Link> */}
+            <Button
+              onClick={() => handleGoToActivityReport()}
+              className={styles.projectsReportBtn}
+            >
+              <span>{langCollection[`${lang}`].reportBtn}</span>
+            </Button>
+          </div>
+      }
     </div>
   );
 };

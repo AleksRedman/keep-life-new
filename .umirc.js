@@ -10,95 +10,84 @@ export default {
     {
       path: '/',
       component: '../layouts/base-layout',
-      routes: [
-        { path: '/', component: '../pages/index' }
-      ].concat(
+      routes: [].concat(
+        configUI().country !== 'Ukraine'
+          ? []
+          : [
+            { path: '/', component: '../pages/index' }
+          ]
+      ).concat(
         // configUI().hidePages.find((i) => i === 'reports')
         //   ? []
         //   : [
         //     { path: '/reports', component: '../pages/reports' }
-        configUI().hidePages.find((i) => i === 'projects')
+        (configUI().hidePages.find((i) => i === 'projects') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects', component: '../pages/projects' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'activity-reporting')
+        (configUI().hidePages.find((i) => i === 'activity-reporting') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/activity-reporting', component: '../pages/activity-reporting' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'projects/kl-mark-1')
+        (configUI().hidePages.find((i) => i === 'projects/kl-mark-1') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects/kl-mark-1', component: '../pages/kl-mark-1' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'projects/kl-mark-2')
+        (configUI().hidePages.find((i) => i === 'projects/kl-mark-2') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects/kl-mark-2', component: '../pages/kl-mark-2' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'projects/kl-mark-3')
+        (configUI().hidePages.find((i) => i === 'projects/kl-mark-3') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects/kl-mark-3', component: '../pages/kl-mark-3' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'projects/kl-mark-4')
+        (configUI().hidePages.find((i) => i === 'projects/kl-mark-4') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects/kl-mark-4', component: '../pages/kl-mark-4' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'projects/kl-mark-5')
+        (configUI().hidePages.find((i) => i === 'projects/kl-mark-5') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/projects/kl-mark-5', component: '../pages/kl-mark-5' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'donate')
+        (configUI().hidePages.find((i) => i === 'donate') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/donate', component: '../pages/donate' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'donate-puzzle')
+        (configUI().hidePages.find((i) => i === 'donate-puzzle') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/donate-puzzle', component: '../pages/donate-puzzle' }
           ]
-      ).concat([
-        { path: '/en', component: '../pages/index-en' }
-        // ]).concat(
-        //   configUI().hidePages.find((i) => i === 'reports')
-        //     ? []
-        //     : [
-        //       { path: '/en/reports', component: '../pages/reports-en' }
-        //     ]
-        // ).concat(
-      ]).concat(
-        configUI().hidePages.find((i) => i === 'activity-reporting')
-          ? []
-          : [
-            { path: '/en/activity-reporting', component: '../pages/activity-reporting-en' }
-          ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'merch')
+        (configUI().hidePages.find((i) => i === 'merch') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/merch', component: '../pages/merch' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'model-3d')
+        (configUI().hidePages.find((i) => i === 'model-3d') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/model-3d', component: '../pages/model-3d' }
           ]
       ).concat(
-        configUI().hidePages.find((i) => i === 'reviews')
+        (configUI().hidePages.find((i) => i === 'reviews') && configUI().country !== 'Ukraine')
           ? []
           : [
             { path: '/reviews', component: '../pages/reviews' }
@@ -168,6 +157,103 @@ export default {
           ? []
           : [
             { path: '/en/model-3d', component: '../pages/model-3d-en' }
+          ]
+      ).concat([
+        { path: '/en', component: '../pages/index-en' }
+        // ]).concat(
+        //   configUI().hidePages.find((i) => i === 'reports')
+        //     ? []
+        //     : [
+        //       { path: '/en/reports', component: '../pages/reports-en' }
+        //     ]
+        // ).concat(
+      ]).concat(
+        configUI().hidePages.find((i) => i === 'activity-reporting')
+          ? []
+          : [
+            { path: '/en/activity-reporting', component: '../pages/activity-reporting-en' }
+          ]
+      )
+      .concat(
+        configUI().hidePages.find((i) => i === 'reviews')
+          ? []
+          : [
+            { path: '/de/reviews', component: '../pages/reviews-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects')
+          ? []
+          : [
+            { path: '/de/projects', component: '../pages/projects-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-1')
+          ? []
+          : [
+            { path: 'de/projects/kl-mark-1', component: '../pages/kl-mark-1-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-2')
+          ? []
+          : [
+            { path: 'de/projects/kl-mark-2', component: '../pages/kl-mark-2-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-3')
+          ? []
+          : [
+            { path: 'de/projects/kl-mark-3', component: '../pages/kl-mark-3-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-4')
+          ? []
+          : [
+            { path: 'de/projects/kl-mark-4', component: '../pages/kl-mark-4-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'projects/kl-mark-5')
+          ? []
+          : [
+            { path: 'de/projects/kl-mark-5', component: '../pages/kl-mark-5-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'donate')
+          ? []
+          : [
+            { path: '/de/donate', component: '../pages/donate-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'donate-puzzle')
+          ? []
+          : [
+            { path: '/de/donate-puzzle', component: '../pages/donate-puzzle-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'merch')
+          ? []
+          : [
+            { path: '/de/merch', component: '../pages/merch-de' }
+          ]
+      ).concat(
+        configUI().hidePages.find((i) => i === 'model-3d')
+          ? []
+          : [
+            { path: '/de/model-3d', component: '../pages/model-3d-de' }
+          ]
+      ).concat([
+        { path: '/de', component: '../pages/index-de' }
+        // ]).concat(
+        //   configUI().hidePages.find((i) => i === 'reports')
+        //     ? []
+        //     : [
+        //       { path: '/en/reports', component: '../pages/reports-en' }
+        //     ]
+        // ).concat(
+      ]).concat(
+        configUI().hidePages.find((i) => i === 'activity-reporting')
+          ? []
+          : [
+            { path: '/de/activity-reporting', component: '../pages/activity-reporting-de' }
           ]
       )
     }

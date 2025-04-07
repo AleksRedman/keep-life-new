@@ -10,30 +10,35 @@ import Shevron from '@/assets/img/shevron.png'
 import router from 'umi/router'
 import styles from './index.less'
 
-const langCollection = {
-  UA: {
-    p1: 'УМОВИ РОБОТИ',
-    p2: 'ЗАДАЧІ',
-    p3: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ',
-    p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
-    p5: '3D МОДЕЛЬ',
-    p6: 'ПРОЄКТИ',
-    p7: 'НАШ МЕРЧ',
-    p8: 'ВІДГУКИ'
-  },
-  EN: {
-    p1: 'WORKING CONDITIONS',
-    p2: 'TASKS',
-    p3: 'TECHNICAL SUPPORT',
-    p4: 'MEDICAL EQUIPMENT',
-    p5: '3D MODEL',
-    p6: 'PROJECTS',
-    p7: 'OUR MERCH',
-    p8: 'REVIEWS'
-  },
-};
+const { text, hidePages, country } = process.env.CONFIG_UI
+
+const langCollection = text?.header
+
+// const langCollection = {
+//   UA: {
+//     p1: 'УМОВИ РОБОТИ',
+//     p2: 'ЗАДАЧІ',
+//     p3: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ',
+//     p4: 'МЕДИЧНЕ ОБЛАДНАННЯ',
+//     p5: '3D МОДЕЛЬ',
+//     p6: 'ПРОЄКТИ',
+//     p7: 'НАШ МЕРЧ',
+//     p8: 'ВІДГУКИ'
+//   },
+//   EN: {
+//     p1: 'WORKING CONDITIONS',
+//     p2: 'TASKS',
+//     p3: 'TECHNICAL SUPPORT',
+//     p4: 'MEDICAL EQUIPMENT',
+//     p5: '3D MODEL',
+//     p6: 'PROJECTS',
+//     p7: 'OUR MERCH',
+//     p8: 'REVIEWS'
+//   },
+// };
 
 const langMapping = {
+  'DE': '/de',
   'EN': '/en',
   'UA': ''
 }
@@ -69,12 +74,14 @@ class Header extends React.Component {
   handleMenuItemClick = (navId) => {
     const { lang } = this.props
     const { onHandleSectionId } = this.props
-    if (document?.location?.pathname !== '/' && document?.location?.pathname !== '/en' ) {
+    if (document?.location?.pathname !== '/' && document?.location?.pathname !== '/en' && document?.location?.pathname !== '/de' ) {
       onHandleSectionId(navId)
       if (lang === 'UA') {
         router.push('/')
       } else if (lang === 'EN') {
         router.push('/en')
+      } else if (lang === 'DE') {
+        router.push('/de')
       }
     } if (navId === 'projects') {
       onHandleSectionId(navId)
@@ -82,6 +89,8 @@ class Header extends React.Component {
         router.push('/projects')
       } else if (lang === 'EN') {
         router.push('/en/projects')
+      } else if (lang === 'DE') {
+        router.push('/de/projects')
       }
       window.scrollTo(0, 0)
     } else if (navId === 'merch') {
@@ -90,6 +99,8 @@ class Header extends React.Component {
         router.push('/merch')
       } else if (lang === 'EN') {
         router.push('/en/merch')
+      } else if (lang === 'DE') {
+        router.push('/de/merch')
       }
       window.scrollTo(0, 0)
     }  if (navId === 'reviews') {
@@ -98,6 +109,8 @@ class Header extends React.Component {
         router.push('/reviews')
       } else if (lang === 'EN') {
         router.push('/en/reviews')
+      } else if (lang === 'DE') {
+        router.push('/de/reviews')
       }
       window.scrollTo(0, 0)
     } else {
@@ -117,6 +130,11 @@ class Header extends React.Component {
     if (curLangPath === '/en') {
       const curRestPath = curPath.slice(3)
       if (key !== 'EN') {
+        router.push(`${lngPath}${curRestPath}`)
+      }
+    } else if (curLangPath === '/de') {
+      const curRestPath = curPath.slice(3)
+      if (key !== 'DE') {
         router.push(`${lngPath}${curRestPath}`)
       }
     } else if (curLangPath === '/') {
@@ -144,10 +162,18 @@ class Header extends React.Component {
 
   handleGoHome = () => {
     const { lang } = this.props
-    if (lang === 'EN') {
+    console.log('lang', lang)
+    if (lang === 'DE') {
+      console.log('lang_DE', lang)
+      router.push('/de')
+    } else if (lang === 'EN') {
       router.push('/en')
     } else {
-      router.push('/')
+      if (country === 'Ukraine') {
+        router.push('/')
+      } else {
+        router.push('/en')
+      }
     }
     
     window.scrollTo(0, 0)
@@ -167,8 +193,13 @@ class Header extends React.Component {
 
     const langMenu = (
       <Menu onClick={this.handleLangMenuClick}>
-        <Menu.Item key="UA">UA</Menu.Item>
-        <Menu.Item key="EN">EN</Menu.Item>
+        {
+          country === 'Ukraine'
+            ? <Menu.Item key='UA'>UA</Menu.Item>
+            : null
+        }
+        <Menu.Item key='EN'>EN</Menu.Item>
+        <Menu.Item key='DE'>DE</Menu.Item>
       </Menu>
     );
 
@@ -195,9 +226,13 @@ class Header extends React.Component {
         {/* <Menu.Item key="merch">
           {langCollection[`${lang}`].p7}
         </Menu.Item> */}
-        <Menu.Item key="reviews">
-          {langCollection[`${lang}`].p8}
-        </Menu.Item>
+        {
+          !hidePages.includes('reviews')
+            ? <Menu.Item key="reviews">
+              {langCollection[`${lang}`].p8}
+            </Menu.Item>
+            : null
+        }
       </Menu>,
     ];
 

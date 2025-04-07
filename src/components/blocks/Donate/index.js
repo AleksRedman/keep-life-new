@@ -17,24 +17,28 @@ import LiqPayForm from '../LiqPayForm'
 import router from 'umi/router'
 import styles from './index.less'
 
-const langCollection = {
-  UA: {
-    link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
-    mbBtn: 'Підтримати',
-    pbCurrency: 'Валюта:',
-    pbRecpt: 'Recipient:',
-    pbEDRPOU: 'ЄДРПОУ:',
-    pbPurp: 'Призначення платежу:'
-  },
-  EN: {
-    link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
-    mbBtn: 'Support',
-    pbCurrency: 'Currency:',
-    pbRecpt: 'Recipient:',
-    pbEDRPOU: 'EDRPOU:',
-    pbPurp: 'Purpose of payment:'
-  },
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.donate
+
+// const langCollection = {
+//   UA: {
+//     link1: 'Долучитися до збору коштів для ще одного мобільного шпиталю KEEP LIFE',
+//     mbBtn: 'Підтримати',
+//     pbCurrency: 'Валюта:',
+//     pbRecpt: 'Recipient:',
+//     pbEDRPOU: 'ЄДРПОУ:',
+//     pbPurp: 'Призначення платежу:'
+//   },
+//   EN: {
+//     link1: 'Join the fundraising campaign for another one mobile hospital KEEP LIFE.',
+//     mbBtn: 'Support',
+//     pbCurrency: 'Currency:',
+//     pbRecpt: 'Recipient:',
+//     pbEDRPOU: 'EDRPOU:',
+//     pbPurp: 'Purpose of payment:'
+//   },
+// };
 
 const Donate = ({ isMobile, lang }) => {
   const [copiedId, setCopiedId] = useState(null)

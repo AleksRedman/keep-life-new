@@ -5,7 +5,11 @@
     "start": "cross-env REACT_APP_ENV=local umi dev",
     "release": "cross-env REACT_APP_ENV=production umi build",
     "dev": "cross-env REACT_APP_ENV=development umi build",
+    "start_eu": "cross-env REACT_APP_ENV=local REACT_APP_UI_CONF=Config/EU umi dev",
+    "release_eu": "cross-env REACT_APP_ENV=production umi build",
+    "dev_eu": "cross-env REACT_APP_ENV=development umi build",
     "build": "umi build",
+    "build_eu": "cross-env REACT_APP_UI_CONF=Config/EU umi build",
     "test": "umi test",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"

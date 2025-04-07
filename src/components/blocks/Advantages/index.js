@@ -3,28 +3,31 @@ import { connect } from 'dva'
 import PropTypes from 'prop-types';
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    h1: 'НА 50%+',
-    p1: 'Зростають шанси у важкопоранених вижити, якщо поблизу є стабпункт',
-    h2: '24/7',
-    p2: 'Функціонує стабпункт за умови ротації медичних бригад',
-    h3: '5-15 КМ',
-    p3: 'Від лінії зіткнення до дислокації модулів',
-    h4: '10-15 ХВ',
-    p4: 'Загалом потрібно для розгортання пункту та початку роботи',
-  },
-  EN: {
-    h1: '50%+',
-    p1: 'The chances of survival for the severely wounded increase if there is a stabilization point nearby',
-    h2: '24/7',
-    p2: "The stabilization unit operates with the rotation of medical teams",
-    h3: '5-15 KM',
-    p3: 'From the front line to the module deployment',
-    h4: '10-15 MIN',
-    p4: 'Generally required for setting up the point and starting work',
-  }
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.advantages
+// const langCollection = {
+//   UA: {
+//     h1: 'НА 50%+',
+//     p1: 'Зростають шанси у важкопоранених вижити, якщо поблизу є стабпункт',
+//     h2: '24/7',
+//     p2: 'Функціонує стабпункт за умови ротації медичних бригад',
+//     h3: '5-15 КМ',
+//     p3: 'Від лінії зіткнення до дислокації модулів',
+//     h4: '10-15 ХВ',
+//     p4: 'Загалом потрібно для розгортання пункту та початку роботи',
+//   },
+//   EN: {
+//     h1: '50%+',
+//     p1: 'The chances of survival for the severely wounded increase if there is a stabilization point nearby',
+//     h2: '24/7',
+//     p2: "The stabilization unit operates with the rotation of medical teams",
+//     h3: '5-15 KM',
+//     p3: 'From the front line to the module deployment',
+//     h4: '10-15 MIN',
+//     p4: 'Generally required for setting up the point and starting work',
+//   }
+// };
 
 const Advantages = ({ isMobile, lang }) => {
   return (

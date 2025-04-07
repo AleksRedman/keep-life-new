@@ -30,23 +30,27 @@ import Stalkon from '../../../assets/img/partners_logos_grey/stalkon-grey2.png'
 
 import styles from './index.less'
 
-const langCollection = {
-  UA: {
-    // h1: 'МОБІЛЬНИЙ',
-    // h2: 'СТАБІЛІЗАЦІЙНИЙ',
-    // h3: 'ПУНКТ',
-    h1: 'АВТОНОМНІ',
-    h2: 'МОБІЛЬНІ',
-    h3: 'МОДУЛІ',
-    descr: 'Автономні медичні пункти на колесах, які рятують життя військовим та цивільним впритул до лінії фронту'
-  },
-  EN: {
-    h1: 'AUTONOMUS',
-    h2: 'MOBILE',
-    h3: 'UNITS',
-    descr: 'Autonomous medical units on wheels that save the lives of military and civilians close to the front line'
-  },
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.banner
+
+// const langCollection = {
+//   UA: {
+//     // h1: 'МОБІЛЬНИЙ',
+//     // h2: 'СТАБІЛІЗАЦІЙНИЙ',
+//     // h3: 'ПУНКТ',
+//     h1: 'АВТОНОМНІ',
+//     h2: 'МОБІЛЬНІ',
+//     h3: 'МОДУЛІ',
+//     descr: 'Автономні медичні пункти на колесах, які рятують життя військовим та цивільним впритул до лінії фронту'
+//   },
+//   EN: {
+//     h1: 'AUTONOMUS',
+//     h2: 'MOBILE',
+//     h3: 'UNITS',
+//     descr: 'Autonomous medical units on wheels that save the lives of military and civilians close to the front line'
+//   },
+// };
 
 // const langCollection = {
 //   UA: {

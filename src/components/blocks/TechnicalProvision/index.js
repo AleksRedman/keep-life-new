@@ -10,34 +10,45 @@ import FireImg from '../../../svg/fire.svg';
 import LightImg from '../../../svg/light.svg';
 import WaterImg from '../../../svg/water.svg';
 import WindKeeperImg from '../../../svg/windKeeper.svg';
+import ConditionerImg from '../../../svg/conditioner.svg';
+import InvertorImg from '../../../svg/invertor.svg';
+import RadioImg from '../../../svg/radio.svg';
+import InternetImg from '../../../svg/internet.svg';
+import BoilerImg from '../../../svg/boiler.svg';
+
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    h1: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ ХІРУРГІЇ',
-    p1: 'ВАНТАЖІВКА',
-    p2: 'МЕТАЛЕВИЙ МОДУЛЬ',
-    p3: 'РОЗСУВНА КОНСТРУКЦІЯ',
-    p4: 'АВАРІЙНІ АКУМУЛЯТОРИ',
-    p5: 'ВЕНТИЛЯЦІЯ',
-    p6: 'ОПАЛЕННЯ',
-    p7: 'ДИЗЕЛЬНИЙ ГЕНЕРАТОР',
-    p8: 'ПАЛИВНИЙ БАК',
-    p9: 'ВОДЯНИЙ БАК',
-  },
-  EN: {
-    h1: 'TECHNICAL SUPPLY OF SURGERY',
-    p1: 'Truck',
-    p2: 'Metal module',
-    p3: 'Sliding structure',
-    p4: 'EMERGENCY BATTERIES',
-    p5: 'Ventilation',
-    p6: 'Heating',
-    p7: 'Diesel generator',
-    p8: 'Fuel tank',
-    p9: 'Water tank',
-  }
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.technical_provision
+
+// const langCollection = {
+//   UA: {
+//     h1: 'ТЕХНІЧНЕ ЗАБЕЗПЕЧЕННЯ ХІРУРГІЇ',
+//     p1: 'ВАНТАЖІВКА',
+//     p2: 'МЕТАЛЕВИЙ МОДУЛЬ',
+//     p3: 'РОЗСУВНА КОНСТРУКЦІЯ',
+//     p4: 'АВАРІЙНІ АКУМУЛЯТОРИ',
+//     p5: 'ВЕНТИЛЯЦІЯ',
+//     p6: 'ОПАЛЕННЯ',
+//     p7: 'ДИЗЕЛЬНИЙ ГЕНЕРАТОР',
+//     p8: 'ПАЛИВНИЙ БАК',
+//     p9: 'ВОДЯНИЙ БАК',
+//   },
+//   EN: {
+//     h1: 'TECHNICAL SUPPLY OF SURGERY',
+//     p1: 'Truck',
+//     p2: 'Metal module',
+//     p3: 'Sliding structure',
+//     p4: 'EMERGENCY BATTERIES',
+//     p5: 'Ventilation',
+//     p6: 'Heating',
+//     p7: 'Diesel generator',
+//     p8: 'Fuel tank',
+//     p9: 'Water tank',
+//   }
+// };
+
 
 const TechnicalProvision = ({ isMobile, lang }) => {
   const item = (img, text) => {
@@ -61,10 +72,17 @@ const TechnicalProvision = ({ isMobile, lang }) => {
           {item(ArrowsImg, langCollection[`${lang}`].p3)}
           {item(BatteryImg, langCollection[`${lang}`].p4)}
           {item(WindKeeperImg, langCollection[`${lang}`].p5)}
-          {item(FireImg, langCollection[`${lang}`].p6)}
+          {/* {item(FireImg, langCollection[`${lang}`].p6)} */}
           {item(LightImg, langCollection[`${lang}`].p7)}
-          {item(BarrelImg, langCollection[`${lang}`].p8)}
+          {/* {item(BarrelImg, langCollection[`${lang}`].p8)} */}
           {item(WaterImg, langCollection[`${lang}`].p9)}
+
+          {item(FireImg, langCollection[`${lang}`].p10)}
+          {item(ConditionerImg, langCollection[`${lang}`].p11)}
+          {item(InvertorImg, langCollection[`${lang}`].p12)}
+          {item(RadioImg, langCollection[`${lang}`].p13)}
+          {item(InternetImg, langCollection[`${lang}`].p14)}
+          {item(BoilerImg, langCollection[`${lang}`].p15)}
         </div>
       </div>
     </section>

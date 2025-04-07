@@ -36,67 +36,71 @@ import Equip16Img from '../../../assets/img/kl-new-eqp/16.png';
 import Equip17Img from '../../../assets/img/kl-new-eqp/17.png';
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    h1: 'МЕДИЧНЕ ОБЛАДНАННЯ',
-    p1: 'Комплекс анестезіологічний Drager Primus ',
-    p2: 'Монітор пацієнта Biolight М-12',
-    p3: 'Кисневий концентратор Brightfield AE-10',
-    p4: 'Насос шприцевий інфузійний Brightfield Healthcare KL-602',
-    p5: 'Електрокоагулятор BOWA ARC 303',
-    p6: 'Операційна двокупольна лампа Luvis S/S300',
-    p7: 'Хірургічний рентгенпрозорий стіл TDY-1',
-    p8: 'Сухожарова шафа ГП-80 для стерилізації',
-    p9: 'Аспіратор медичний електричний пересувний 20 л H002 Folee',
-    p10: 'Компресорний автохолодильник Alpicool TW45',
-    p11: 'Дефібрилятор-монітор Біомед S6',
-    p12: 'Портативний УЗД апарат PHILIPS Lumify C5-2',
-    p13: 'Підігрівач інфузійних розчинів і крові FT70',
-    p14: 'Апарат ШВЛ Drager Oxylog 3000 plus',
-    p15: 'Камера ультрафіолетова Мобіл Заповіт',
-    p16: 'Пакувальна машина X330, Lifedent',
-    p17: 'Бактерицидний опромінювач BactoSfera OBB 15S ECO',
-    p18: 'Портативний рентген аппарат EcoRay ULTRA 100'
-  },
-  // EN: {
-  //   h1: 'MEDICAL EQUIPMENT',
-  //   p1: 'S1100A Ventilator',
-  //   p2: 'Brightfield Healthcare OSEN 8000 Patient Monitor',
-  //   p3: 'Brightfield AE-10 Oxygen Concentrator',
-  //   p4: 'Infusion syringe pump Brightfield Healthcare OSP-500',
-  //   p5: 'BOWA ARC 303 electrocoagulator',
-  //   p6: 'Maestro LED300 operating lamp',
-  //   p7: 'Surgical x-ray table TDY-1',
-  //   p8: 'Steam sterilizer Q70B',
-  //   p9: 'Surgical portable Aspira Go 30 aspirator',
-  //   p10: 'Compressor car refrigerator Alpicool TW45',
-  //   p11: 'Defi 8 External Defibrillator',
-  //   p12: 'Mindray DP-10 portable ultrasound device',
-  //   p13: 'EcoRay ULTRA 100 portable x-ray machine',
-  //   p14: 'Portable ventilator OXYLOG 3000 Plus'
-  // },
-  EN: {
-    h1: 'MEDICAL EQUIPMENT',
-    p1: 'Drager Primus Anesthesia Workstation',
-    p2: 'Biolight M-12 Patient Monitor',
-    p3: 'Brightfield AE-10 Oxygen Concentrator',
-    p4: 'Brightfield Healthcare KL-602 Syringe Infusion Pump',
-    p5: 'BOWA ARC 303 Electrosurgical Unit',
-    p6: 'Luvis S/S300 operational double-dome lamp',
-    p7: 'TDY-1 Radiolucent Surgical Table',
-    p8: 'GP-80 Dry Heat Sterilizer',
-    p9: 'H002 Folee 20L Electric Portable Medical Suction Unit',
-    p10: 'Alpicool TW45 Compressor Car Refrigerator',
-    p11: 'Biomed S6 Defibrillator-Monitor',
-    p12: 'PHILIPS Lumify C5-2 Portable Ultrasound Machine',
-    p13: 'FT70 Infusion and Blood Warmer',
-    p14: 'Drager Oxylog 3000 plus Ventilator',
-    p15: 'Mobil Zapovit Ultraviolet Chamber',
-    p16: 'X330 Packing Machine, Lifedent',
-    p17: 'BactoSfera OBB 15S ECO Bactericidal Lamp',
-    p18: 'EcoRay ULTRA 100 portable x-ray machine',
-  }
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.equipment
+
+// const langCollection = {
+//   UA: {
+//     h1: 'МЕДИЧНЕ ОБЛАДНАННЯ',
+//     p1: 'Комплекс анестезіологічний Drager Primus ',
+//     p2: 'Монітор пацієнта Biolight М-12',
+//     p3: 'Кисневий концентратор Brightfield AE-10',
+//     p4: 'Насос шприцевий інфузійний Brightfield Healthcare KL-602',
+//     p5: 'Електрокоагулятор BOWA ARC 303',
+//     p6: 'Операційна двокупольна лампа Luvis S/S300',
+//     p7: 'Хірургічний рентгенпрозорий стіл TDY-1',
+//     p8: 'Сухожарова шафа ГП-80 для стерилізації',
+//     p9: 'Аспіратор медичний електричний пересувний 20 л H002 Folee',
+//     p10: 'Компресорний автохолодильник Alpicool TW45',
+//     p11: 'Дефібрилятор-монітор Біомед S6',
+//     p12: 'Портативний УЗД апарат PHILIPS Lumify C5-2',
+//     p13: 'Підігрівач інфузійних розчинів і крові FT70',
+//     p14: 'Апарат ШВЛ Drager Oxylog 3000 plus',
+//     p15: 'Камера ультрафіолетова Мобіл Заповіт',
+//     p16: 'Пакувальна машина X330, Lifedent',
+//     p17: 'Бактерицидний опромінювач BactoSfera OBB 15S ECO',
+//     p18: 'Портативний рентген аппарат EcoRay ULTRA 100'
+//   },
+//   // EN: {
+//   //   h1: 'MEDICAL EQUIPMENT',
+//   //   p1: 'S1100A Ventilator',
+//   //   p2: 'Brightfield Healthcare OSEN 8000 Patient Monitor',
+//   //   p3: 'Brightfield AE-10 Oxygen Concentrator',
+//   //   p4: 'Infusion syringe pump Brightfield Healthcare OSP-500',
+//   //   p5: 'BOWA ARC 303 electrocoagulator',
+//   //   p6: 'Maestro LED300 operating lamp',
+//   //   p7: 'Surgical x-ray table TDY-1',
+//   //   p8: 'Steam sterilizer Q70B',
+//   //   p9: 'Surgical portable Aspira Go 30 aspirator',
+//   //   p10: 'Compressor car refrigerator Alpicool TW45',
+//   //   p11: 'Defi 8 External Defibrillator',
+//   //   p12: 'Mindray DP-10 portable ultrasound device',
+//   //   p13: 'EcoRay ULTRA 100 portable x-ray machine',
+//   //   p14: 'Portable ventilator OXYLOG 3000 Plus'
+//   // },
+//   EN: {
+//     h1: 'MEDICAL EQUIPMENT',
+//     p1: 'Drager Primus Anesthesia Workstation',
+//     p2: 'Biolight M-12 Patient Monitor',
+//     p3: 'Brightfield AE-10 Oxygen Concentrator',
+//     p4: 'Brightfield Healthcare KL-602 Syringe Infusion Pump',
+//     p5: 'BOWA ARC 303 Electrosurgical Unit',
+//     p6: 'Luvis S/S300 operational double-dome lamp',
+//     p7: 'TDY-1 Radiolucent Surgical Table',
+//     p8: 'GP-80 Dry Heat Sterilizer',
+//     p9: 'H002 Folee 20L Electric Portable Medical Suction Unit',
+//     p10: 'Alpicool TW45 Compressor Car Refrigerator',
+//     p11: 'Biomed S6 Defibrillator-Monitor',
+//     p12: 'PHILIPS Lumify C5-2 Portable Ultrasound Machine',
+//     p13: 'FT70 Infusion and Blood Warmer',
+//     p14: 'Drager Oxylog 3000 plus Ventilator',
+//     p15: 'Mobil Zapovit Ultraviolet Chamber',
+//     p16: 'X330 Packing Machine, Lifedent',
+//     p17: 'BactoSfera OBB 15S ECO Bactericidal Lamp',
+//     p18: 'EcoRay ULTRA 100 portable x-ray machine',
+//   }
+// };
 
 const Equipment = ({ isMobile, lang }) => {
   const [hoveredItem, setHoverItem] = useState(null);

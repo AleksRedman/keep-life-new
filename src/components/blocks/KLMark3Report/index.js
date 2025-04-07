@@ -25,20 +25,24 @@ import KLMark3Img12 from '../../../assets/img/kl-mark3/SquareImgs/kl3_12.jpg';
 
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    p1: "Третя модель Keep Life, на відміну від попередніх двох, розрахована більше на цивільне населення прифронтових регіонів. Наразі мобільна терапія та гінекологія вже працюють в областях, де є проблеми з медичними закладами.",
-    p2: "Ця модель створена на базі 20-футового контейнера, однак не має розсувних конструкцій, що робить її найкомпактнішою з усіх. Всередині розміщені коридор, приймальня, оглядова гінекологічна кімната та санвузол.",
-    p3: "Також ми врахували, що ця модель здебільшого використовуватиметься в населених пунктах, тому ми провели каналізацію з контейнера. Змін зазнав і зовнішній пандус. Тут він складається з двох частин, опускається та піднімається за допомогою механічної лебідки.",
-    p4: "Головною перевагою третьої моделі стала вантажівка MAN з подвійним рядом сидінь в кабіні. Це дозволить всій команді медиків безперешкодно пересуватися між точками призначення.",
-  },
-  EN: {
-    p1: "The third model of Keep Life, unlike the previous two, is designed more for the civilian population in frontline regions. Currently, mobile therapy and gynecology services are already operating in areas with medical facility issues.",
-    p2: "This model is based on a 20-foot container but does not have sliding structures, making it the most compact of all. Inside, it features a corridor, reception area, gynecological examination room, and a bathroom.",
-    p3: "We also took into account that this model will mostly be used in populated areas, so we installed sewage from the container. The external ramp was also modified; it now consists of two parts and can be lowered and raised using a mechanical winch.",
-    p4: "The main advantage of the third model is the MAN truck with a double row of seats in the cab. This allows the entire medical team to move seamlessly between destinations.",
-  },
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.kl_mark_3
+
+// const langCollection = {
+//   UA: {
+//     p1: "Третя модель Keep Life, на відміну від попередніх двох, розрахована більше на цивільне населення прифронтових регіонів. Наразі мобільна терапія та гінекологія вже працюють в областях, де є проблеми з медичними закладами.",
+//     p2: "Ця модель створена на базі 20-футового контейнера, однак не має розсувних конструкцій, що робить її найкомпактнішою з усіх. Всередині розміщені коридор, приймальня, оглядова гінекологічна кімната та санвузол.",
+//     p3: "Також ми врахували, що ця модель здебільшого використовуватиметься в населених пунктах, тому ми провели каналізацію з контейнера. Змін зазнав і зовнішній пандус. Тут він складається з двох частин, опускається та піднімається за допомогою механічної лебідки.",
+//     p4: "Головною перевагою третьої моделі стала вантажівка MAN з подвійним рядом сидінь в кабіні. Це дозволить всій команді медиків безперешкодно пересуватися між точками призначення.",
+//   },
+//   EN: {
+//     p1: "The third model of Keep Life, unlike the previous two, is designed more for the civilian population in frontline regions. Currently, mobile therapy and gynecology services are already operating in areas with medical facility issues.",
+//     p2: "This model is based on a 20-foot container but does not have sliding structures, making it the most compact of all. Inside, it features a corridor, reception area, gynecological examination room, and a bathroom.",
+//     p3: "We also took into account that this model will mostly be used in populated areas, so we installed sewage from the container. The external ramp was also modified; it now consists of two parts and can be lowered and raised using a mechanical winch.",
+//     p4: "The main advantage of the third model is the MAN truck with a double row of seats in the cab. This allows the entire medical team to move seamlessly between destinations.",
+//   },
+// };
 
 const KLMark1Report = ({ isMobile, lang }) => {
   const slide = (image, key) => {

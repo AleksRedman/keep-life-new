@@ -16,16 +16,20 @@ import Gallery9Img from '../../../assets/img/gallery9.jpg';
 import GalleryImgNew1 from '../../../assets/img/gallery_new_1.jpg';
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    h1: "Місія Keep Life",
-    p1: "Забезпечити можливість оперативно надавати екстрену медичну допомогу постраждалим в зонах активних бойових дій, не втрачаючи час на їх транспортування до шпиталів",
-  },
-  EN: {
-    h1: "Keep Life Mission",
-    p1: "Provide the ability to quickly provide emergency medical care to victims in active combat zones, without losing time on transporting them to hospitals",
-  },
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.mission
+
+// const langCollection = {
+//   UA: {
+//     h1: "Місія Keep Life",
+//     p1: "Забезпечити можливість оперативно надавати екстрену медичну допомогу постраждалим в зонах активних бойових дій, не втрачаючи час на їх транспортування до шпиталів",
+//   },
+//   EN: {
+//     h1: "Keep Life Mission",
+//     p1: "Provide the ability to quickly provide emergency medical care to victims in active combat zones, without losing time on transporting them to hospitals",
+//   },
+// };
 
 const Mission = ({ isMobile, lang }) => {
   const slide = (image, key) => {

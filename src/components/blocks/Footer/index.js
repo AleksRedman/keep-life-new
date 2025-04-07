@@ -8,18 +8,22 @@ import LogoVoznFondImg from '../../../assets/img/vozn_fond.png';
 import FooterBanner from '../../../assets/img/footer-banner.png';
 import styles from './index.less'
 
-const langCollection = {
-  UA: {
-    h1: 'Контакти',
-    adr: '79018, Україна, м. Львів, вул. Юрія Федьковича 58, офіс 305',
-    // phn1: '+38(066)123-13-50 - Прихисток',
-  },
-  EN: {
-    h1: 'Contacts',
-    adr: '58 Yuri Fedkovycha Street, Office 305, Lviv, Ukraine, 79018',
-    // phn1: '+38(066)123-13-50 - Shelter',
-  },
-};
+const { text, country } = process.env.CONFIG_UI
+
+const langCollection = text?.footer
+
+// const langCollection = {
+//   UA: {
+//     h1: 'Контакти',
+//     adr: '79018, Україна, м. Львів, вул. Юрія Федьковича 58, офіс 305',
+//     // phn1: '+38(066)123-13-50 - Прихисток',
+//   },
+//   EN: {
+//     h1: 'Contacts',
+//     adr: '58 Yuri Fedkovycha Street, Office 305, Lviv, Ukraine, 79018',
+//     // phn1: '+38(066)123-13-50 - Shelter',
+//   },
+// };
 
 const Footer = ({ lang, sectionId, onHandleSectionId, short }) => {
   useEffect(() => {
@@ -44,18 +48,28 @@ const Footer = ({ lang, sectionId, onHandleSectionId, short }) => {
             <div className={styles.footerContactsAddress}>{langCollection[`${lang}`].adr}</div>
             <div className={styles.footerContactsItemsWrap}>
               {/* <a href="tel:+38(096)213-44-48" className={styles.footerContactsItem}><PhoneOutlined /><span>+38(097)270-28-22</span></a> */}
-              <a href="tel:+380(97)238-89-11" className={styles.footerContactsItem}><PhoneOutlined /><span>+380(97)238-89-11</span></a>
-              <a href="mailto:keeplife911@gmail.com" className={styles.footerContactsItem}><GlobalOutlined /><span>keeplife911@gmail.com</span></a>
+              {
+                country === 'Ukraine'
+                  ? <>
+                    <a href="tel:+380(97)238-89-11" className={styles.footerContactsItem}><PhoneOutlined /><span>+380(97)238-89-11</span></a>
+                    <a href="mailto:keeplife911@gmail.com" className={styles.footerContactsItem}><GlobalOutlined /><span>keeplife911@gmail.com</span></a>
+                  </>
+                  : <>
+                    <a href="tel:+37068626102" className={styles.footerContactsItem}><PhoneOutlined /><span>+37068626102</span></a>
+                    <a href="tel:+4917679829052" className={styles.footerContactsItem}><PhoneOutlined /><span>+4917679829052</span></a>
+                    <a href="mailto:info@keeplife.eu" className={styles.footerContactsItem}><GlobalOutlined /><span>info@keeplife.eu</span></a>
+                  </>
+              }
               {/* <a href="mailto:office@cfbvoznytskyy.org" className={styles.footerContactsItem}><GlobalOutlined /><span>office@cfbvoznytskyy.org</span></a> */}
             </div>
           </div>
         </div>
         <div className={styles.footerLogo}>
-          <div className={styles.footerLogoImgWrap}>
+          {/* <div className={styles.footerLogoImgWrap}>
             <a href="https://cfbvoznytskyy.org/" target="_blank" rel="noreferrer">
               <img key="vozn_fond" alt="vozn_fond" src={LogoVoznFondImg} />
             </a>
-          </div>
+          </div> */}
         </div>
         {
           short

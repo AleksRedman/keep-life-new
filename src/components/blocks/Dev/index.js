@@ -9,15 +9,18 @@ import Gallery6Img from '../../../assets/img/gallery6.jpg';
 import Gallery8Img from '../../../assets/img/gallery8.jpg';
 
 import styles from './index.less';
+const { text } = process.env.CONFIG_UI
 
-const langCollection = {
-  UA: {
-    h2: 'ПАРТНЕРИ'
-  },
-  EN: {
-    h2: 'PARTNERS'
-  },
-};
+const langCollection = text?.dev
+
+// const langCollection = {
+//   UA: {
+//     h2: 'ПАРТНЕРИ'
+//   },
+//   EN: {
+//     h2: 'PARTNERS'
+//   },
+// };
 
 const Dev = ({ isMobile, lang }) => {
   const slide = (image, url, key) => {

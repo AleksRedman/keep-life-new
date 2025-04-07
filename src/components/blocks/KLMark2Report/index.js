@@ -19,24 +19,22 @@ import KLMark2Img12 from '../../../assets/img/kl-mark2/kl2_12.jpg';
 
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    p1: "Друга вдосконалена модель Keep Life була створена на базі вдвічі меншого 20-футового контейнера з розкладними конструкціями, що дозволило зберегти внутрішню робочу площу та розмістити там два робочі місця для хірургів, щоб проводити кілька операцій одночасно. Таким чином, пропускна можливість пункту збільшилася і медики можуть врятувати більше життів.",
-    p2: "Також для другої моделі встановили потужнішу вентиляцію, завдяки цьому в контейнері одночасно можуть перебувати до 13 осіб, та збільшили об’єм баку для води до 600 літрів. Окрім того, два генератори замінили на один з більшими технічними можливостями.",
-    p3: "Цей проект був запущений, враховуючи побажання та зауваження медиків, які працюють на передовій. Основними вимогами до стабпункту залишилися мобільність, автономність, швидке розгортання та безпека. Однак, основною перевагою моделі є автономність контейнера від автівки. Модуль можна зняти та встановити його в будь-якому доступному для цього місці.",
-  },
-  EN: {
-    p1: "The second improved model of Keep Life was created based on a container that is twice as small, a 20-foot container with folding structures. This allowed for maintaining the internal working area and accommodating two workstations for surgeons, enabling multiple surgeries to be performed simultaneously. Thus, the throughput of the unit increased, allowing medical personnel to save more lives.",
-    p2: "Additionally, the second model features a more powerful ventilation system, allowing up to 13 people to be inside the container at the same time. The water tank capacity was also increased to 600 liters. Moreover, two generators were replaced with one that has greater technical capabilities.",
-    p3: "This project was launched taking into account the wishes and comments of medics working on the front lines. The main requirements for the mobile unit remained mobility, autonomy, quick deployment, and safety. However, the main advantage of the model is the container's independence from the vehicle. The module can be removed and installed in any suitable location.",
-  },
-};
+const { text } = process.env.CONFIG_UI
 
+const langCollection = text?.kl_mark_2
 
-
-
-
-
+// const langCollection = {
+//   UA: {
+//     p1: "Друга вдосконалена модель Keep Life була створена на базі вдвічі меншого 20-футового контейнера з розкладними конструкціями, що дозволило зберегти внутрішню робочу площу та розмістити там два робочі місця для хірургів, щоб проводити кілька операцій одночасно. Таким чином, пропускна можливість пункту збільшилася і медики можуть врятувати більше життів.",
+//     p2: "Також для другої моделі встановили потужнішу вентиляцію, завдяки цьому в контейнері одночасно можуть перебувати до 13 осіб, та збільшили об’єм баку для води до 600 літрів. Окрім того, два генератори замінили на один з більшими технічними можливостями.",
+//     p3: "Цей проект був запущений, враховуючи побажання та зауваження медиків, які працюють на передовій. Основними вимогами до стабпункту залишилися мобільність, автономність, швидке розгортання та безпека. Однак, основною перевагою моделі є автономність контейнера від автівки. Модуль можна зняти та встановити його в будь-якому доступному для цього місці.",
+//   },
+//   EN: {
+//     p1: "The second improved model of Keep Life was created based on a container that is twice as small, a 20-foot container with folding structures. This allowed for maintaining the internal working area and accommodating two workstations for surgeons, enabling multiple surgeries to be performed simultaneously. Thus, the throughput of the unit increased, allowing medical personnel to save more lives.",
+//     p2: "Additionally, the second model features a more powerful ventilation system, allowing up to 13 people to be inside the container at the same time. The water tank capacity was also increased to 600 liters. Moreover, two generators were replaced with one that has greater technical capabilities.",
+//     p3: "This project was launched taking into account the wishes and comments of medics working on the front lines. The main requirements for the mobile unit remained mobility, autonomy, quick deployment, and safety. However, the main advantage of the model is the container's independence from the vehicle. The module can be removed and installed in any suitable location.",
+//   },
+// };
 
 const KLMark1Report = ({ isMobile, lang }) => {
   const slide = (image, key) => {
@@ -100,6 +98,9 @@ const KLMark1Report = ({ isMobile, lang }) => {
         </div>
         <div className={styles.klMark2ReportText}>
           <p>{langCollection[`${lang}`].p3}</p>
+        </div>
+        <div className={styles.klMark2ReportText}>
+          <p>{langCollection[`${lang}`].p4}</p>
         </div>
         <div className={styles.klMark2ReportBanner}>
           <img alt={'KL Mark2 Report Banner'} src={KLMark2Img1} style={{ width: '100%' }} className={styles.klMark2ReportBannerImg} />

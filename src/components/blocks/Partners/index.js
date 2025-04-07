@@ -26,14 +26,18 @@ import MiaMed from '../../../assets/img/partners_logos/mia-med-logo.png'
 import Stalkon from '../../../assets/img/partners_logos/stalkon-logo.png'
 import styles from './index.less';
 
-const langCollection = {
-  UA: {
-    h2: 'ПАРТНЕРИ'
-  },
-  EN: {
-    h2: 'PARTNERS'
-  },
-};
+const { text } = process.env.CONFIG_UI
+
+const langCollection = text?.partners
+
+// const langCollection = {
+//   UA: {
+//     h2: 'ПАРТНЕРИ'
+//   },
+//   EN: {
+//     h2: 'PARTNERS'
+//   },
+// };
 
 const Partners = ({ isMobile, lang }) => {
   const item = (image, url, key, wideImg) => {
