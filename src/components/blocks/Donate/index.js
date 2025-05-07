@@ -207,10 +207,10 @@ const Donate = ({ isMobile, lang }) => {
               <p className={styles.donatePPCardPaymentDetailsRow}>
                 <span className={styles.donatePPCardPaymentDetailsLabel}>Email:</span>
                 <span className={styles.donatePPCardPaymentDetailsValue}>
-                  donate@cfbvoznytskyy.org
+                  donate@keeplife.com.ua
                   <Tooltip
                     title={
-                      (copiedId === 'donate@cfbvoznytskyy.org')
+                      (copiedId === 'donate@keeplife.com.ua')
                         ? <div>
                           <CheckOutlined />
                           <span>Copied to clipboard</span>
@@ -221,7 +221,7 @@ const Donate = ({ isMobile, lang }) => {
                     <Button
                       type='link'
                       icon={<CopyOutlined />}
-                      onClick={() => handleCopyText( 'donate@cfbvoznytskyy.org' )}
+                      onClick={() => handleCopyText( 'donate@keeplife.com.ua' )}
                       className={styles.donatePPCardPaymentDetailsCopy}
                     />
                   </Tooltip>
