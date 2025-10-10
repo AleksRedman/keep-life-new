@@ -14,6 +14,21 @@ import Gallery4Img from '../../../assets/img/gallery4.jpg';
 import Gallery7Img from '../../../assets/img/gallery7.jpg';
 import Gallery9Img from '../../../assets/img/gallery9.jpg';
 import GalleryImgNew1 from '../../../assets/img/gallery_new_1.jpg';
+
+import GalleryMissionImg1 from '../../../assets/img/mission-imgs-gal/mission-img-gal1.png'
+import GalleryMissionImg2 from '../../../assets/img/mission-imgs-gal/mission-img-gal2.png'
+import GalleryMissionImg3 from '../../../assets/img/mission-imgs-gal/mission-img-gal3.png'
+import GalleryMissionImg4 from '../../../assets/img/mission-imgs-gal/mission-img-gal4.png'
+import GalleryMissionImg5 from '../../../assets/img/mission-imgs-gal/mission-img-gal5.png'
+import GalleryMissionImg6 from '../../../assets/img/mission-imgs-gal/mission-img-gal6.png'
+import GalleryMissionImg7 from '../../../assets/img/mission-imgs-gal/mission-img-gal7.png'
+import GalleryMissionImg8 from '../../../assets/img/mission-imgs-gal/mission-img-gal8.png'
+import GalleryMissionImg9 from '../../../assets/img/mission-imgs-gal/mission-img-gal9.png'
+
+import GalleryMedicsImg1 from '../../../assets/img/medics-imgs-gal/medics-img-gal1.png'
+import GalleryMedicsImg2 from '../../../assets/img/medics-imgs-gal/medics-img-gal2.png'
+import GalleryMedicsImg3 from '../../../assets/img/medics-imgs-gal/medics-img-gal3.png'
+import GalleryMedicsImg4 from '../../../assets/img/medics-imgs-gal/medics-img-gal4.png'
 import styles from './index.less';
 
 const { text } = process.env.CONFIG_UI
@@ -59,12 +74,16 @@ const Mission = ({ isMobile, lang }) => {
               slidesPerRow={1}
               className={styles.missionSlidesSmallCarousel}
             >
-              {slide(MissionSlide1, 'MissionSlide1')}
+              {/* {slide(MissionSlide1, 'MissionSlide1')}
               {slide(MissionSlide2, 'MissionSlide2')}
               {/* {slide(MissionSlide3, 'MissionSlide3')} */}
-              {slide(MissionSlide4, 'MissionSlide4')}
+              {/* {slide(MissionSlide4, 'MissionSlide4')}
               {slide(MissionSlide5, 'MissionSlide5')}
-              {slide(MissionSlide6, 'MissionSlide6')}
+              {slide(MissionSlide6, 'MissionSlide6')} */}
+              {slide(GalleryMedicsImg1, 'GalleryMedicsImg1')}
+              {slide(GalleryMedicsImg2, 'GalleryMedicsImg2')}
+              {slide(GalleryMedicsImg3, 'GalleryMedicsImg3')}
+              {slide(GalleryMedicsImg4, 'GalleryMedicsImg4')}
             </Carousel>
           </div>
         </div>
@@ -79,11 +98,21 @@ const Mission = ({ isMobile, lang }) => {
             prevArrow={<LeftOutlined />}
             className={styles.missionSlidesBigCarousel}
           >
-            {slide(GalleryImgNew1, 'GalleryImgNew1')}
+            {/* {slide(GalleryImgNew1, 'GalleryImgNew1')}
             {slide(Gallery9Img, 'Gallery9Img')}
             {slide(Gallery3Img, 'Gallery3Img')}
             {slide(Gallery4Img, 'Gallery4Img')}
-            {slide(Gallery7Img, 'Gallery7Img')}
+            {slide(Gallery7Img, 'Gallery7Img')} */}
+
+            {slide(GalleryMissionImg1, 'GalleryMissionImg1')}
+            {slide(GalleryMissionImg2, 'GalleryMissionImg2')}
+            {slide(GalleryMissionImg3, 'GalleryMissionImg3')}
+            {slide(GalleryMissionImg4, 'GalleryMissionImg4')}
+            {slide(GalleryMissionImg5, 'GalleryMissionImg5')}
+            {slide(GalleryMissionImg6, 'GalleryMissionImg6')}
+            {slide(GalleryMissionImg7, 'GalleryMissionImg7')}
+            {slide(GalleryMissionImg8, 'GalleryMissionImg8')}
+            {slide(GalleryMissionImg9, 'GalleryMissionImg9')}
           </Carousel>
         </div>
       </div>

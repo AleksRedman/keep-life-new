@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 // import Equip2Img from '../../../assets/img/equip2.png';
 import Equip1Img from '../../../assets/img/kl-new-eqp/1.jpg';
 import Equip2Img from '../../../assets/img/kl-new-eqp/2.png';
-import Equip3Img from '../../../assets/img/equip3.png';
+// import Equip3Img from '../../../assets/img/equip3.png';
+import Equip3Img from '../../../assets/img/equipment_oxg_conc.png';
+
 // import Equip4Img from '../../../assets/img/equip4.png';
 import Equip4Img from '../../../assets/img/kl-new-eqp/4.jpg';
 import Equip5Img from '../../../assets/img/equip5.png';

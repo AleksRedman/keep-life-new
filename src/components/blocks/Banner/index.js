@@ -21,8 +21,10 @@ import UkrnaftaImg from '../../../assets/img/partners_logos_grey/logo-15.png';
 import TyingVinesImg from '../../../assets/img/partners_logos_grey/logo-16.png';
 import OperationChargeImg from '../../../assets/img/partners_logos_grey/logo-17.png';
 import SEImg from '../../../assets/img/partners_logos_grey/logo-18.png';
-import TrallerImg from '../../../assets/img/TRAILLER.png';
-import TrallerImgSmall from '../../../assets/img/trailler_small.png';
+// import TrallerImg from '../../../assets/img/TRAILLER.png';
+// import TrallerImgSmall from '../../../assets/img/trailler_small.png';
+import TrallerImg from '../../../assets/img/kl_new_home3.png';
+import TrallerImgSmall from '../../../assets/img/kl_new_home3.png';
 
 import Avenir from '../../../assets/img/partners_logos_grey/avenir-grey.png'
 import MiaMed from '../../../assets/img/partners_logos_grey/mia-med-grey.png'
