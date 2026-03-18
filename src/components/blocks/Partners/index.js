@@ -20,6 +20,7 @@ import BudMallImg from '../../../assets/img/budmall_partner_icon.jpg'
 import OkkoImg from '../../../assets/img/okko_logo.jpeg'
 import OnePlusOne from '../../../assets/img/partners_logos/1plus1-logo.png'
 import MetalHolding from '../../../assets/img/metalHolding.jpg'
+import SolidarityImg from '../../../assets/solidarity-charity-fund-logo.png'
 
 import Avenir from '../../../assets/img/partners_logos/avenir-logo.png'
 import MiaMed from '../../../assets/img/partners_logos/mia-med-logo.png'
@@ -70,10 +71,11 @@ const Partners = ({ isMobile, lang }) => {
         <h2 className={styles.partnersTitle}>{langCollection[`${lang}`].h2}</h2>
         <div className={styles.partnersList}>
           {item(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
-          {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
+          {/* {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')} */}
+          {item(SolidarityImg, 'https://solidarityfoundation.com.ua/', 'SolidarityImg')}
           {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
           {item(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD', true)}
-          {item(Stalkon, 'https://pro.stalkon.com.ua/en/', 'Stalkon', true)}
+          {item(Stalkon, 'https://pro.stalkon.com.ua/', 'Stalkon', true)}
           {item(Avenir, 'https://avenir-franco-ukrainien.org/', 'Avenir', true)}
           {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
           {item(MiaMed, 'https://miamed.company/', 'MiaMed', true)}

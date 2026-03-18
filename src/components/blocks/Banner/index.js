@@ -25,6 +25,7 @@ import SEImg from '../../../assets/img/partners_logos_grey/logo-18.png';
 // import TrallerImgSmall from '../../../assets/img/trailler_small.png';
 import TrallerImg from '../../../assets/img/kl_new_home3.png';
 import TrallerImgSmall from '../../../assets/img/kl_new_home3.png';
+import SolidarityImg from '../../../assets/lrmr-new-grey.png'
 
 import Avenir from '../../../assets/img/partners_logos_grey/avenir-grey.png'
 import MiaMed from '../../../assets/img/partners_logos_grey/mia-med-grey.png'
@@ -117,7 +118,8 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
           slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 8}
         >
           {slide(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
-          {slide(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')}
+          {/* {slide(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')} */}
+          {slide(SolidarityImg, 'https://solidarityfoundation.com.ua/', 'Leroy Merlin')}
           {slide(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric')}
           {slide(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD')}
           {slide(Stalkon, 'https://pro.stalkon.com.ua/en/', 'Stalkon')}
