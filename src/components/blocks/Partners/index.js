@@ -13,6 +13,7 @@ import ShippingCompImg from '../../../assets/img/shipping_comp.jpg';
 import TyingVinesImg from '../../../assets/img/tying_vines.png';
 import UkrnaftaImg from '../../../assets/img/ukrnafta.png';
 import WalkWithMeImg from '../../../assets/img/walk_with_me.png';
+import WWMIG from '../../../assets/img/partners_logos/wwg_small.png';
 import OperationChargeImg from '../../../assets/img/operation_charge.png';
 import BridgeOfKindness from '../../../assets/img/bridge_of_kindness.png';
 import VolonterRyadnina from '../../../assets/img/volonter_ryadnina.jpg'
@@ -70,12 +71,17 @@ const Partners = ({ isMobile, lang }) => {
       <div className={styles.partnersWrap}>
         <h2 className={styles.partnersTitle}>{langCollection[`${lang}`].h2}</h2>
         <div className={styles.partnersList}>
+          {item(WWMIG, 'https://walkwithme.global/', 'Walk With Me')}
+          {item(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank', true)}
           {item(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
           {/* {item(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')} */}
           {item(SolidarityImg, 'https://solidarityfoundation.com.ua/', 'SolidarityImg')}
           {item(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric', true)}
           {item(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD', true)}
           {item(Stalkon, 'https://pro.stalkon.com.ua/', 'Stalkon', true)}
+          {item(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines', true)}
+          {item(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')}
+          {item(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
           {item(Avenir, 'https://avenir-franco-ukrainien.org/', 'Avenir', true)}
           {item(BridgeOfKindness, '#', 'Bridge Of Kindness', true)}
           {item(MiaMed, 'https://miamed.company/', 'MiaMed', true)}

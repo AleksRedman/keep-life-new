@@ -115,14 +115,20 @@ const Banner = ({ onEnterChange, lang, isMobile, isScreenSmMin }) => {
           dots={false}
           className={styles.bannerPartnersCarousel}
           // slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 7}
-          slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 8}
+          slidesPerRow={isMobile ? isScreenSmMin? 3 : 4 : 7}
         >
+          {slide(WalkWithMeImg, 'https://walkwithme.global/', 'Walk With Me')}
+          {slide(DiamontBankImg, 'https://ir.diamondbackenergy.com/', 'Diamon Bank')}
+          
           {slide(OnePlusOne, 'https://1plus1.ua/', '1 + 1')}
           {/* {slide(LRMRImg, 'https://lmsolidarity.com.ua/', 'Leroy Merlin')} */}
           {slide(SolidarityImg, 'https://solidarityfoundation.com.ua/', 'Leroy Merlin')}
           {slide(SEImg, 'https://www.se.com/ua/uk/', 'Schneider Electric')}
           {slide(ExtremeLTDImg, 'https://extremeltd.ua/', 'Extreme LTD')}
           {slide(Stalkon, 'https://pro.stalkon.com.ua/en/', 'Stalkon')}
+          {slide(TyingVinesImg, 'https://tyingvines.org/', 'Tying Vines')}
+          {slide(IcrossCanadaImg, 'https://www.icrosscanada.com/', 'Icross Canada')}
+          {slide(ShippingCompImg, 'https://www.crwarehouse.ca/', 'Shipping Compassion')}
           {slide(Avenir, 'https://avenir-franco-ukrainien.org/', 'Avenir')}
           {slide(BridgeOfKindness, '#', 'Bridge Of Kindness')}
           {slide(MiaMed, 'https://miamed.company/', 'MiaMed')}
